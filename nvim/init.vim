@@ -117,6 +117,8 @@ filetype plugin indent on
 
 " set emmet (xml/html autocompletition)
 let g:user_emmet_expandabbr_key='<Tab>'
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
 
 fun! TrimWhitespace()
     let l:save = winsaveview()
