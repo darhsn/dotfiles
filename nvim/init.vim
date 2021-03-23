@@ -41,7 +41,7 @@ call plug#begin()
     " Code Formatting
     Plug 'sbdchd/neoformat'
 
-    " Fuzzy finder
+    " Telescope
     Plug 'nvim-lua/popup.nvim'
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim'
@@ -60,9 +60,7 @@ call plug#begin()
     " Better UI
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
-
-    " Tmux status bar
-    Plug 'edkolev/tmuxline.vim'
+    Plug 'Yggdroot/indentLine'
 
     " Git integration
     Plug 'tpope/vim-fugitive'
@@ -109,6 +107,11 @@ require'lspconfig'.tsserver.setup{}
 -- Vim
 require'lspconfig'.vimls.setup{}
 EOF
+
+" Indent line
+let g:indentLine_setColors = 0
+let g:indentLine_char = '|'
+let g:indentLine_color_term = 239
 
 " Autocompletition
 " set the autocompletition for xml/html tags
