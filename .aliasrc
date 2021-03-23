@@ -17,9 +17,9 @@ alias clh="clear && lh"
 
 alias e="nvim"
 
-alias aliasrc="e ~/.aliasrc"
-alias bashrc="e ~/.bashrc"
-alias nvimconf="e ~/.config/nvim/init.vim"
+alias aliasrc="e \"$HOME/Code/dotfiles/.aliasrc\""
+alias bashrc="e \"$HOME/Code/dotfiles/.bashrc\""
+alias nvimconf="e \"$HOME/Code/dotfiles/nvim/init.vim\""
 
 alias code="c ~/Code"
 
