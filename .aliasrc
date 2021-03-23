@@ -1,0 +1,26 @@
+#!/bin/bash
+
+alias l="exa -l"
+alias lh="exa -la"
+
+alias mk="mkdir -p"
+alias rm="rm -r"
+
+alias c="cd"
+alias ..="cd .."
+alias ...="cd ../../"
+alias ....="cd ../../../"
+
+alias cl="clear"
+alias cls="clear && l"
+alias clh="clear && lh"
+
+alias e="nvim"
+
+alias aliasrc="e ~/.aliasrc"
+alias bashrc="e ~/.bashrc"
+alias nvimconf="e ~/.config/nvim/init.vim"
+
+alias code="c ~/Code"
+
+# vim: ft=sh
