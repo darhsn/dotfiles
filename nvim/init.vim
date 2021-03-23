@@ -36,7 +36,7 @@ call plug#begin()
 
     " Autocompletition
     Plug 'nvim-lua/completion-nvim'
-    Plug 'ycm-core/YouCompleteMe'
+    " Plug 'ycm-core/YouCompleteMe'
 
     " Code Formatting
     Plug 'sbdchd/neoformat'
@@ -68,7 +68,6 @@ call plug#begin()
 
     " Color Schemes
     Plug 'chriskempson/base16-vim'
-    Plug 'morhetz/gruvbox'
 call plug#end()
 
 " Key Bindings
@@ -104,10 +103,6 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set termguicolors
 
 colorscheme base16-default-dark
-
-" let g:gruvbox_italic=1
-" let g:gruvbox_contrast_dark="hard"
-" colorscheme gruvbox
 
 " Lsp
 lua << EOF
