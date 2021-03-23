@@ -76,10 +76,14 @@ nnoremap <silent> <C-h> :bprevious<CR>
 
 nnoremap <silent> <leader>ir :echo "Reloaded init.vim"<CR>:source $MYVIMRC<CR>
 
+nnoremap <silent> <leader>xh :nohl<CR>
+
+
 nnoremap <silent> <leader>c :Commentary<CR>
 vnoremap <silent> <leader>c :Commentary<CR>
 
 nnoremap <silent> <leader>g :Git<CR>
+nnoremap <silent> <leader>gp :Git push<CR>
 
 nnoremap <silent> gd :lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> gD :lua vim.lsp.buf.declaration()<CR>
