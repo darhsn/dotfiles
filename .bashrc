@@ -14,7 +14,6 @@ BLUE="\[\033[01;34m\]"
 PINK="\[\033[01;35m\]"
 YELLOW="\[\033[33;1m\]"
 
-
 precmd() {
     if [ "$?" == "0" ]; then
         SHELL_COLOR="${WHITE}"
