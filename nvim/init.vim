@@ -68,6 +68,7 @@ call plug#begin()
 
     " Color Schemes
     Plug 'chriskempson/base16-vim'
+    Plug 'morhetz/gruvbox'
 call plug#end()
 
 " Key Bindings
@@ -104,6 +105,10 @@ set termguicolors
 
 colorscheme base16-default-dark
 
+" let g:gruvbox_italic=1
+" let g:gruvbox_contrast_dark="hard"
+" colorscheme gruvbox
+
 " Lsp
 lua << EOF
 -- TypeScript
@@ -115,7 +120,7 @@ EOF
 " Indent line
 let g:indentLine_setColors = 0
 let g:indentLine_char = '┊'
-let g:indentLine_color_term = 239
+let g:indentLine_color_term = 202
 
 " Autocompletition
 " set the autocompletition for xml/html tags
