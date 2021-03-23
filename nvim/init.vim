@@ -117,7 +117,6 @@ filetype plugin indent on
 
 " set emmet (xml/html autocompletition)
 let g:user_emmet_expandabbr_key='<Tab>'
-imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
 fun! TrimWhitespace()
     let l:save = winsaveview()
