@@ -34,9 +34,11 @@ call plug#begin()
     Plug 'tpope/vim-commentary'
     Plug 'tpope/vim-surround'
 
+    " Tmux
+    Plug 'edkolev/tmuxline.vim'
+
     " Autocompletition
     Plug 'nvim-lua/completion-nvim'
-    " Plug 'ycm-core/YouCompleteMe'
 
     " Code Formatting
     Plug 'sbdchd/neoformat'
@@ -61,6 +63,7 @@ call plug#begin()
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'Yggdroot/indentLine'
+    Plug 'ryanoasis/vim-webdevicons'
 
     " Git integration
     Plug 'tpope/vim-fugitive'
@@ -81,7 +84,6 @@ nnoremap <silent> <leader>xh :nohl<CR>
 
 nnoremap <silent> <leader>c :Commentary<CR>
 vnoremap <silent> <leader>c :Commentary<CR>
-
 nnoremap <silent> <leader>g :Git<CR>
 nnoremap <silent> <leader>gp :Git push<CR>
 
@@ -96,7 +98,7 @@ nnoremap <silent> <leader>p :Telescope live_grep<CR>
 " Airline
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#whitespace#enabled = 1
-let g:airline#extensions#tabline#enabled = 0
+let g:airline#extensions#tabline#enabled = 1
 
 " Color Schemes
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
@@ -104,13 +106,23 @@ set termguicolors
 
 colorscheme base16-default-dark
 
-" Lsp
+" LSP
 lua << EOF
 -- TypeScript
 require'lspconfig'.tsserver.setup{}
 -- Vim
 require'lspconfig'.vimls.setup{}
 EOF
+
+" Treesitter
+" lua <<EOF
+" require'nvim-treesitter.configs'.setup {
+  " ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+  " highlight = {
+    " enable = true,              -- false will disable the whole extension
+  " },
+" }
+" EOF
 
 " Indent line
 let g:indentLine_setColors = 0
