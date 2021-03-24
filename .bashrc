@@ -31,3 +31,4 @@ precmd() {
 }
 
 PROMPT_COMMAND="precmd"
+export PATH=$HOME/.config/nvcode/utils/bin:$PATH
