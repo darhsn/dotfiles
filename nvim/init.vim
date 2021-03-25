@@ -89,10 +89,15 @@ nnoremap <silent> <leader>gp :Git push<CR>
 nnoremap <silent> gd :lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> gD :lua vim.lsp.buf.declaration()<CR>
 
-noremap <silent> <leader>ft :retab<CR>
+nnoremap <silent> <leader>ft :retab<CR>
 
 nnoremap <silent> <C-p> :Telescope find_files<CR>
 nnoremap <silent> <leader>p :Telescope live_grep<CR>
+
+nnoremap <M-k> :resize +2<CR>
+nnoremap <M-j> :resize -2<CR>
+nnoremap <M-l> :vertical resize +2<CR>
+nnoremap <M-h> :vertical resize -2<CR>
 
 " Airline
 let g:airline_powerline_fonts=1
@@ -138,6 +143,7 @@ endfun
 " Autocommands
 augroup DARIO_GROUP
     autocmd!
+
     " Trim spaces
     autocmd BufWritePre * :call TrimWhitespace()
 
