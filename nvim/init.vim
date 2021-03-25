@@ -13,7 +13,6 @@ set expandtab
 
 set nowrap
 set number relativenumber
-set numberwidth=1
 set foldcolumn=1
 set noshowmode
 
@@ -118,6 +117,8 @@ lua << EOF
 require'lspconfig'.tsserver.setup{}
 -- Vim
 require'lspconfig'.vimls.setup{}
+-- C/C++
+require'lspconfig'.clangd.setup{}
 EOF
 
 " Indent line
