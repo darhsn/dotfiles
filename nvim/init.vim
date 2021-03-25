@@ -132,7 +132,6 @@ filetype plugin indent on
 " Emmet
 let g:user_emmet_expandabbr_key='<C-z>'
 let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
 
 fun! TrimWhitespace()
     let l:save = winsaveview()
@@ -142,7 +141,11 @@ endfun
 
 " Autocommands
 augroup DARIO_GROUP
+    " Remove all autocommands
     autocmd!
+
+    " Enable emmet
+    autocmd FileType html,css EmmetInstall
 
     " Trim spaces
     autocmd BufWritePre * :call TrimWhitespace()
