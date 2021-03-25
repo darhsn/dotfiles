@@ -22,5 +22,6 @@ alias bashrc="e \"$HOME/Code/dotfiles/.bashrc\""
 alias nvimconf="e \"$HOME/Code/dotfiles/nvim/init.vim\""
 
 alias code="c ~/Code"
+alias dotfiles="c ~/Code/dotfiles/"
 
 # vim: ft=sh
