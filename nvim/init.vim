@@ -63,7 +63,6 @@ call plug#begin()
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'Yggdroot/indentLine'
-    Plug 'ryanoasis/vim-webdevicons'
 
     " Git integration
     Plug 'tpope/vim-fugitive'
@@ -96,9 +95,9 @@ nnoremap <silent> <C-p> :Telescope find_files<CR>
 nnoremap <silent> <leader>p :Telescope live_grep<CR>
 
 " Airline
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#whitespace#enabled = 1
-let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts=1
+let g:airline#extensions#whitespace#enabled=1
+let g:airline#extensions#tabline#enabled=0
 
 " Color Schemes
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
@@ -106,7 +105,9 @@ set termguicolors
 
 colorscheme base16-default-dark
 
-" LSP
+hi Comment cterm=italic gui=italic
+
+" Neovim LSP
 lua << EOF
 -- TypeScript
 require'lspconfig'.tsserver.setup{}
@@ -114,27 +115,16 @@ require'lspconfig'.tsserver.setup{}
 require'lspconfig'.vimls.setup{}
 EOF
 
-" Treesitter
-" lua <<EOF
-" require'nvim-treesitter.configs'.setup {
-  " ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-  " highlight = {
-    " enable = true,              -- false will disable the whole extension
-  " },
-" }
-" EOF
-
 " Indent line
 let g:indentLine_setColors = 0
 let g:indentLine_char = '┊'
 let g:indentLine_color_term = 202
 
-" Autocompletition
-" set the autocompletition for xml/html tags
+" Auto close tag
 let g:closetag_filenames = '*.xml,*.html,*.xhtml,*.phtml,*.php'
 filetype plugin indent on
 
-" set emmet (xml/html autocompletition)
+" Emmet
 let g:user_emmet_expandabbr_key='<C-z>'
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
