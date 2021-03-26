@@ -3,6 +3,7 @@
 if [ "$(pwd)" == "/" ]; then
     cd
 fi
+
 clear
 pfetch
 source ~/.aliasrc
