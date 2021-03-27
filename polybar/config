@@ -1,9 +1,9 @@
 [colors]
-background = #181818
-foreground = #d8d8d8
+background = #282C34
+foreground = #ABB2BF
 muted = #585858
-urgent = #ab4642
-primary = #7cafc2
+urgent = #E06C75
+primary = #61AFEF
 
 [template]
 width = 100%
@@ -77,10 +77,10 @@ type = internal/battery
 battery = BAT0
 adapter = AC0
 full-at = 98
-format-charging = %{F#f7ca88} <label-charging>
+format-charging = %{F#E5C07B} <label-charging>
 format-discharging = <ramp-capacity>  <label-discharging>
-format-full = %{F#f7ca88} <label-full>
-ramp-capacity-0 = %{F#ab4642}
+format-full = %{F#E50C07B} <label-full>
+ramp-capacity-0 = %{F#E06C75}
 ramp-capacity-1 = %{F#86c1b9}
 ramp-capacity-2 = 
 ramp-capacity-3 = 
@@ -119,5 +119,4 @@ label-urgent-padding = 1.5
 [settings]
 screenchange-reload = true
 
-; vim: ft=dosini
-
+# vim: ft=dosini
