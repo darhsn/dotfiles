@@ -26,7 +26,6 @@
   spacing: 0;
   background-color: transparent;
 
-  font: "JetBrainsMono Nerd Font 14";
   text-color: @text;
 }
 
