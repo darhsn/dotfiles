@@ -11,16 +11,15 @@ set shiftwidth=4
 set smartindent
 set expandtab
 
-set timeoutlen=700
-
 set nowrap
 set number relativenumber
 set noshowmode
-
 set completeopt=menuone,noinsert,noselect
+set guicursor=
 
 let mapleader=" "
-set guicursor=
+set timeoutlen=700
+set mouse=a
 
 " Plugins
 call plug#begin()
@@ -36,9 +35,6 @@ call plug#begin()
 
     " Snippets
     Plug 'hrsh7th/vim-vsnip'
-
-    " Tmux
-    Plug 'edkolev/tmuxline.vim'
 
     " Autocompletition
     Plug 'nvim-lua/completion-nvim'
@@ -63,20 +59,20 @@ call plug#begin()
     Plug 'neovim/nvim-lspconfig'
 
     " Better UI
-    Plug 'itchyny/lightline.vim'
     Plug 'liuchengxu/vim-which-key'
+    Plug 'romgrk/barbar.nvim'
 
     " Git integration
     Plug 'tpope/vim-fugitive'
     Plug 'airblade/vim-gitgutter'
 
     " Color Schemes
-    Plug 'chriskempson/base16-vim'
+    Plug 'joshdick/onedark.vim'
 call plug#end()
 
 " Mappings
-nnoremap <silent> <C-[> :bprevious<CR>
-nnoremap <silent> <C-]> :bnext<CR>
+nnoremap <silent> <C-h> :bprevious<CR>
+nnoremap <silent> <C-l> :bnext<CR>
 
 nnoremap <silent> <leader>r :echo "Reloaded init.vim"<CR>:source $MYVIMRC<CR>
 
@@ -110,62 +106,6 @@ let g:gitgutter_sign_removed='◢'
 let g:gitgutter_sign_removed_first_line='◥'
 let g:gitgutter_sign_modified_removed='◢'
 
-" Status bar
-let s:base00 = [ '#18181800',  0 ] " black
-let s:base00_ = [ '#181818',  0 ] " black
-let s:base01 = [ '#28282800', 18 ]
-let s:base01_ = [ '#282828', 18 ]
-let s:base02 = [ '#383838', 19 ]
-let s:base03 = [ '#585858',  8 ]
-let s:base04 = [ '#b8b8b8', 20 ]
-let s:base05 = [ '#d8d8d8',  7 ]
-let s:base06 = [ '#e8e8e8', 21 ]
-let s:base07 = [ '#f8f8f8', 15 ] " white
-
-let s:base08 = [ '#ab4642',  1 ] " red
-let s:base09 = [ '#dc9656', 16 ] " orange
-let s:base0A = [ '#f7ca88',  3 ] " yellow
-let s:base0B = [ '#a1b56c',  2 ] " green
-let s:base0C = [ '#86c1b9',  6 ] " teal
-let s:base0D = [ '#7cafc2',  4 ] " blue
-let s:base0E = [ '#ba8baf',  5 ] " pink
-let s:base0F = [ '#a16946', 17 ] " brown
-
-let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': {}, 'tabline': {}}
-
-let s:p.normal.left     = [ [ s:base00_, s:base0D ], [ s:base05, s:base02 ] ]
-let s:p.insert.left     = [ [ s:base01_, s:base0B ], [ s:base05, s:base02 ] ]
-let s:p.visual.left     = [ [ s:base00_, s:base09 ], [ s:base05, s:base02 ] ]
-let s:p.replace.left    = [ [ s:base00_, s:base08 ], [ s:base05, s:base02 ] ]
-let s:p.inactive.left   = [ [ s:base02, s:base00 ] ]
-
-let s:p.normal.middle   = [ [ s:base07, s:base01 ] ]
-let s:p.inactive.middle = [ [ s:base01, s:base00 ] ]
-
-let s:p.normal.right    = [ [ s:base01, s:base03 ], [ s:base06, s:base02 ] ]
-let s:p.inactive.right  = [ [ s:base01, s:base00 ] ]
-
-let s:p.normal.error    = [ [ s:base07, s:base08 ] ]
-let s:p.normal.warning  = [ [ s:base07, s:base09 ] ]
-
-let s:p.tabline.left    = [ [ s:base05, s:base02 ] ]
-let s:p.tabline.middle  = [ [ s:base05, s:base01 ] ]
-let s:p.tabline.right   = [ [ s:base05, s:base02 ] ]
-let s:p.tabline.tabsel  = [ [ s:base02, s:base0A ] ]
-
-let g:lightline#colorscheme#base16_default_dark#palette = lightline#colorscheme#flatten(s:p)
-
-let g:lightline = {
-    \ 'colorscheme': 'base16_default_dark',
-    \ 'active': {
-    \   'left': [ [ 'mode', 'paste' ],
-    \             [ 'gitbranch', 'readonly', 'filename' ] ]
-    \ },
-    \ 'component_function': {
-    \   'gitbranch': 'FugitiveHead'
-    \ },
-    \ }
-
 " Highlights
 
 
@@ -173,7 +113,7 @@ let g:lightline = {
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set termguicolors
 
-colorscheme base16-default-dark
+colorscheme onedark
 
 " Neovim LSP
 lua << EOF
