@@ -11,6 +11,8 @@ set shiftwidth=4
 set smartindent
 set expandtab
 
+set timeoutlen=700
+
 set nowrap
 set number relativenumber
 set foldcolumn=1
@@ -32,6 +34,9 @@ call plug#begin()
     Plug 'jiangmiao/auto-pairs'
     Plug 'tpope/vim-commentary'
     Plug 'tpope/vim-surround'
+
+    " Snippets
+    Plug 'hrsh7th/vim-vsnip'
 
     " Tmux
     Plug 'edkolev/tmuxline.vim'
@@ -61,7 +66,7 @@ call plug#begin()
     " Better UI
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
-    Plug 'Yggdroot/indentLine'
+    Plug 'liuchengxu/vim-which-key'
 
     " Git integration
     Plug 'tpope/vim-fugitive'
@@ -71,7 +76,7 @@ call plug#begin()
     Plug 'chriskempson/base16-vim'
 call plug#end()
 
-" Key Bindings
+" Mappings
 nnoremap <silent> <C-l> :bnext<CR>
 nnoremap <silent> <C-h> :bprevious<CR>
 
@@ -79,11 +84,12 @@ nnoremap <silent> <leader>ir :echo "Reloaded init.vim"<CR>:source $MYVIMRC<CR>
 
 nnoremap <silent> <leader>xh :nohl<CR>
 
-
 nnoremap <silent> <leader>c :Commentary<CR>
 vnoremap <silent> <leader>c :Commentary<CR>
 nnoremap <silent> <leader>g :Git<CR>
 nnoremap <silent> <leader>gp :Git push<CR>
+
+nnoremap <silent> <leader><leader> :WhichKey '<space>'<CR>
 
 nnoremap <silent> gd :lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> gD :lua vim.lsp.buf.declaration()<CR>
@@ -113,18 +119,21 @@ hi Comment cterm=italic gui=italic
 
 " Neovim LSP
 lua << EOF
--- TypeScript
-require'lspconfig'.tsserver.setup{}
--- Vim
-require'lspconfig'.vimls.setup{}
--- C/C++
-require'lspconfig'.clangd.setup{}
+local servers = {"tsserver", "clangd", "vimls"}
+for _, lsp in ipairs(servers) do
+    require'lspconfig'[lsp].setup {
+        capabilities = {
+            textDocument = {
+                completion = {
+                    completionItem = {
+                        snippetSupport = true
+                    }
+                }
+            }
+        }
+  }
+end
 EOF
-
-" Indent line
-let g:indentLine_setColors = 0
-let g:indentLine_char = '┊'
-let g:indentLine_color_term = 202
 
 " Auto close tag
 let g:closetag_filenames = '*.xml,*.html,*.xhtml,*.phtml,*.php'
