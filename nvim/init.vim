@@ -61,6 +61,8 @@ call plug#begin()
     " Better UI
     Plug 'liuchengxu/vim-which-key'
     Plug 'romgrk/barbar.nvim'
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
 
     " Git integration
     Plug 'tpope/vim-fugitive'
@@ -106,14 +108,15 @@ let g:gitgutter_sign_removed='◢'
 let g:gitgutter_sign_removed_first_line='◥'
 let g:gitgutter_sign_modified_removed='◢'
 
-" Highlights
-
-
 " Color Schemes
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set termguicolors
 
 colorscheme onedark
+
+" Airline
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
 
 " Neovim LSP
 lua << EOF
