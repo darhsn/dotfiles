@@ -18,7 +18,7 @@ set completeopt=menuone,noinsert,noselect
 set guicursor=
 
 let mapleader=" "
-set timeoutlen=700
+set timeoutlen=500
 set mouse=a
 
 " Plugins
