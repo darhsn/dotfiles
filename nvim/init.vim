@@ -171,6 +171,7 @@ augroup DARIO_GROUP
     autocmd BufWritePre *.js TSBufEnable javascript
     autocmd BufWritePre *.ts TSBufEnable typescript
     autocmd BufWritePre *.json TSBufEnable json
+    autocmd BufWritePre *.c TSBufEnable c
 
     " Autocompletition
     autocmd BufEnter * lua require'completion'.on_attach()
