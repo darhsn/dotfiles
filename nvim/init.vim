@@ -112,6 +112,12 @@ let g:gitgutter_sign_removed='◢'
 let g:gitgutter_sign_removed_first_line='◥'
 let g:gitgutter_sign_modified_removed='◢'
 
+" Netrw
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_winsize = 20
+
 " Color Schemes
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set termguicolors
