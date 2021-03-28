@@ -63,6 +63,7 @@ call plug#begin()
     Plug 'romgrk/barbar.nvim'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
+    Plug 'edkolev/tmuxline.vim'
     Plug 'preservim/tagbar'
 
     " Git integration
@@ -127,6 +128,14 @@ colorscheme onedark
 " Airline
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
+
+" Tmuxline
+let g:tmuxline_separators = {
+    \ 'left': '',
+    \ 'left_alt': ' ',
+    \ 'right' : '',
+    \ 'right_alt' : ' ',
+    \ 'space' : ' '}
 
 " Neovim LSP
 lua << EOF
