@@ -63,6 +63,7 @@ call plug#begin()
     Plug 'romgrk/barbar.nvim'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
+    Plug 'preservim/tagbar'
 
     " Git integration
     Plug 'tpope/vim-fugitive'
@@ -84,8 +85,11 @@ nnoremap <silent> <leader>xh :nohl<CR>
 
 nnoremap <silent> <leader>c :Commentary<CR>
 vnoremap <silent> <leader>c :Commentary<CR>
+
 nnoremap <silent> <leader>g :Git<CR>
 nnoremap <silent> <leader>gp :Git push<CR>
+
+nnoremap <silent> <leader>l :lua vim.lsp.buf.document_symbol()<CR>
 
 nnoremap <silent> <leader><leader> :WhichKey '<space>'<CR>
 
