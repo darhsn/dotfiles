@@ -63,8 +63,11 @@ call plug#begin()
     Plug 'romgrk/barbar.nvim'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
-    Plug 'edkolev/tmuxline.vim'
     Plug 'preservim/tagbar'
+
+    " Tmux integration
+    Plug 'edkolev/tmuxline.vim'
+    Plug 'preservim/vimux'
 
     " Git integration
     Plug 'tpope/vim-fugitive'
@@ -173,33 +176,33 @@ endfun
 
 " Autocommands
 augroup DARIO_GROUP
-    " Remove all autocommands
     autocmd!
-
-    " Enable emmet
-    autocmd FileType html,css EmmetInstall
 
     " Trim spaces
     autocmd BufWritePre * :call TrimWhitespace()
 
-    " Formatting
+    " Autocompletition
+    autocmd BufEnter * lua require'completion'.on_attach()
+augroup END
+
+augroup WEB_DEV
+    autocmd FileType html,css EmmetInstall
+    autocmd StdinReadPre * let s:std_in=1
+augroup END
+
+augroup FORMATTER
     autocmd BufWritePre *.js Neoformat
     autocmd BufWritePre *.ts Neoformat
     autocmd BufWritePre *.html Neoformat
     autocmd BufWritePre *.css Neoformat
     autocmd BufWritePre *.c Neoformat
     autocmd BufWritePre *.h Neoformat
+augroup END
 
-    " Better syntax highlighting
+augroup NVIM_TREESITTER
     autocmd BufWritePre *.js TSBufEnable javascript
     autocmd BufWritePre *.ts TSBufEnable typescript
     autocmd BufWritePre *.json TSBufEnable json
     autocmd BufWritePre *.c TSBufEnable c
     autocmd BufWritePre *.h TSBufEnable c
-
-    " Autocompletition
-    autocmd BufEnter * lua require'completion'.on_attach()
-
-    " xml/html autoclose tag
-    autocmd StdinReadPre * let s:std_in=1
 augroup END
