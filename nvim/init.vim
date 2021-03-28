@@ -94,6 +94,8 @@ nnoremap <silent> <leader>l :lua vim.lsp.buf.document_symbol()<CR>
 
 nnoremap <silent> <leader><leader> :WhichKey '<space>'<CR>
 
+nnoremap <silent> <leader>t :TagbarToggle<CR>
+
 nnoremap <silent> gd :lua vim.lsp.buf.definition()<CR>
 
 nnoremap <silent> <leader>ft :retab<CR>
@@ -185,13 +187,13 @@ augroup DARIO_GROUP
     autocmd BufWritePre *.ts Neoformat
     autocmd BufWritePre *.html Neoformat
     autocmd BufWritePre *.css Neoformat
-    autocmd BufWritePre *.c Neoformat
+    autocmd BufWritePre *.c *.h Neoformat
 
     " Better syntax highlighting
     autocmd BufWritePre *.js TSBufEnable javascript
     autocmd BufWritePre *.ts TSBufEnable typescript
     autocmd BufWritePre *.json TSBufEnable json
-    autocmd BufWritePre *.c TSBufEnable c
+    autocmd BufWritePre *.c *.h TSBufEnable c
 
     " Autocompletition
     autocmd BufEnter * lua require'completion'.on_attach()
