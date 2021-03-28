@@ -175,7 +175,7 @@ fun! TrimWhitespace()
 endfun
 
 fun! GitPush()
-    VimuxRunCommand "clear && git push && exit"
+    VimuxRunCommand "clear; git push; exit"
 endfun
 
 " Autocommands
