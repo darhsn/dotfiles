@@ -174,8 +174,8 @@ fun! TrimWhitespace()
     call winrestview(l:save)
 endfun
 
-fun! GitPull()
-    VimuxRunCommand "clear && git pull && exit"
+fun! GitPush()
+    VimuxRunCommand "clear && git push && exit"
 endfun
 
 " Autocommands
