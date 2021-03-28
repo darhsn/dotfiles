@@ -187,13 +187,15 @@ augroup DARIO_GROUP
     autocmd BufWritePre *.ts Neoformat
     autocmd BufWritePre *.html Neoformat
     autocmd BufWritePre *.css Neoformat
-    autocmd BufWritePre *.c *.h Neoformat
+    autocmd BufWritePre *.c Neoformat
+    autocmd BufWritePre *.h Neoformat
 
     " Better syntax highlighting
     autocmd BufWritePre *.js TSBufEnable javascript
     autocmd BufWritePre *.ts TSBufEnable typescript
     autocmd BufWritePre *.json TSBufEnable json
-    autocmd BufWritePre *.c *.h TSBufEnable c
+    autocmd BufWritePre *.c TSBufEnable c
+    autocmd BufWritePre *.h TSBufEnable c
 
     " Autocompletition
     autocmd BufEnter * lua require'completion'.on_attach()
