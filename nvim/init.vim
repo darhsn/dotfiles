@@ -174,6 +174,10 @@ fun! TrimWhitespace()
     call winrestview(l:save)
 endfun
 
+fun! GitPull()
+    VimuxRunCommand "clear && git pull && exit"
+endfun
+
 " Autocommands
 augroup DARIO_GROUP
     autocmd!
