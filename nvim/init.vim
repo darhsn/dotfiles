@@ -185,6 +185,7 @@ augroup DARIO_GROUP
     autocmd BufWritePre *.ts Neoformat
     autocmd BufWritePre *.html Neoformat
     autocmd BufWritePre *.css Neoformat
+    autocmd BufWritePre *.c Neoformat
 
     " Better syntax highlighting
     autocmd BufWritePre *.js TSBufEnable javascript
