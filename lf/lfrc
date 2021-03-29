@@ -1,0 +1,8 @@
+cmd mkfile ${{
+  printf "File to create: "
+  read ans
+  touch $ans
+}}
+
+map x $rm -rf $f
+map t mkfile
