@@ -90,6 +90,9 @@ nnoremap <silent> <leader>xh :nohl<CR>
 nnoremap <silent> <leader>c :Commentary<CR>
 vnoremap <silent> <leader>c :Commentary<CR>
 
+inoremap <silent> <C-j> <C-n>
+inoremap <silent> <C-k> <C-p>
+
 nnoremap <silent> <leader>g :Git<CR>
 nnoremap <silent> <leader>gp :call GitPush()<CR>
 
