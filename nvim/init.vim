@@ -33,9 +33,6 @@ call plug#begin()
     Plug 'tpope/vim-commentary'
     Plug 'tpope/vim-surround'
 
-    " Org mode in vim
-    Plug 'jceb/vim-orgmode'
-
     " Snippets
     Plug 'hrsh7th/vim-vsnip'
 
