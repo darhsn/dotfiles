@@ -150,4 +150,4 @@ configuration {
 /*	me-accept-entry: "MouseDPrimary";*/
 /*	me-accept-custom: "Control+MouseDPrimary";*/
 }
-@import "/home/dario/Code/dotfiles/rofi/onedark.rasi"
+@import "/home/dario/Code/dotfiles/rofi/base16-default-dark.rasi"
