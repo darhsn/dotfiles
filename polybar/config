@@ -1,14 +1,15 @@
 [colors]
-background = #282C34
-foreground = #ABB2BF
-muted = #585858
-urgent = #E06C75
-primary = #61AFEF
+background = #1d2021
+foreground = #fbf1c7
+background-alt = #ff4d4d
+muted = #928374
+urgent = #cc241d
+accent = #32302f
 
 [template]
 width = 100%
 height = 25
-fixed-center = true
+fixed-center = false
 override-redirect = false
 wm-restack = i3
 background = ${colors.background}
@@ -21,15 +22,14 @@ module-margin-left = 1
 module-margin-right = 1
 ; scroll-up = i3wm-wsnext
 ; scroll-down = i3wm-wsprev
-font-0 = "Mononoki Nerd Font:pixelsize=11"
-font-1 = "Mononoki Nerd Font:pixelsize=11"
-font-2 = "Mononoki Nerd Font:pixelsize=11"
+font-0 = "Fira Code Nerd Font:pixelsize=12"
+font-1 = "Fira Code Nerd Font:pixelsize=12"
+font-2 = "Fira Code Nerd Font:pixelsize=12"
 
 [bar/primary]
 inherit = template
 monitor = LVDS1
-modules-right = pulseaudio keyboard wlan battery
-modules-center = time
+modules-right = pulseaudio keyboard wlan battery time
 modules-left = i3
 
 [bar/secondary]
@@ -43,7 +43,7 @@ type = internal/xkeyboard
 blacklist-0 = num lock
 blacklist-1 = scroll lock
 format =  <label-indicator><label-layout>
-label-indicator = %{F#ab4642}
+label-indicator = %{F#ff4d4d}
 label-layout =   %layout%
 
 [module/wlan]
@@ -58,7 +58,7 @@ label-disconnected = no conn
 [module/time]
 type = internal/date
 interval = 5
-date =   %d/%m %I:%M %p
+date =  %I:%M%p
 
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -77,14 +77,34 @@ type = internal/battery
 battery = BAT0
 adapter = AC0
 full-at = 98
-format-charging = %{F#E5C07B} <label-charging>
+format-charging = <animation-charging> <label-charging>
 format-discharging = <ramp-capacity>  <label-discharging>
-format-full = %{F#E5C07B} <label-full>
-ramp-capacity-0 = %{F#E06C75}
-ramp-capacity-1 = %{F#86c1b9}
+format-full = %{F#c4c400} <label-full>
+ramp-capacity-0 = %{F#ff1a1a}
+ramp-capacity-1 = %{F#ffcc00}
 ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
+animation-charging-framerate = 41
+animation-charging-0 = %{F#dfdfdf}
+animation-charging-1 = %{F#dcdcc6}
+animation-charging-2 = %{F#d9d9ad}
+animation-charging-3 = %{F#d6d695}
+animation-charging-4 = %{F#d3d37c}
+animation-charging-5 = %{F#d0d063}
+animation-charging-6 = %{F#cdcd4a}
+animation-charging-7 = %{F#caca32}
+animation-charging-8 = %{F#c7c719}
+animation-charging-9 = %{F#c4c400}
+animation-charging-10 = %{F#c7c719}
+animation-charging-11 = %{F#caca32}
+animation-charging-12 = %{F#cdcd4a}
+animation-charging-13 = %{F#d0d063}
+animation-charging-14 = %{F#d3d37c}
+animation-charging-15 = %{F#d6d695}
+animation-charging-16 = %{F#d9d9ad}
+animation-charging-17 = %{F#dcdcc6}
+animation-charging-18 = %{F#dfdfdf}
 
 [module/i3]
 type = internal/i3
@@ -93,12 +113,12 @@ pin-workspaces = true
 format = <label-state> <label-mode>
 label-mode = %mode%
 label-mode-padding = 1.5
-label-mode-background = ${colors.background}
-label-mode-foreground = ${colors.urgent}
+label-mode-background = ${colors.urgent}
+label-mode-foreground = ${colors.foreground}
 label-focused-font = 1.5
 label-focused = %index%
-label-focused-foreground = ${colors.primary}
-label-focused-background = ${colors.background}
+label-focused-foreground = ${colors.foreground}
+label-focused-background = ${colors.accent}
 label-focused-padding = 1.5
 label-unfocused-font = 1.5
 label-unfocused = %index%
@@ -112,11 +132,12 @@ label-visible-foreground = ${colors.foreground}
 label-visible-background = #444444
 label-urgent-font = 1.5
 label-urgent = %index%
-label-urgent-foreground = ${colors.urgent}
-label-urgent-background = ${colors.background}
+label-urgent-foreground = ${colors.foreground}
+label-urgent-background = ${colors.urgent}
 label-urgent-padding = 1.5
 
 [settings]
 screenchange-reload = true
 
-# vim: ft=dosini
+; vim: ft=dosini
+
