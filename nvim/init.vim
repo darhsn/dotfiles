@@ -75,7 +75,7 @@ call plug#begin()
 
     " Color Schemes
     Plug 'joshdick/onedark.vim'
-    Plug 'morhetz/gruvbox'
+    Plug 'chriskempson/base16-vim'
 call plug#end()
 
 " Mappings
@@ -116,11 +116,11 @@ nnoremap <M-l> :vertical resize +2<CR>
 nnoremap <M-h> :vertical resize -2<CR>
 
 " Git Gutter
-let g:gitgutter_sign_added='┃'
-let g:gitgutter_sign_modified='┃'
-let g:gitgutter_sign_removed='◢'
-let g:gitgutter_sign_removed_first_line='◥'
-let g:gitgutter_sign_modified_removed='◢'
+" let g:gitgutter_sign_added='┃'
+" let g:gitgutter_sign_modified='┃'
+" let g:gitgutter_sign_removed='◢'
+" let g:gitgutter_sign_removed_first_line='◥'
+" let g:gitgutter_sign_modified_removed='◢'
 
 " Netrw
 let g:netrw_banner = 0
@@ -133,7 +133,7 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set termguicolors
 
 " colorscheme onedark
-colorscheme gruvbox
+colorscheme base16-default-dark
 
 " Airline
 let g:airline_left_sep = ''
