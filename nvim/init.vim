@@ -75,6 +75,7 @@ call plug#begin()
 
     " Color Schemes
     Plug 'joshdick/onedark.vim'
+    Plug 'morhetz/gruvbox'
 call plug#end()
 
 " Mappings
@@ -131,7 +132,8 @@ let g:netrw_winsize = 20
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set termguicolors
 
-colorscheme onedark
+" colorscheme onedark
+colorscheme gruvbox
 
 " Airline
 let g:airline_left_sep = ''
