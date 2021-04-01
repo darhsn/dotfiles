@@ -33,9 +33,6 @@ call plug#begin()
     Plug 'tpope/vim-commentary'
     Plug 'tpope/vim-surround'
 
-    " Snippets
-    Plug 'hrsh7th/vim-vsnip'
-
     " Autocompletition
     Plug 'nvim-lua/completion-nvim'
 
@@ -57,6 +54,9 @@ call plug#begin()
 
     " Neovim LSP
     Plug 'neovim/nvim-lspconfig'
+
+    " Vim wiki
+    Plug 'vimwiki/vimwiki'
 
     " Better UI
     Plug 'liuchengxu/vim-which-key'
