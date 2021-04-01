@@ -11,7 +11,7 @@ yay -S neovim-git
 
 ## Screenshots
 ### Gruvbox
-[gruvbox screenshot](./screenshots/gruvbox_browser.png)
-[gruvbox screenshot](./screenshots/gruvbox_rofi.png)
-[gruvbox screenshot](./screenshots/gruvbox_wallpaper.png)
-[gruvbox screenshot](./screenshots/gruvbox_terminal.png)
+![gruvbox screenshot](./screenshots/gruvbox_browser.png)
+![gruvbox screenshot](./screenshots/gruvbox_rofi.png)
+![gruvbox screenshot](./screenshots/gruvbox_wallpaper.png)
+![gruvbox screenshot](./screenshots/gruvbox_terminal.png)
