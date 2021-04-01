@@ -76,6 +76,7 @@ call plug#begin()
     " Color Schemes
     Plug 'joshdick/onedark.vim'
     Plug 'chriskempson/base16-vim'
+    Plug 'morhetz/gruvbox'
 call plug#end()
 
 " Mappings
@@ -133,7 +134,10 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set termguicolors
 
 " colorscheme onedark
-colorscheme base16-default-dark
+" colorscheme base16-default-dark
+let g:gruvbox_contrast_dark = "hard"
+let g:gruvbox_italic = 1
+colorscheme gruvbox
 
 " Airline
 let g:airline_left_sep = ''
