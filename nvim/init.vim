@@ -116,11 +116,11 @@ nnoremap <M-l> :vertical resize +2<CR>
 nnoremap <M-h> :vertical resize -2<CR>
 
 " Git Gutter
-" let g:gitgutter_sign_added='┃'
-" let g:gitgutter_sign_modified='┃'
-" let g:gitgutter_sign_removed='◢'
-" let g:gitgutter_sign_removed_first_line='◥'
-" let g:gitgutter_sign_modified_removed='◢'
+let g:gitgutter_sign_added='┃'
+let g:gitgutter_sign_modified='┃'
+let g:gitgutter_sign_removed='◢'
+let g:gitgutter_sign_removed_first_line='◥'
+let g:gitgutter_sign_modified_removed='◢'
 
 " Netrw
 let g:netrw_banner = 0
@@ -149,7 +149,7 @@ let g:tmuxline_separators = {
 
 " Neovim LSP
 lua << EOF
-local servers = {"tsserver", "clangd", "vimls"}
+local servers = {"tsserver", "clangd", "vimls", "gopls"}
 for _, lsp in ipairs(servers) do
     require'lspconfig'[lsp].setup {
         capabilities = {
