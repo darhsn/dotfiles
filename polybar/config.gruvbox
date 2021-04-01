@@ -20,23 +20,23 @@ margin-top = 0
 margin-bottom = 0
 module-margin-left = 1
 module-margin-right = 1
-; scroll-up = i3wm-wsnext
-; scroll-down = i3wm-wsprev
-font-0 = "Fira Code Nerd Font:pixelsize=12"
-font-1 = "Fira Code Nerd Font:pixelsize=12"
-font-2 = "Fira Code Nerd Font:pixelsize=12"
+font-0 = "mononoki Code Nerd Font Mono:pixelsize=12"
+font-1 = "mononoki Code Nerd Font Mono:pixelsize=12"
+font-2 = "mononoki Code Nerd Font Mono:pixelsize=12"
 
 [bar/primary]
 inherit = template
 monitor = LVDS1
-modules-right = pulseaudio keyboard wlan battery time
 modules-left = i3
+modules-center = time
+modules-right = pulseaudio keyboard wlan battery
 
 [bar/secondary]
 inherit = template
 monitor = VGA1
 modules-left = i3
-modules-right = pulseaudio keyboard wlan battery time
+modules-center = time
+modules-right = pulseaudio keyboard wlan battery
 
 [module/keyboard]
 type = internal/xkeyboard
