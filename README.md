@@ -14,6 +14,8 @@ yay -S neovim-git
 ```
 
 ## Screenshots
+### Recommended font
+![font](https://localfonts.eu/wp-content/uploads/2019/07/Mononoki_950x475_11.png)
 ### Gruvbox
 ![gruvbox screenshot](./screenshots/gruvbox_browser.png)
 ![gruvbox screenshot](./screenshots/gruvbox_rofi.png)

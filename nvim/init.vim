@@ -169,6 +169,20 @@ for _, lsp in ipairs(servers) do
 end
 EOF
 
+" Telescope
+lua << EOF
+local actions = require('telescope.actions')
+require('telescope').setup{
+    defaults = {
+        mappings = {
+            i = {
+                ["<esc>"] = actions.close
+            },
+        },
+    }
+}
+EOF
+
 " Auto close tag
 let g:closetag_filenames = '*.xml,*.html,*.xhtml,*.phtml,*.php'
 filetype plugin indent on
