@@ -5,6 +5,7 @@ background-alt = #BF616A
 muted = #4C566A
 urgent = #cc241d
 accent = #434C5E
+primary = "#5E81AC"
 
 [template]
 width = 100%
@@ -20,17 +21,16 @@ margin-top = 0
 margin-bottom = 0
 module-margin-left = 1
 module-margin-right = 1
-; scroll-up = i3wm-wsnext
-; scroll-down = i3wm-wsprev
-font-0 = "Fira Code Nerd Font:pixelsize=12"
-font-1 = "Fira Code Nerd Font:pixelsize=12"
-font-2 = "Fira Code Nerd Font:pixelsize=12"
+font-0 = "Mononoki Nerd Font:pixelsize=11"
+font-1 = "Mononoki Nerd Font:pixelsize=11"
+font-2 = "Mononoki Nerd Font:pixelsize=11"
 
 [bar/primary]
 inherit = template
 monitor = LVDS1
-modules-right = pulseaudio keyboard wlan battery time
 modules-left = i3
+modules-center = time
+modules-right = pulseaudio keyboard wlan battery
 
 [bar/secondary]
 inherit = template
@@ -117,8 +117,8 @@ label-mode-background = ${colors.urgent}
 label-mode-foreground = ${colors.foreground}
 label-focused-font = 1.5
 label-focused = %index%
-label-focused-foreground = ${colors.foreground}
-label-focused-background = ${colors.accent}
+label-focused-foreground = ${colors.primary}
+label-focused-background = ${colors.background}
 label-focused-padding = 1.5
 label-unfocused-font = 1.5
 label-unfocused = %index%
