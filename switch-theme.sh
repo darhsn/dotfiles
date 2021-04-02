@@ -10,7 +10,7 @@ switch-theme() {
     elif [ "${1}" == "gruvbox" ]; then
         cd $DOTFILES_DIR
         cp polybar/gruvbox-config polybar/config
-        cp rofi/gruvbox-config.rasi rofi/theme.rasi
+        cp rofi/gruvbox.rasi rofi/theme.rasi
         cp dunst/gruvbox-dunstrc dunst/dunstrc
         cd ..
         echo "switch-theme: changed theme to gruvbox, wallpaper and vim theme should be changed manually"
