@@ -5,7 +5,10 @@ My personal dotfiles
 Packages to install:
 ```sh
 git clone http://github.com/darioisthebest/dotfiles
-sudo pacman -S kitty polybar i3-gaps rofi nitrogen picom pfetch lf dunst brave
+# recommended programs
+sudo pacman -S kitty polybar i3-gaps rofi nitrogen picom pfetch lf dunst brave doas
+# change theme
+. ./switch-theme.sh gruvbox | base16 | nord | onedark
 yay -S neovim-git
 ```
 
