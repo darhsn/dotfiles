@@ -21,3 +21,8 @@ yay -S neovim-git
 ![gruvbox screenshot](./screenshots/gruvbox_rofi.png)
 ![gruvbox screenshot](./screenshots/gruvbox_wallpaper.png)
 ![gruvbox screenshot](./screenshots/gruvbox_terminal.png)
+### Onedark
+![onedark screenshot](./screenshots/onedark_browser.png)
+![onedark screenshot](./screenshots/onedark_rofi.png)
+![onedark screenshot](./screenshots/onedark_wallpaper.png)
+![onedark screenshot](./screenshots/onedark_terminal.png)

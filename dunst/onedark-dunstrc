@@ -188,15 +188,15 @@ background = "#282C34"
 timeout = 4
 
 [urgency_normal]
-frame_color = "#98C379"
-foreground = "#98C379"
-background = "#282C34"
+frame_color = "#98971a"
+foreground = "#98971a"
+background = "#1d2021"
 #background = "#2B313C"
 timeout = 6
 
 [urgency_critical]
-frame_color = "#E06C75"
-foreground = "#E06C75"
-background = "#282C34"
+frame_color = "#cc241d"
+foreground = "#cc241d"
+background = "#1d2021"
 #background = "#2B313C"
 timeout = 8

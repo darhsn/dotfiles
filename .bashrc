@@ -6,6 +6,7 @@ fi
 
 clear
 pfetch
+# fortune | cowsay | lolcat -p 1
 source ~/.aliasrc
 
 RED="\[\033[31m\]"
