@@ -40,4 +40,5 @@ switch-theme() {
         cd ..
         echo "switch-theme: changed theme to base16, wallpaper and vim theme should be changed manually"
     fi
+
 }
