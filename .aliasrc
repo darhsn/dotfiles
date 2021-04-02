@@ -25,4 +25,7 @@ alias code="c ~/Code"
 alias dotfiles="c ~/Code/dotfiles/"
 alias scripts="c ~/Code/Scripts"
 
+alias rxmon="xrandr --output VGA1 --auto --right-of LVDS1"
+alias rxmon_off="xrandr --output VGA1 --off"
+
 # vim: ft=sh
