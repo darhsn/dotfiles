@@ -28,3 +28,7 @@ yay -S neovim-git
 ![onedark screenshot](./screenshots/onedark_wallpaper.png)
 ![onedark screenshot](./screenshots/onedark_terminal.png)
 ### Nord
+![nord screenshot](./screenshots/nord_browser.png)
+![nord screenshot](./screenshots/nord_rofi.png)
+![nord screenshot](./screenshots/nord_wallpaper.png)
+![nord screenshot](./screenshots/nord_terminal.png)
