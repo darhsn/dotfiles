@@ -21,6 +21,8 @@ let mapleader=" "
 set timeoutlen=400
 set mouse=a
 
+let g:colorscheme="gruvbox"
+
 " Plugins
 call plug#begin()
     " Web dev
@@ -77,6 +79,7 @@ call plug#begin()
     Plug 'joshdick/onedark.vim'
     Plug 'chriskempson/base16-vim'
     Plug 'morhetz/gruvbox'
+    Plug 'arcticicestudio/nord-vim'
 call plug#end()
 
 " Mappings
@@ -133,11 +136,21 @@ let g:netrw_winsize = 20
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set termguicolors
 
-" colorscheme onedark
-" colorscheme base16-default-dark
-let g:gruvbox_contrast_dark = "hard"
-let g:gruvbox_italic = 1
-colorscheme gruvbox
+if g:colorscheme == "gruvbox"
+    let g:gruvbox_contrast_dark = "hard"
+    let g:gruvbox_italic = 1
+    colorscheme gruvbox
+elseif g:colorscheme == "base16"
+     colorscheme base16-default-dark
+    hi Comment cterm=italic
+elseif g:colorscheme == "nord"
+    let g:nord_italic = 1
+    let g:nord_italic_comments = 1
+    colorscheme nord
+elseif g:colorscheme == "onedark"
+    let g:onedark_terminal_italics = 1
+    colorscheme onedark
+endif
 
 " Airline
 let g:airline_left_sep = ''
