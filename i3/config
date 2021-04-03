@@ -184,3 +184,4 @@ gaps outer 5
 exec polybar primary
 exec --no-startup-id compton
 exec --no-startup-id nitrogen --restore
+exec --no-startup-id pulseaudio
