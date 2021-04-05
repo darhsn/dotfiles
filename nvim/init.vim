@@ -80,6 +80,7 @@ call plug#begin()
     Plug 'chriskempson/base16-vim'
     Plug 'morhetz/gruvbox'
     Plug 'arcticicestudio/nord-vim'
+    Plug 'dtinth/vim-colors-dtinth256'
 call plug#end()
 
 " Mappings
@@ -189,7 +190,8 @@ require('telescope').setup{
     defaults = {
         mappings = {
             i = {
-                ["<esc>"] = actions.close
+                ["<esc>"] = actions.close,
+                [ "<C-q>" ] = actions.send_to_qflist
             },
         },
     }
