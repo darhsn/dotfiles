@@ -63,6 +63,7 @@ call plug#begin()
     " Better UI
     Plug 'liuchengxu/vim-which-key'
     Plug 'romgrk/barbar.nvim'
+    Plug 'kyazdani42/nvim-web-devicons'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'preservim/tagbar'
