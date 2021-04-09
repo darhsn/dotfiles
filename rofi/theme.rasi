@@ -1,137 +1,99 @@
-/**
- * Nordic rofi theme
- * Adapted by undiabler <undiabler@gmail.com>
+/*
+ * ROFI One Dark
  *
- * Nord Color palette imported from https://www.nordtheme.com/
+ * Based on OneDark.vim (https://github.com/joshdick/onedark.vim)
+ *
+ * Author: Benjamin Stauss
+ * User: me-benni
  *
  */
 
-configuration {
-
-	font: "Mononoki Nerd Font 12";
-	width: 30;
-	line-margin: 10;
-	lines: 6;
-	columns: 2;
-
-    display-ssh:    " ";
-    display-run:    " ";
-    display-drun:   " ";
-    display-window: " ";
-    display-combi:  " ";
-    show-icons:     true;
-}
 
 * {
-	nord0: #2e3440;
-	nord1: #3b4252;
-	nord2: #434c5e;
-	nord3: #4c566a;
+  black:      #000000;
+  red:        #eb6e67;
+  green:      #95ee8f;
+  yellow:     #f8c456;
+  blue:       #6eaafb;
+  mangenta:   #d886f3;
+  cyan:       #6cdcf7;
+  emphasis:   #50536b;
+  text:       #dfdfdf;
+  text-alt:   #b2b2b2;
+  fg:         #abb2bf;
+  bg:         #282c34;
 
-	nord4: #d8dee9;
-	nord5: #e5e9f0;
-	nord6: #eceff4;
+  spacing: 0;
+  background-color: transparent;
 
-	nord7: #8fbcbb;
-	nord8: #88c0d0;
-	nord9: #81a1c1;
-	nord10: #5e81ac;
-	nord11: #bf616a;
-
-	nord12: #d08770;
-	nord13: #ebcb8b;
-	nord14: #a3be8c;
-	nord15: #b48ead;
-
-    foreground:  @nord9;
-    backlight:   #ccffeedd;
-    background-color:  transparent;
-
-    highlight:     underline bold #eceff4;
-
-    transparent: rgba(46,52,64,0);
+  text-color: @text;
 }
 
 window {
-    location: center;
-    anchor:   center;
-    transparency: "screenshot";
-    padding: 10px;
-    border:  0px;
-    border-radius: 6px;
-
-    background-color: @transparent;
-    spacing: 0;
-    children:  [mainbox];
-    orientation: horizontal;
+  transparency: "real";
+  fullscreen: true;
+  background-color: #282c34dd;
 }
 
 mainbox {
-    spacing: 0;
-    children: [ inputbar, message, listview ];
-}
-
-message {
-    color: @nord0;
-    padding: 5;
-    border-color: @foreground;
-    border:  0px 2px 2px 2px;
-    background-color: @nord7;
+  padding: 30% 30%;
 }
 
 inputbar {
-    color: @nord6;
-    padding: 11px;
-    background-color: #3b4252;
-
-    border: 1px;
-    border-radius:  6px 6px 0px 0px;
-    border-color: @nord10;
-}
-
-entry, prompt, case-indicator {
-    text-font: inherit;
-    text-color:inherit;
+  margin: 0px 0px 20px 0px;
+  children: [prompt, textbox-prompt-colon, entry, case-indicator];
 }
 
 prompt {
-    margin: 0px 0.3em 0em 0em ;
+  text-color: @blue;
+}
+
+textbox-prompt-colon {
+  expand: false;
+  str: ":";
+  text-color: @text-alt;
+}
+
+entry {
+  margin: 0px 10px;
 }
 
 listview {
-    padding: 8px;
-    border-radius: 0px 0px 6px 6px;
-    border-color: @nord10;
-    border: 0px 1px 1px 1px;
-    background-color: rgba(46,52,64,0.9);
-    dynamic: false;
+  spacing: 5px;
+  dynamic: true;
+  scrollbar: false;
 }
 
 element {
-    padding: 3px;
-    vertical-align: 0.5;
-    border-radius: 4px;
-    background-color: transparent;
-    color: @foreground;
-    text-color: rgb(216, 222, 233);
+  padding: 5px;
+  text-color: @text-alt;
+  highlight: bold #95ee8f; /* green */
+  border-radius: 3px;
 }
 
-element selected.normal {
-	background-color: @nord7;
-	text-color: #2e3440;
+element selected {
+  background-color: @emphasis;
+  text-color: @text;
 }
 
-button {
-    padding: 6px;
-    color: @foreground;
-    horizontal-align: 0.5;
-
-    border: 2px 0px 2px 2px;
-    border-radius: 4px 0px 0px 4px;
-    border-color: @foreground;
+element urgent, element selected urgent {
+  text-color: @red;
 }
 
-button selected normal {
-    border: 2px 0px 2px 2px;
-    border-color: @foreground;
+element active, element selected active {
+  text-color: @purple;
+}
+
+message {
+  padding: 5px;
+  border-radius: 3px;
+  background-color: @emphasis;
+  border: 1px;
+  border-color: @cyan;
+}
+
+button selected {
+  padding: 5px;
+  border-radius: 3px;
+  background-color: @emphasis;
 }
