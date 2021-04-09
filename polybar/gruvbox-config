@@ -12,7 +12,6 @@ width = 100%
 height = 25
 fixed-center = true
 override-redirect = false
-wm-restack = i3
 background = ${colors.background}
 foreground = ${colors.foreground}
 padding-left = 0
@@ -28,14 +27,14 @@ font-2 = "Mononoki Nerd Font:pixelsize=11"
 [bar/primary]
 inherit = template
 monitor = LVDS1
-modules-left = i3
+modules-left = workspaces
 modules-center = time
 modules-right = pulseaudio keyboard wlan battery
 
 [bar/secondary]
 inherit = template
 monitor = VGA1
-modules-left = i3
+modules-left = workspaces
 modules-center = time
 modules-right = pulseaudio keyboard wlan battery
 
@@ -86,6 +85,22 @@ ramp-capacity-1 = %{F#ffcc00}
 ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
+
+[module/workspaces]
+type = internal/xworkspaces
+pin-workspaces = false
+enable-click = true
+enable-scroll = true
+label-active = %icon% %name% %icon%
+label-active-foreground = ${colors.primary}
+label-active-background = ${colors.background}
+label-occupied = %icon% %name% %icon%
+label-occupied-foreground = ${colors.foreground}
+label-urgent = %icon% %name% %icon%
+label-urgent-foreground = ${colors.urgent}
+label-urgent-background = ${colors.background}
+label-empty = %icon% %name% %icon%
+label-empty-foreground = ${colors.muted}
 
 [module/i3]
 type = internal/i3
