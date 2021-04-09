@@ -46,6 +46,9 @@ There are several screenshots available in the `screenshots` folder
 ### Base16
 ![base16](./screenshots/base16.png)
 
+## Gtk theme
+You need to install lxappearance and the gruvbox-gtk and arc-gtk themes
+
 ## Set up firefox
 Extensions that I use:
  - uBlock Origin
