@@ -85,8 +85,8 @@ call plug#begin()
 call plug#end()
 
 " Mappings
-nnoremap <silent> <C-h> :bprevious<CR>
-nnoremap <silent> <C-l> :bnext<CR>
+nnoremap <silent> <C-h> :BufferPrevious<CR>
+nnoremap <silent> <C-l> :BufferNext<CR>
 
 nnoremap <silent> <leader>r :echo "Reloaded init.vim"<CR>:source $MYVIMRC<CR>
 
