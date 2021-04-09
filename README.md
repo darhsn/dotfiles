@@ -12,9 +12,7 @@ yay -S neovim-git lf pfetch pulseaudio-ctl
 . ./switch-theme.sh
 switch-theme gruvbox | base16 | nord | onedark
 ```
-
-## Screenshots
-### Recommended font
+## Recommended font
 Download [here](https://github.com/ryanoasis/nerd-fonts/releases) (nerd fonts)
 ```sh
 # Install mononoki
@@ -25,19 +23,6 @@ sudo mv *.ttf /usr/share/fonts
 sudo fc-cache -fv
 ```
 ![font](https://localfonts.eu/wp-content/uploads/2019/07/Mononoki_950x475_11.png)
-### Gruvbox
-![gruvbox screenshot](./screenshots/gruvbox_browser.png)
-![gruvbox screenshot](./screenshots/gruvbox_rofi.png)
-![gruvbox screenshot](./screenshots/gruvbox_wallpaper.png)
-![gruvbox screenshot](./screenshots/gruvbox_terminal.png)
-### Base 16
-### Onedark
-![onedark screenshot](./screenshots/onedark_browser.png)
-![onedark screenshot](./screenshots/onedark_rofi.png)
-![onedark screenshot](./screenshots/onedark_wallpaper.png)
-![onedark screenshot](./screenshots/onedark_terminal.png)
-### Nord
-![nord screenshot](./screenshots/nord_browser.png)
-![nord screenshot](./screenshots/nord_rofi.png)
-![nord screenshot](./screenshots/nord_wallpaper.png)
-![nord screenshot](./screenshots/nord_terminal.png)
+
+## Screenshots
+There are several screenshots available in the `screenshots` folder
