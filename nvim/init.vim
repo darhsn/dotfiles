@@ -21,7 +21,7 @@ let mapleader=" "
 set timeoutlen=400
 set mouse=a
 
-let g:colorscheme="base16"
+let g:colorscheme="nord"
 
 " Plugins
 call plug#begin()

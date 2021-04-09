@@ -1,14 +1,16 @@
 [colors]
-background = #181818
-foreground = #d8d8d8
-muted = #585858
-urgent = #ab4642
-primary = #7cafc2
+background = #2E3440
+foreground = #E5E9F0
+background-alt = #BF616A
+muted = #4C566A
+urgent = #cc241d
+accent = #434C5E
+primary = "#5E81AC"
 
 [template]
 width = 100%
 height = 25
-fixed-center = true
+fixed-center = false
 override-redirect = false
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -32,7 +34,7 @@ modules-right = pulseaudio keyboard wlan battery
 [bar/secondary]
 inherit = template
 monitor = VGA1
-modules-left = workspaces
+modules-left = i3
 modules-right = pulseaudio keyboard wlan battery time
 
 [module/keyboard]
@@ -40,7 +42,7 @@ type = internal/xkeyboard
 blacklist-0 = num lock
 blacklist-1 = scroll lock
 format =  <label-indicator><label-layout>
-label-indicator = %{F#ab4642}
+label-indicator = %{F#BF616A}
 label-layout =   %layout%
 
 [module/wlan]
@@ -55,7 +57,7 @@ label-disconnected = no conn
 [module/time]
 type = internal/date
 interval = 5
-date =   %I:%M %p
+date =  %I:%M%p
 
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -74,11 +76,11 @@ type = internal/battery
 battery = BAT0
 adapter = AC0
 full-at = 98
-format-charging = %{F#f7ca88} <label-charging>
+format-charging = %{F#EBCB8B} <label-charging>
 format-discharging = <ramp-capacity>  <label-discharging>
-format-full = %{F#f7ca88} <label-full>
-ramp-capacity-0 = %{F#ab4642}
-ramp-capacity-1 = %{F#86c1b9}
+format-full = %{F#EBCB8B} <label-full>
+ramp-capacity-0 = %{F#BF616A}
+ramp-capacity-1 = %{F#EBCB8B}
 ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
@@ -99,6 +101,7 @@ label-urgent-background = ${colors.background}
 label-empty = %icon% %name% %icon%
 label-empty-foreground = ${colors.muted}
 
+
 [module/i3]
 type = internal/i3
 wrapping-scroll = false
@@ -106,8 +109,8 @@ pin-workspaces = true
 format = <label-state> <label-mode>
 label-mode = %mode%
 label-mode-padding = 1.5
-label-mode-background = ${colors.background}
-label-mode-foreground = ${colors.urgent}
+label-mode-background = ${colors.urgent}
+label-mode-foreground = ${colors.foreground}
 label-focused-font = 1.5
 label-focused = %index%
 label-focused-foreground = ${colors.primary}
@@ -125,8 +128,8 @@ label-visible-foreground = ${colors.foreground}
 label-visible-background = ${colors.background}
 label-urgent-font = 1.5
 label-urgent = %index%
-label-urgent-foreground = ${colors.urgent}
-label-urgent-background = ${colors.background}
+label-urgent-foreground = ${colors.foreground}
+label-urgent-background = ${colors.urgent}
 label-urgent-padding = 1.5
 
 [settings]
