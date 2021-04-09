@@ -7,14 +7,15 @@ Packages to install:
 git clone http://github.com/darioisthebest/dotfiles
 # recommended programs
 sudo pacman -S kitty polybar i3-gaps rofi nitrogen picom dunst
+yay -S neovim-git lf pfetch
 # change theme
 . ./switch-theme.sh
 switch-theme gruvbox | base16 | nord | onedark
-yay -S neovim-git lf pfetch
 ```
 
 ## Screenshots
 ### Recommended font
+Download [here](https://github.com/ryanoasis/nerd-fonts/releases) (nerd fonts)
 ![font](https://localfonts.eu/wp-content/uploads/2019/07/Mononoki_950x475_11.png)
 ### Gruvbox
 ![gruvbox screenshot](./screenshots/gruvbox_browser.png)
