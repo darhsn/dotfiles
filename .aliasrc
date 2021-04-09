@@ -4,6 +4,7 @@ alias l="exa -lh"
 alias lh="exa -lah"
 
 alias mk="mkdir -p"
+alias t="touch"
 alias rm="rm -r"
 
 alias c="cd"
