@@ -12,7 +12,6 @@ width = 100%
 height = 25
 fixed-center = true
 override-redirect = false
-wm-restack = i3
 background = ${colors.background}
 foreground = ${colors.foreground}
 padding-left = 0
@@ -28,14 +27,14 @@ font-2 = "Mononoki Nerd Font:pixelsize=11"
 [bar/primary]
 inherit = template
 monitor = LVDS1
-modules-left = i3
+modules-left = workspaces
 modules-center = time
 modules-right = pulseaudio keyboard wlan battery
 
 [bar/secondary]
 inherit = template
 monitor = VGA1
-modules-left = i3
+modules-left = workspaces
 modules-center = time
 modules-right = pulseaudio keyboard wlan battery
 
@@ -86,6 +85,86 @@ ramp-capacity-1 = %{F#ffcc00}
 ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
+
+[module/workspaces]
+type = internal/xworkspaces
+pin-workspaces = false
+
+; Only show workspaces defined on the same output as the bar
+; ;
+; ; Useful if you want to show monitor specific workspaces
+; ; on different bars
+; ;
+; ; Default: false
+; pin-workspaces = true
+;
+; ; Create click handler used to focus desktop
+; ; Default: true
+enable-click = true
+;
+; ; Create scroll handlers used to cycle desktops
+; ; Default: true
+enable-scroll = true
+
+; icon-[0-9]+ = <desktop-name>;<icon>
+; ; NOTE: The desktop name needs to match the name configured by the WM
+; ; You can get a list of the defined desktops using:
+; ; $ xprop -root _NET_DESKTOP_NAMES
+; icon-0 = code;♚
+; icon-1 = office;♛
+; icon-2 = graphics;♜
+; icon-3 = mail;♝
+; icon-4 = web;♞
+; icon-default = ♟
+;
+; ; Available tags:
+; ;   <label-monitor>
+; ;   <label> - gets replaced with <label-(active|urgent|occupied|empty)>
+; ; Default: <label>
+;format = <label>
+;
+; ; Available tokens:
+; ;   %name%
+; ; Default: %name%
+#label-monitor = %name%
+;
+; ; Available tokens:
+; ;   %name%
+; ;   %icon%
+; ;   %index%
+; ; Default: %icon%  %name%
+label-active = %icon% %name% %icon%
+label-active-foreground = #ffffff
+label-active-background = #3f3f3f
+label-active-underline = #fba922
+;
+; ; Available tokens:
+; ;   %name%
+; ;   %icon%
+; ;   %index%
+; ; Default: %icon%  %name%
+label-occupied = %icon% %name% %icon%
+label-occupied-underline = #555555
+label-occupied-foreground = #ffffff
+;
+; ; Available tokens:
+; ;   %name%
+; ;   %icon%
+; ;   %index%
+; ; Default: %icon%  %name%
+label-urgent = %icon% %name% %icon%
+label-urgent-foreground = #000000
+label-urgent-background = #bd2c40
+label-urgent-underline = #9b0a20
+;
+; ; Available tokens:
+; ;   %name%
+; ;   %icon%
+; ;   %index%
+; ; Default: %icon%  %name%
+label-empty = %icon% %name% %icon%
+label-empty-foreground = #55
+
 
 [module/i3]
 type = internal/i3
