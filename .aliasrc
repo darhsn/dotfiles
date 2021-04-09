@@ -17,12 +17,12 @@ alias clh="clear && lh"
 
 alias e="nvim"
 
-alias aliasrc="e \"$HOME/Code/dotfiles/.aliasrc\""
-alias bashrc="e \"$HOME/Code/dotfiles/.bashrc\""
-alias nvimconf="e \"$HOME/Code/dotfiles/nvim/init.vim\""
+alias aliasrc="e \"$HOME/dotfiles/.aliasrc\""
+alias bashrc="e \"$HOME/dotfiles/.bashrc\""
+alias nvimconf="e \"$HOME/dotfiles/nvim/init.vim\""
 
 alias code="c ~/Code"
-alias dotfiles="c ~/Code/dotfiles/"
+alias dotfiles="c ~/dotfiles/"
 alias scripts="c ~/Code/Scripts"
 
 alias rxmon="xrandr --output VGA1 --auto --right-of LVDS1"
