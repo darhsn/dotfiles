@@ -6,7 +6,7 @@ Packages to install:
 ```sh
 git clone http://github.com/darioisthebest/dotfiles
 # recommended programs
-sudo pacman -S kitty polybar i3-gaps rofi nitrogen picom dunst scrot
+sudo pacman -S kitty polybar i3-gaps rofi nitrogen picom dunst scrot sxiv
 yay -S neovim-git lf pfetch pulseaudio-ctl
 # change theme
 . ./switch-theme.sh
