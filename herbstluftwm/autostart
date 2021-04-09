@@ -19,6 +19,7 @@ hc keybind $Mod-Shift-q close
 # Programs
 hc keybind $Mod-Return spawn "${TERMINAL:-kitty}" # Spawn my terminal emulator
 hc keybind $Mod-d spawn rofi -show run # Spawn rofi menu
+hc keybind $Mod-Shift-s spawn scrot ~/Pictures/Screenshots/%b_%d_%H_%M.png
 
 # basic movement in tiling and floating mode
 # focusing clients
