@@ -181,7 +181,7 @@ gaps outer 5
 
 # Autostart programs
 # (not starting nm-applet because already started above)
-exec pulseaudio &
 exec polybar primary &
 exec compton &
+exec dunst &
 exec nitrogen --restore
