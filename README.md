@@ -26,3 +26,12 @@ sudo fc-cache -fv
 
 ## Screenshots
 There are several screenshots available in the `screenshots` folder
+
+### Nord
+![nord](./screenshots/nord.png)
+### Onedark
+![onedark](./screenshots/onedark.png)
+### Gruvbox
+![gruvbox](./screenshots/gruvbox.png)
+### Base16
+![base16](./screenshots/base16.png)
