@@ -6,11 +6,11 @@ Packages to install:
 ```sh
 git clone http://github.com/darioisthebest/dotfiles
 # recommended programs
-sudo pacman -S kitty polybar i3-gaps rofi nitrogen picom pfetch lf dunst brave doas
+sudo pacman -S kitty polybar i3-gaps rofi nitrogen picom dunst
 # change theme
 . ./switch-theme.sh
 switch-theme gruvbox | base16 | nord | onedark
-yay -S neovim-git
+yay -S neovim-git lf pfetch
 ```
 
 ## Screenshots
