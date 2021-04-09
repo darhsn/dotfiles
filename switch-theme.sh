@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOTFILES_DIR="$HOME/Code/dotfiles"
+DOTFILES_DIR="$HOME/dotfiles"
 
 switch-theme() {
     if [ "${1}" == "" ]; then

@@ -155,7 +155,7 @@ max_icon_size = 80
 icon_path = /usr/share/icons/Paper/16x16/mimetypes/:/usr/share/icons/Paper/48x48/status/:/usr/share/icons/Paper/16x16/devices/:/usr/share/icons/Paper/48x48/notifications/:/usr/share/icons/Paper/48x48/emblems/
 
 frame_width = 3
-frame_color = "#458588"
+frame_color = "#8EC07C"
 
 [shortcuts]
 
@@ -181,22 +181,22 @@ context = ctrl+shift+period
 [urgency_low]
 # IMPORTANT: colors have to be defined in quotation marks.
 # Otherwise the "#" and following would be interpreted as a comment.
-frame_color = "#076678"
-foreground = "#076678"
-background = "#1d2021"
+frame_color = "#75b5aa"
+foreground = "#75b5aa"
+background = "#151515"
 #background = "#2B313C"
 timeout = 4
 
 [urgency_normal]
-frame_color = "#98971a"
-foreground = "#98971a"
-background = "#1d2021"
+frame_color = "#90a959"
+foreground = "#90a959"
+background = "#151515"
 #background = "#2B313C"
 timeout = 6
 
 [urgency_critical]
-frame_color = "#cc241d"
-foreground = "#cc241d"
-background = "#1d2021"
+frame_color = "#ac4141"
+foreground = "#ac4141"
+background = "#151515"
 #background = "#2B313C"
 timeout = 8
