@@ -171,16 +171,7 @@ lua << EOF
 local servers = {"tsserver", "clangd", "vimls", "gopls"}
 for _, lsp in ipairs(servers) do
     require'lspconfig'[lsp].setup {
-        capabilities = {
-            textDocument = {
-                completion = {
-                    completionItem = {
-                        snippetSupport = true
-                    }
-                }
-            }
-        }
-  }
+    }
 end
 EOF
 
