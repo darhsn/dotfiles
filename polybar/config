@@ -55,7 +55,7 @@ label-disconnected = no conn
 [module/time]
 type = internal/date
 interval = 5
-date =   %d/%m %I:%M %p
+date =   %I:%M %p
 
 [module/pulseaudio]
 type = internal/pulseaudio
