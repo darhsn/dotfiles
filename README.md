@@ -6,7 +6,7 @@ Packages to install:
 ```sh
 git clone http://github.com/darioisthebest/dotfiles
 # recommended programs
-sudo pacman -S kitty polybar i3-gaps rofi nitrogen picom dunst scrot sxiv
+sudo pacman -S kitty polybar i3-gaps rofi nitrogen picom dunst scrot sxiv firefox
 yay -S neovim-git lf pfetch pulseaudio-ctl
 ```
 ## Recommended font
@@ -45,3 +45,9 @@ There are several screenshots available in the `screenshots` folder
 ![gruvbox](./screenshots/gruvbox.png)
 ### Base16
 ![base16](./screenshots/base16.png)
+
+## Set up firefox
+Extensions that I use:
+ - uBlock Origin
+ - Gruvbox hard/onedark theme
+ - Dark reader
