@@ -168,10 +168,9 @@ let g:tmuxline_separators = {
 
 " Neovim LSP
 lua << EOF
-local servers = {"tsserver", "clangd", "vimls", "gopls"}
+local servers = {"tsserver", "clangd", "vimls"}
 for _, lsp in ipairs(servers) do
-    require'lspconfig'[lsp].setup {
-    }
+    require('lspconfig')[lsp].setup{on_attach=require'completion'.on_attach}
 end
 EOF
 
