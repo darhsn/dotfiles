@@ -27,7 +27,7 @@ font-2 = "Mononoki Nerd Font:pixelsize=11"
 
 [bar/primary]
 inherit = template
-monitor = LVDS-1
+monitor = LVDS1
 modules-left = i3
 modules-center = time
 modules-right = pulseaudio keyboard wlan battery
