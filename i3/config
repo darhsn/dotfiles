@@ -89,7 +89,7 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # screenshot
-bindsym $mod+Shift+s exec --no-startup-id scrot ~/Pictures/Screenshots/%b%d::%H%M%S.png
+bindsym $mod+Shift+s exec --no-startup-id scrot ~/Pics/Screenshots/%b%d_%H_%M.png
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -114,7 +114,6 @@ set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
-set $ws10 "10"
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
