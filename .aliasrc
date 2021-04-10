@@ -7,6 +7,9 @@ alias mk="mkdir -p"
 alias t="touch"
 alias rm="rm -r"
 
+alias g="grep"
+alias m="less"
+
 alias c="cd"
 alias ..="cd .."
 alias ...="cd ../../"
