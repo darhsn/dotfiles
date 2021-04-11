@@ -81,6 +81,7 @@ call plug#begin()
     Plug 'chriskempson/base16-vim'
     Plug 'morhetz/gruvbox'
     Plug 'arcticicestudio/nord-vim'
+    Plug 'crusoexia/vim-monokai'
 call plug#end()
 
 " Mappings
@@ -169,7 +170,7 @@ let g:tmuxline_separators = {
 
 " Neovim LSP
 lua << EOF
-local servers = {"tsserver", "clangd", "vimls"}
+local servers = {"tsserver", "clangd", "vimls", "pyright"}
 for _, lsp in ipairs(servers) do
     require('lspconfig')[lsp].setup{on_attach=require'completion'.on_attach}
 end
