@@ -21,7 +21,7 @@ let mapleader=" "
 set timeoutlen=400
 set mouse=a
 
-let g:colorscheme="base16"
+let g:colorscheme="gruvbox"
 
 " Plugins
 call plug#begin()
@@ -99,7 +99,9 @@ vnoremap <silent> <leader>c :Commentary<CR>
 inoremap <silent> <C-j> <C-n>
 inoremap <silent> <C-k> <C-p>
 
-nnoremap <silent> <leader>g :Git<CR>
+nnoremap <silent> <leader>gg :Git<CR>
+" Nmap because uses <Plug>
+nmap <silent> <leader>gh <Plug>(GitGutterPreviewHunk)
 nnoremap <silent> <leader>gp :call GitPush()<CR>
 
 nnoremap <silent> <leader>l :lua vim.lsp.buf.document_symbol()<CR>
@@ -142,7 +144,7 @@ if g:colorscheme == "gruvbox"
     let g:gruvbox_italic = 1
     colorscheme gruvbox
 elseif g:colorscheme == "base16"
-     colorscheme base16-default-dark
+    colorscheme base16-default-dark
     hi Comment cterm=italic
 elseif g:colorscheme == "nord"
     let g:nord_italic = 1
