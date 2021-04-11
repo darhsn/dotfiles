@@ -19,6 +19,9 @@ alias cl="clear"
 alias cls="clear && l"
 alias clh="clear && lh"
 
+alias sd="mkdir -p ~/sd && sudo mount /dev/mmcblk0 ~/sd && cd ~/sd"
+alias usd="sudo umount ~/sd && rm -rf ~/sd"
+
 alias e="nvim"
 
 alias aliasrc="e \"$HOME/dotfiles/.aliasrc\""
