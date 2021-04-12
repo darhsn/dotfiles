@@ -1,16 +1,16 @@
 [colors]
-background = #2E3440
-foreground = #E5E9F0
-background-alt = #BF616A
-muted = #4C566A
-urgent = #BF616A
-accent = #434C5E
-primary = "#5E81AC"
+background = #1d2021
+foreground = #fbf1c7
+background-alt = #ff4d4d
+muted = #928374
+urgent = #cc241d
+accent = #32302f
+primary = #458588
 
 [template]
 width = 100%
 height = 25
-fixed-center = false
+fixed-center = true
 override-redirect = false
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -34,15 +34,16 @@ modules-right = pulseaudio keyboard wlan battery
 [bar/secondary]
 inherit = template
 monitor = VGA1
-modules-left = i3
-modules-right = pulseaudio keyboard wlan battery time
+modules-left = workspaces
+modules-center = time
+modules-right = pulseaudio keyboard wlan battery
 
 [module/keyboard]
 type = internal/xkeyboard
 blacklist-0 = num lock
 blacklist-1 = scroll lock
 format =  <label-indicator><label-layout>
-label-indicator = %{F#BF616A}
+label-indicator = %{F#ff4d4d}
 label-layout =   %layout%
 
 [module/wlan]
@@ -76,11 +77,11 @@ type = internal/battery
 battery = BAT0
 adapter = AC0
 full-at = 98
-format-charging = %{F#EBCB8B} <label-charging>
+format-charging = %{F#c4c400} <label-charging>
 format-discharging = <ramp-capacity>  <label-discharging>
-format-full = %{F#EBCB8B} <label-full>
-ramp-capacity-0 = %{F#BF616A}
-ramp-capacity-1 = %{F#EBCB8B}
+format-full = %{F#c4c400} <label-full>
+ramp-capacity-0 = %{F#ff1a1a}
+ramp-capacity-1 = %{F#ffcc00}
 ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
@@ -100,7 +101,6 @@ label-urgent-foreground = ${colors.urgent}
 label-urgent-background = ${colors.background}
 label-empty = %icon% %name% %icon%
 label-empty-foreground = ${colors.muted}
-
 
 [module/i3]
 type = internal/i3
