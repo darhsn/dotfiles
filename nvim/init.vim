@@ -21,10 +21,17 @@ let mapleader=" "
 set timeoutlen=400
 set mouse=a
 
-set guifont=mononoki\ Nerd\ Font\ Mono:h20
-let g:neovide_cursor_vfx_particle_speed=21.0
+if exists('g:neovide')
+    echo "Welcome to neovide"
+    set guifont=mononoki\ Nerd\ Font\ Mono:h20
+    imap <silent> <C-S-v> <Esc>"+pi
+endif
 
 let g:colorscheme="gruvbox"
+
+if has('gui_running')
+    echo "WELCOME DARIO"
+endif
 
 " Plugins
 call plug#begin()
