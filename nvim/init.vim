@@ -21,6 +21,8 @@ let mapleader=" "
 set timeoutlen=400
 set mouse=a
 
+set guifont=mononoki\ Nerd\ Font\ Mono:h19
+
 let g:colorscheme="gruvbox"
 
 " Plugins
