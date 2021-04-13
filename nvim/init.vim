@@ -3,6 +3,7 @@
 ""--------------------------------------------------------------------------""
 
 " My sets
+set encoding=UTF-8
 set noswapfile
 set noerrorbells
 
@@ -75,6 +76,8 @@ call plug#begin()
     Plug 'kyazdani42/nvim-web-devicons'
     Plug 'liuchengxu/vim-which-key'
     Plug 'preservim/tagbar'
+    Plug 'voldikss/vim-floaterm'
+:FloatermNew --height=0.6 --width=0.4 --wintype=float --name=floaterm1 --position=topleft --autoclose=2 ranger --cmd="cd ~"
 
     " Status bar
     Plug 'vim-airline/vim-airline'
