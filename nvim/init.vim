@@ -21,7 +21,8 @@ let mapleader=" "
 set timeoutlen=400
 set mouse=a
 
-set guifont=mononoki\ Nerd\ Font\ Mono:h19
+set guifont=mononoki\ Nerd\ Font\ Mono:h20
+let g:neovide_cursor_vfx_particle_speed=21.0
 
 let g:colorscheme="gruvbox"
 
@@ -63,12 +64,14 @@ call plug#begin()
     Plug 'vimwiki/vimwiki'
 
     " Better UI
-    Plug 'liuchengxu/vim-which-key'
     Plug 'romgrk/barbar.nvim'
     Plug 'kyazdani42/nvim-web-devicons'
+    Plug 'liuchengxu/vim-which-key'
+    Plug 'preservim/tagbar'
+
+    " Status bar
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
-    Plug 'preservim/tagbar'
 
     " Tmux integration
     Plug 'edkolev/tmuxline.vim'
