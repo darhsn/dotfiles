@@ -217,6 +217,11 @@ fun! TrimWhitespace()
     call winrestview(l:save)
 endfun
 
+if exists('g:neovide')
+    " Comment now are regular and not italic
+    hi Comment gui=standout
+endif
+
 fun! GitPush()
     VimuxRunCommand "clear; git push; exit"
 endfun
