@@ -20,9 +20,9 @@ margin-top = 0
 margin-bottom = 0
 module-margin-left = 1
 module-margin-right = 1
-font-0 = "Mononoki Nerd Font:pixelsize=11"
-font-1 = "Mononoki Nerd Font:pixelsize=11"
-font-2 = "Mononoki Nerd Font:pixelsize=11"
+font-0 = "Hack Nerd Font:pixelsize=11"
+font-1 = "Hack Nerd Font:pixelsize=11"
+font-2 = "Hack Nerd Font:pixelsize=11"
 
 [bar/primary]
 inherit = template
