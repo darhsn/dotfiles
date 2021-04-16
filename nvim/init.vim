@@ -76,8 +76,6 @@ call plug#begin()
     Plug 'kyazdani42/nvim-web-devicons'
     Plug 'liuchengxu/vim-which-key'
     Plug 'preservim/tagbar'
-    Plug 'voldikss/vim-floaterm'
-:FloatermNew --height=0.6 --width=0.4 --wintype=float --name=floaterm1 --position=topleft --autoclose=2 ranger --cmd="cd ~"
 
     " Status bar
     Plug 'vim-airline/vim-airline'
@@ -118,9 +116,11 @@ inoremap <silent> <C-k> <C-p>
 nnoremap <silent> <leader>gg :Git<CR>
 " Nmap because uses <Plug>
 nmap <silent> <leader>gh <Plug>(GitGutterPreviewHunk)
-nnoremap <silent> <leader>gp :call GitPush()<CR>
+nnoremap <silent> <leader>gp :Git push<CR>
 
 nnoremap <silent> <leader>l :lua vim.lsp.buf.document_symbol()<CR>
+
+nnoremap <silent> <leader>tn :vsp<CR>:term<CR>
 
 nnoremap <silent> <leader><leader> :WhichKey '<space>'<CR>
 
@@ -137,6 +137,8 @@ nnoremap <M-k> :resize +2<CR>
 nnoremap <M-j> :resize -2<CR>
 nnoremap <M-l> :vertical resize +2<CR>
 nnoremap <M-h> :vertical resize -2<CR>
+
+tnoremap <C-Esc> <C-\><C-n>
 
 " Git Gutter
 let g:gitgutter_sign_added='┃'
@@ -224,10 +226,6 @@ if exists('g:neovide')
     " Comment now are regular and not italic
     hi Comment gui=standout
 endif
-
-fun! GitPush()
-    VimuxRunCommand "clear; git push; exit"
-endfun
 
 " Autocommands
 augroup DARIO_GROUP
