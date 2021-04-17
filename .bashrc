@@ -4,6 +4,8 @@ if [ "$(pwd)" == "/" ]; then
     cd
 fi
 
+dots = "$HOME/dotfiles"
+
 clear
 pfetch
 # fortune | cowsay | lolcat -p 1
@@ -34,4 +36,3 @@ precmd() {
 }
 
 PROMPT_COMMAND="precmd"
-export PATH=$HOME/.config/nvcode/utils/bin:$PATH
