@@ -4,7 +4,7 @@ if [ "$(pwd)" == "/" ]; then
     cd
 fi
 
-dots = "$HOME/dotfiles"
+dots="$HOME/dotfiles"
 
 clear
 pfetch
