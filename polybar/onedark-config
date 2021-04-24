@@ -24,7 +24,7 @@ font-2 = "Hack Nerd Font:pixelsize=11"
 
 [bar/primary]
 inherit = template
-monitor = LVDS1
+monitor = LVDS-1
 modules-left = workspaces
 modules-center = time
 modules-right = pulseaudio keyboard wlan battery
