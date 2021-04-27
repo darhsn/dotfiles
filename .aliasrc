@@ -24,7 +24,7 @@ alias usd="sudo umount ~/sd && rm -rf ~/sd"
 
 alias pac="sudo pacman"
 
-alias e="nvim"
+alias vi="nvim"
 
 alias aliasrc="e \"$HOME/dotfiles/.aliasrc\""
 alias bashrc="e \"$HOME/dotfiles/.bashrc\""
