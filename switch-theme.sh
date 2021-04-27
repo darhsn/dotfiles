@@ -31,6 +31,12 @@ switch-theme() {
         cp $DOTFILES_DIR/dunst/base16-dunstrc $DOTFILES_DIR/dunst/dunstrc
         cp $DOTFILES_DIR/kitty/base16-kitty.conf $DOTFILES_DIR/kitty/kitty.conf
         echo "switch-theme: changed theme to base16, wallpaper and vim theme should be changed manually"
+    elif [ "${1}" == "dark" ]; then
+        cp $DOTFILES_DIR/polybar/dark-config $DOTFILES_DIR/polybar/config
+        cp $DOTFILES_DIR/rofi/dark.rasi $DOTFILES_DIR/rofi/theme.rasi
+        cp $DOTFILES_DIR/dunst/dark-dunstrc $DOTFILES_DIR/dunst/dunstrc
+        cp $DOTFILES_DIR/kitty/dark-kitty.conf $DOTFILES_DIR/kitty/kitty.conf
+        echo "switch-theme: changed theme to dark, wallpaper and vim theme should be changed manually"
     else
         echo "switch-theme: invalid theme!"
         echo "switch-theme: usage: switch-theme THEME_NAME"
