@@ -55,3 +55,11 @@ colors:
     magenta: '0xc678dd'
     cyan:    '0x56b6c2'
     white:   '0x828791'
+font:
+  normal:
+    family: UbuntuMono Nerd Font
+    style: Regular
+  italic:
+    family: UbuntuMono Nerd Font
+    style: italic
+  size: 15.0

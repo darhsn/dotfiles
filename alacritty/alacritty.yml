@@ -34,7 +34,9 @@ font:
 font:
   normal:
     family: UbuntuMono Nerd Font
-    size: 30
+    style: Regular
   italic:
     family: UbuntuMono Nerd Font
+    style: italic
+  size: 15.0
 
