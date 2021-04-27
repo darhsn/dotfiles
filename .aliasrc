@@ -22,13 +22,11 @@ alias clh="clear && lh"
 alias sd="mkdir -p ~/sd && sudo mount /dev/mmcblk0 ~/sd && cd ~/sd"
 alias usd="sudo umount ~/sd && rm -rf ~/sd"
 
-alias pac="sudo pacman"
-
 alias vi="nvim"
 
-alias aliasrc="e \"$HOME/dotfiles/.aliasrc\""
-alias bashrc="e \"$HOME/dotfiles/.bashrc\""
-alias nvimconf="e \"$HOME/dotfiles/nvim/init.vim\""
+alias aliasrc="vi \"$HOME/dotfiles/.aliasrc\""
+alias bashrc="vi \"$HOME/dotfiles/.bashrc\""
+alias nvimconf="vi \"$HOME/dotfiles/nvim/init.vim\""
 
 alias code="c ~/Code"
 alias dotfiles="c ~/dotfiles/"
