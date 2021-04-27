@@ -31,7 +31,6 @@ colors:
     cyan:    '0x00ffff'
     white:   '0xFFFFFF'
 font:
-font:
   normal:
     family: UbuntuMono Nerd Font
     style: Regular
