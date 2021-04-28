@@ -3,7 +3,7 @@ background = #000
 foreground = ##ffffff
 muted = #262626
 urgent = #870000
-primary = #61AFEF
+primary = #5f87af
 
 [template]
 width = 100%

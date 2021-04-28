@@ -1,5 +1,5 @@
 [global]
-font = mononoki Nerd Font Mono 11
+font = UbuntuMono Nerd Font 11
 
 # Allow a small subset of html markup:
 #   <b>bold</b>
@@ -155,7 +155,7 @@ max_icon_size = 80
 icon_path = /usr/share/icons/Paper/16x16/mimetypes/:/usr/share/icons/Paper/48x48/status/:/usr/share/icons/Paper/16x16/devices/:/usr/share/icons/Paper/48x48/notifications/:/usr/share/icons/Paper/48x48/emblems/
 
 frame_width = 3
-frame_color = "#61AFEF"
+frame_color = "#458588"
 
 [shortcuts]
 
@@ -183,20 +183,20 @@ context = ctrl+shift+period
 # Otherwise the "#" and following would be interpreted as a comment.
 frame_color = "#5f87af"
 foreground = "#5f87af"
-background = "#000"
+background = "#000000"
 #background = "#2B313C"
 timeout = 4
 
 [urgency_normal]
 frame_color = "#ffd75f"
 foreground = "#ffd75f"
-background = "#000"
+background = "#000000"
 #background = "#2B313C"
 timeout = 6
 
 [urgency_critical]
 frame_color = "#870000"
-foreground = "#87000"
-background = "#000"
+foreground = "#870000"
+background = "#000000"
 #background = "#2B313C"
 timeout = 8

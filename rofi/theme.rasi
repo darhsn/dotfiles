@@ -17,44 +17,44 @@
     scrollbar: true;
 
     /* Gruvbox dark colors */
-    gruvbox-dark-bg0-hard:     #1d2021;
-    gruvbox-dark-bg0:          #282828;
-    gruvbox-dark-bg2:          #504945;
-    gruvbox-dark-fg0:          #fbf1c7;
-    gruvbox-dark-fg1:          #ebdbb2;
-    gruvbox-dark-red-dark:     #cc241d;
-    gruvbox-dark-red-light:    #fb4934;
-    gruvbox-dark-yellow-dark:  #d79921;
-    gruvbox-dark-yellow-light: #fabd2f;
-    gruvbox-dark-gray:         #a89984;
+    bg0-hard:     #1d2021;
+    bg0:          #282828;
+    bg2:          #504945;
+    fg0:          #fbf1c7;
+    fg1:          #ebdbb2;
+    red-dark:     #cc241d;
+    red-light:    #fb4934;
+    yellow-dark:  #d79921;
+    yellow-light: #fabd2f;
+    dark-gray:    #a89984;
 
     /* Theme colors */
-    background:                  @gruvbox-dark-bg0-hard;
+    background:                  @bg0-hard;
     background-color:            @background;
-    foreground:                  @gruvbox-dark-fg1;
-    border-color:                @gruvbox-dark-gray;
+    foreground:                  @fg1;
+    border-color:                @dark-gray;
     separatorcolor:              @border-color;
     scrollbar-handle:            @border-color;
 
     normal-background:           @background;
     normal-foreground:           @foreground;
-    alternate-normal-background: @gruvbox-dark-bg0;
+    alternate-normal-background: @bg0;
     alternate-normal-foreground: @foreground;
-    selected-normal-background:  @gruvbox-dark-bg2;
-    selected-normal-foreground:  @gruvbox-dark-fg0;
+    selected-normal-background:  @bg2;
+    selected-normal-foreground:  @fg0;
 
-    active-background:           @gruvbox-dark-yellow-dark;
+    active-background:           @yellow-dark;
     active-foreground:           @background;
     alternate-active-background: @active-background;
     alternate-active-foreground: @active-foreground;
-    selected-active-background:  @gruvbox-dark-yellow-light;
+    selected-active-background:  @yellow-light;
     selected-active-foreground:  @active-foreground;
 
-    urgent-background:           @gruvbox-dark-red-dark;
+    urgent-background:           @red-dark;
     urgent-foreground:           @background;
     alternate-urgent-background: @urgent-background;
     alternate-urgent-foreground: @urgent-foreground;
-    selected-urgent-background:  @gruvbox-dark-red-light;
+    selected-urgent-background:  @red-light;
     selected-urgent-foreground:  @urgent-foreground;
 }
 

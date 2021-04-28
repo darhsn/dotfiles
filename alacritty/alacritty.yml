@@ -3,10 +3,11 @@ colors:
     primary:
         background: '0x000000'
         foreground: '0xffffff'
-        cursor:
-            text: '0xF81CE5'
-            cursor: '0xffffff'
+    cursor:
+        text: '0xF81CE5'
+        cursor: '0xffffff'
 
+    # Normal colors
     normal:
         black:   '0x000000'
         red:     '0xfe0100'
@@ -17,6 +18,7 @@ colors:
         cyan:    '0x00ffff'
         white:   '0xd0d0d0'
 
+      # Bright colors
     bright:
         black:   '0x808080'
         red:     '0xfe0100'
