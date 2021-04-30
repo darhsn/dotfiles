@@ -49,6 +49,10 @@ call plug#begin()
     " Tmux
     Plug 'preservim/vimux'
 
+    " NvimTreesitter (Better syntax analyzing and highlighting)
+    Plug 'nvim-treesitter/nvim-treesitter'
+    Plug 'nvim-treesitter/playground'
+
     " Colorscheme
     " Plug 'morhetz/gruvbox'
     " Plug 'joshdick/onedark.vim'
