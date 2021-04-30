@@ -1,5 +1,7 @@
 [init]
-	defaultBranch = master
+    defaultBranch = master
 [user]
-	email = 76775977+darioisthebest@users.noreply.github.com
-	name = Dario
+    email = 76775977+darioisthebest@users.noreply.github.com
+    name = Dario
+[alias]
+    prettylog = log --pretty=format:"\"%Cgreen%h %Creset%cd %Cblue[%cn] %Creset%s%C(yellow)%d%C(reset)\""
