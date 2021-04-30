@@ -61,9 +61,6 @@ call plug#begin()
     Plug 'arcticicestudio/nord-vim'
     Plug 'fcpg/vim-fahrenheit'
 
-    " UI
-    Plug 'Yggdroot/indentLine'
-
     " Formatting
     Plug 'sbdchd/neoformat'
 call plug#end()
@@ -138,9 +135,6 @@ let g:airline_mode_map = {
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#alt_sep = 1
-
-" Indent line
-let g:indentLine_char = '┊'
 
 " Tmuxline
 " let g:tmuxline_separators = {
