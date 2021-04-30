@@ -33,7 +33,7 @@ modules-right = pulseaudio keyboard wlan battery
 
 [bar/secondary]
 inherit = template
-monitor = VGA1
+monitor = VGA-1
 modules-left = workspaces
 modules-center = time
 modules-right = pulseaudio keyboard wlan battery
