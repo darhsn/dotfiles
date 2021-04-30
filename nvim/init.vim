@@ -1,169 +1,126 @@
-""--------------------------------------------------------------------------""
-""                                     MYVIMRC                              ""
-""--------------------------------------------------------------------------""
+" Global
+set guicursor=
+set termguicolors
+set completeopt=menuone,noinsert,noselect
+set mouse=a
+set updatetime=100
+set timeoutlen=300
 
-" My sets
-set encoding=UTF-8
-set noswapfile
-set noerrorbells
+" Local to window
+set number relativenumber
+set nowrap
 
+" Local to buffer
 set tabstop=4
 set shiftwidth=4
-set smartindent
+set noswapfile
 set expandtab
 
-set nowrap
-set number relativenumber
-set noshowmode
-set completeopt=menuone,noinsert,noselect
-set guicursor=
-
 let mapleader=" "
-set timeoutlen=400
-set mouse=a
+let g:colorscheme="dark"
 
-if exists('g:neovide')
-    echo "Welcome to neovide"
-    set guifont=mononoki\ Nerd\ Font\ Mono:h20
-    imap <silent> <C-S-v> <Esc>"+pi
-endif
-
-let g:colorscheme="gruvbox"
-
-if has('gui_running')
-    echo "WELCOME DARIO"
-endif
-
-" Plugins
 call plug#begin()
-    " Web dev
-    Plug 'mattn/emmet-vim'
-    Plug 'ap/vim-css-color'
-    Plug 'alvan/vim-closetag'
-
-    " Writing code faster
-    Plug 'jiangmiao/auto-pairs'
-    Plug 'tpope/vim-commentary'
-    Plug 'tpope/vim-surround'
-
-    " Autocompletition
-    Plug 'nvim-lua/completion-nvim'
-
-    " Code Formatting
-    Plug 'sbdchd/neoformat'
-
     " Telescope
     Plug 'nvim-lua/popup.nvim'
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim'
 
-    " Multi cursor
-    Plug 'terryma/vim-multiple-cursors'
-
-    " Syntax highlighting
-    Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
-    Plug 'nvim-treesitter/playground'
-    Plug 'sheerun/vim-polyglot'
-
-    " Neovim LSP
+    " LSP & Completition
     Plug 'neovim/nvim-lspconfig'
+    Plug 'nvim-lua/completion-nvim'
+    Plug 'onsails/lspkind-nvim'
 
-    " Vim wiki
+    " Surrounding utils
+    Plug 'tpope/vim-surround'
+    Plug 'jiangmiao/auto-pairs'
+    Plug 'alvan/vim-closetag'
+
+    " VimWiki
     Plug 'vimwiki/vimwiki'
 
-    " Better UI
-    Plug 'romgrk/barbar.nvim'
-    Plug 'kyazdani42/nvim-web-devicons'
-    Plug 'liuchengxu/vim-which-key'
-    Plug 'preservim/tagbar'
+    " WebDev
+    Plug 'ap/vim-css-color'
 
     " Status bar
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
 
-    " Tmux integration
-    Plug 'edkolev/tmuxline.vim'
-    Plug 'preservim/vimux'
-
-    " Git integration
+    " Git
     Plug 'tpope/vim-fugitive'
     Plug 'airblade/vim-gitgutter'
 
-    " Color Schemes
+    " Comment line
+    Plug 'tpope/vim-commentary'
+
+    " Tmux
+    Plug 'edkolev/tmuxline.vim'
+    Plug 'preservim/vimux'
+
+    " Colorscheme
+    Plug 'morhetz/gruvbox'
     Plug 'joshdick/onedark.vim'
     Plug 'chriskempson/base16-vim'
-    Plug 'morhetz/gruvbox'
     Plug 'arcticicestudio/nord-vim'
-    Plug 'crusoexia/vim-monokai'
+    Plug 'fcpg/vim-fahrenheit'
+
+    " UI
+    Plug 'Yggdroot/indentLine'
+
+    " Formatting
+    Plug 'sbdchd/neoformat'
 call plug#end()
 
-" Mappings
-nnoremap <silent> <C-h> :BufferPrevious<CR>
-nnoremap <silent> <C-l> :BufferNext<CR>
+" LSP Symbols
+lua << EOF
+require('lspkind').init({
+    -- with_text = true,
+    symbol_map = {
+      Text = '',
+      Method = 'ƒ',
+      Function = '',
+      Constructor = '',
+      Variable = '',
+      Class = '',
+      Interface = 'ﰮ',
+      Module = '',
+      Property = '',
+      Unit = '',
+      Value = '',
+      Enum = '了',
+      Keyword = '',
+      Snippet = '﬌',
+      Color = '',
+      File = '',
+      Folder = '',
+      EnumMember = '',
+      Constant = '',
+      Struct = ''
+    },
+})
+EOF
 
-nnoremap <silent> <leader>r :echo "Reloaded init.vim"<CR>:source $MYVIMRC<CR>
+" LSP
+lua <<EOF
+local lspconfig = require('lspconfig')
+local completion = require('completion')
 
-nnoremap <silent> <leader>i :PlugInstall<CR>
+local lsp_servers = {"vimls", "clangd", "phpactor", "tsserver"}
 
-nnoremap <silent> <leader>xh :nohl<CR>
+for index, server in ipairs(lsp_servers) do
+    lspconfig[server].setup{
+        on_attach=completion.on_attach
+    }
+end
+EOF
 
-nnoremap <silent> <leader>c :Commentary<CR>
-vnoremap <silent> <leader>c :Commentary<CR>
-
-inoremap <silent> <C-j> <C-n>
-inoremap <silent> <C-k> <C-p>
-
-nnoremap <silent> <leader>gg :Git<CR>
-" Nmap because uses <Plug>
-nmap <silent> <leader>gh <Plug>(GitGutterPreviewHunk)
-nnoremap <silent> <leader>gp :Git push<CR>
-
-nnoremap <silent> <leader>l :lua vim.lsp.buf.document_symbol()<CR>
-
-nnoremap <silent> <leader>tn :vsp<CR>:term<CR>
-
-nnoremap <silent> <leader><leader> :WhichKey '<space>'<CR>
-
-nnoremap <silent> <leader>t :TagbarToggle<CR>
-
-nnoremap <silent> gd :lua vim.lsp.buf.definition()<CR>
-
-nnoremap <silent> <leader>ft :retab<CR>
-
-nnoremap <silent> <C-p> :Telescope find_files<CR>
-nnoremap <silent> <leader>p :Telescope live_grep<CR>
-
-nnoremap <M-k> :resize +2<CR>
-nnoremap <M-j> :resize -2<CR>
-nnoremap <M-l> :vertical resize +2<CR>
-nnoremap <M-h> :vertical resize -2<CR>
-
-tnoremap <C-Esc> <C-\><C-n>
-
-" Git Gutter
-let g:gitgutter_sign_added='┃'
-let g:gitgutter_sign_modified='┃'
-let g:gitgutter_sign_removed='◢'
-let g:gitgutter_sign_removed_first_line='◥'
-let g:gitgutter_sign_modified_removed='◢'
-
-" Netrw
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
-let g:netrw_browse_split = 4
-let g:netrw_winsize = 20
-
-" Color Schemes
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-set termguicolors
-
+" Colorscheme
 if g:colorscheme == "gruvbox"
     let g:gruvbox_contrast_dark = "hard"
     let g:gruvbox_italic = 1
     colorscheme gruvbox
 elseif g:colorscheme == "base16"
     colorscheme base16-default-dark
-    hi Comment cterm=italic
+    hi Comment cterm=italic gui=italic
 elseif g:colorscheme == "nord"
     let g:nord_italic = 1
     let g:nord_italic_comments = 1
@@ -171,91 +128,132 @@ elseif g:colorscheme == "nord"
 elseif g:colorscheme == "onedark"
     let g:onedark_terminal_italics = 1
     colorscheme onedark
+elseif g:colorscheme == "dark"
+    colorscheme fahrenheit
 endif
 
+" Git gutter
+let g:gitgutter_map_keys = 0
+
+let g:gitgutter_sign_added='┃'
+let g:gitgutter_sign_modified='┃'
+let g:gitgutter_sign_removed='◢'
+let g:gitgutter_sign_removed_first_line='◥'
+let g:gitgutter_sign_modified_removed='◢'
+
 " Airline
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
+let g:airline_mode_map = {
+    \ '__'     : '-',
+    \ 'c'      : 'C',
+    \ 'i'      : 'I',
+    \ 'ic'     : 'I',
+    \ 'ix'     : 'I',
+    \ 'n'      : 'N',
+    \ 'multi'  : 'M',
+    \ 'ni'     : 'N',
+    \ 'no'     : 'N',
+    \ 'R'      : 'R',
+    \ 'Rv'     : 'R',
+    \ 's'      : 'S',
+    \ 'S'      : 'S',
+    \ ''     : 'S',
+    \ 't'      : 'T',
+    \ 'v'      : 'V',
+    \ 'V'      : 'V',
+    \ ''     : 'V',
+    \ }
+
+"let g:airline_left_sep = ''
+"let g:airline_right_sep = ''
+
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#alt_sep = 1
+
+" Indent line
+let g:indentLine_char = '┊'
 
 " Tmuxline
-let g:tmuxline_separators = {
-    \ 'left': '',
-    \ 'left_alt': ' ',
-    \ 'right' : '',
-    \ 'right_alt' : ' ',
-    \ 'space' : ' '}
+" let g:tmuxline_separators = {
+    " \ 'left': '',
+    " \ 'left_alt': ' ',
+    " \ 'right' : '',
+    " \ 'right_alt' : ' ',
+    " \ 'space' : ' '
+    " \ }
 
-" Neovim LSP
-lua << EOF
-local servers = {"tsserver", "clangd", "vimls", "pyright"}
-for _, lsp in ipairs(servers) do
-    require('lspconfig')[lsp].setup{on_attach=require'completion'.on_attach}
-end
-EOF
-
-" Telescope
-lua << EOF
-local actions = require('telescope.actions')
-require('telescope').setup{
-    defaults = {
-        mappings = {
-            i = {
-                ["<esc>"] = actions.close,
-                [ "<C-q>" ] = actions.send_to_qflist
-            },
-        },
-    }
-}
-EOF
-
-" Auto close tag
-let g:closetag_filenames = '*.xml,*.html,*.xhtml,*.phtml,*.php'
-filetype plugin indent on
-
-" Emmet
-let g:user_emmet_expandabbr_key='<C-z>'
-let g:user_emmet_install_global = 0
-
-fun! TrimWhitespace()
+" Functions
+fun! TrimSpace()
     let l:save = winsaveview()
     keeppatterns %s/\s\+$//e
     call winrestview(l:save)
 endfun
 
-if exists('g:neovide')
-    " Comment now are regular and not italic
-    hi Comment gui=standout
-endif
+fun TmuxGitPush()
+    VimuxRunCommand "clear; git push; exit"
+endfun
 
-" Autocommands
+fun TmuxMake(command)
+    VimuxRunCommand "clear; make " . a:command . "; read -p \"Program finished with $?, Press enter to continue...\" && exit"
+endfun
+
+fun BufferAdd()
+    let buffer = input("Buffer to add => ")
+    if buffer == ""
+        return 0
+    else
+        exec "badd " . buffer
+        bnext
+    endif
+endfunction
+
+" Mappings
+nnoremap <silent> <leader>c :Commentary<CR>
+vnoremap <silent> <leader>c :Commentary<CR>
+
+nnoremap <silent> <leader>ir :source $MYVIMRC<CR>
+nnoremap <silent> <leader>ie :edit $MYVIMRC<CR>
+
+nnoremap <silent> <leader>pi :PlugInstall<CR>
+nnoremap <silent> <leader>pc :PlugClean<CR>
+nnoremap <silent> <leader>pu :PlugUpdate<CR>
+nnoremap <silent> <leader>pU :PlugUpgrade<CR>
+
+nnoremap <silent> <leader>gg :Git<CR>
+nnoremap <silent> <leader>gp :call TmuxGitPush()<CR>
+nnoremap <silent> <leader>gb :Git blame<CR>
+
+nnoremap <silent> <leader>ghn :GitGutterNextHunk<CR>
+nnoremap <silent> <leader>ghN :GitGutterPrevHunk<CR>
+nnoremap <silent> <leader>ghp :GitGutterPreviewHunk<CR>
+nnoremap <silent> <leader>ghs :GitGutterStageHunk<CR>
+nnoremap <silent> <leader>ghu :GitGutterUndoHunk<CR>
+
+nnoremap <silent> <leader>mi :call TmuxMake("install")<CR>
+nnoremap <silent> <leader>mt :call TmuxMake("test")<CR>
+nnoremap <silent> <leader>mc :call TmuxMake("clean")<CR>
+nnoremap <silent> <leader>mm :call TmuxMake("")<CR>
+
+nnoremap <silent> <leader>tf :Telescope find_files<CR>
+nnoremap <silent> <leader>tg :Telescope git_files<CR>
+
+nnoremap <silent> <leader>bd :bd<CR>
+nnoremap <silent> <leader>ba :call BufferAdd()<CR>
+nnoremap <silent> <C-h> :bprev<CR>
+nnoremap <silent> <C-l> :bnext<CR>
+
+" Auto commands
 augroup DARIO_GROUP
     autocmd!
-
-    " Trim spaces
-    autocmd BufWritePre * :call TrimWhitespace()
-
-    " Autocompletition
-    autocmd BufEnter * lua require'completion'.on_attach()
-augroup END
-
-augroup WEB_DEV
-    autocmd FileType html,css EmmetInstall
-    autocmd StdinReadPre * let s:std_in=1
+    autocmd BufWrite,BufWritePre * :call TrimSpace()
+    autocmd BufWrite,BufWritePre * :retab
 augroup END
 
 augroup FORMATTER
-    autocmd BufWritePre *.js Neoformat
-    autocmd BufWritePre *.ts Neoformat
-    autocmd BufWritePre *.html Neoformat
-    autocmd BufWritePre *.css Neoformat
-    autocmd BufWritePre *.c Neoformat
-    autocmd BufWritePre *.h Neoformat
-augroup END
-
-augroup NVIM_TREESITTER
-    autocmd BufWritePre *.js TSBufEnable javascript
-    autocmd BufWritePre *.ts TSBufEnable typescript
-    autocmd BufWritePre *.json TSBufEnable json
-    autocmd BufWritePre *.c TSBufEnable c
-    autocmd BufWritePre *.h TSBufEnable c
+    autocmd BufWritePre *.js silent! Neoformat
+    autocmd BufWritePre *.ts silent! Neoformat
+    autocmd BufWritePre *.html silent! Neoformat
+    autocmd BufWritePre *.css silent! Neoformat
+    autocmd BufWritePre *.c silent! Neoformat
+    autocmd BufWritePre *.h silent! Neoformat
 augroup END
