@@ -40,8 +40,8 @@ call plug#begin()
     Plug 'ap/vim-css-color'
 
     " Status bar
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
+    " Plug 'vim-airline/vim-airline'
+    " Plug 'vim-airline/vim-airline-themes'
 
     " Git
     Plug 'tpope/vim-fugitive'
@@ -51,7 +51,7 @@ call plug#begin()
     Plug 'tpope/vim-commentary'
 
     " Tmux
-    Plug 'edkolev/tmuxline.vim'
+    " Plug 'edkolev/tmuxline.vim'
     Plug 'preservim/vimux'
 
     " Colorscheme
@@ -107,8 +107,8 @@ let g:gitgutter_sign_removed='◢'
 let g:gitgutter_sign_removed_first_line='◥'
 let g:gitgutter_sign_modified_removed='◢'
 
-" Airline
-let g:airline_mode_map = {
+" Statusline
+let g:currentmode = {
     \ '__'     : '-',
     \ 'c'      : 'C',
     \ 'i'      : 'I',
@@ -129,21 +129,7 @@ let g:airline_mode_map = {
     \ ''     : 'V',
     \ }
 
-"let g:airline_left_sep = ''
-"let g:airline_right_sep = ''
-
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#alt_sep = 1
-
-" Tmuxline
-" let g:tmuxline_separators = {
-    " \ 'left': '',
-    " \ 'left_alt': ' ',
-    " \ 'right' : '',
-    " \ 'right_alt' : ' ',
-    " \ 'space' : ' '
-    " \ }
+set statusline=%{toupper(g:currentmode[mode()])}\ %#Todo#%F%h\ %#Type#%{fugitive#statusline()}\ %=\ %#Function#LN\ %l\/%L\ %#Number#C\ %c%V\ %#Statement#%P\ %#Indentifier#\%m%r%h%w%y
 
 " Functions
 fun! TrimSpace()
