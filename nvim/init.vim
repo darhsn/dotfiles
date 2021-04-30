@@ -199,3 +199,11 @@ augroup FORMATTER
     autocmd BufWritePre *.c silent! Neoformat
     autocmd BufWritePre *.h silent! Neoformat
 augroup END
+
+augroup TREESITTER
+    autocmd BufWritePre *.js silent! TSBufEnable javascript
+    autocmd BufWritePre *.ts silent! TSBufEnable typescript
+    autocmd BufWritePre *.json silent! TSBufEnable json
+    autocmd BufWritePre *.c silent! TSBufEnable c
+    autocmd BufWritePre *.php silent! TSBufEnable php
+augroup END
