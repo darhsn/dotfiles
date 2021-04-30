@@ -39,10 +39,6 @@ call plug#begin()
     " WebDev
     Plug 'ap/vim-css-color'
 
-    " Status bar
-    " Plug 'vim-airline/vim-airline'
-    " Plug 'vim-airline/vim-airline-themes'
-
     " Git
     Plug 'tpope/vim-fugitive'
     Plug 'airblade/vim-gitgutter'
@@ -51,7 +47,6 @@ call plug#begin()
     Plug 'tpope/vim-commentary'
 
     " Tmux
-    " Plug 'edkolev/tmuxline.vim'
     Plug 'preservim/vimux'
 
     " Colorscheme
@@ -100,12 +95,6 @@ endif
 
 " Git gutter
 let g:gitgutter_map_keys = 0
-
-let g:gitgutter_sign_added='┃'
-let g:gitgutter_sign_modified='┃'
-let g:gitgutter_sign_removed='◢'
-let g:gitgutter_sign_removed_first_line='◥'
-let g:gitgutter_sign_modified_removed='◢'
 
 " Statusline
 let g:currentmode = {
