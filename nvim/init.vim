@@ -50,10 +50,10 @@ call plug#begin()
     Plug 'preservim/vimux'
 
     " Colorscheme
-    Plug 'morhetz/gruvbox'
-    Plug 'joshdick/onedark.vim'
-    Plug 'chriskempson/base16-vim'
-    Plug 'arcticicestudio/nord-vim'
+    " Plug 'morhetz/gruvbox'
+    " Plug 'joshdick/onedark.vim'
+    " Plug 'chriskempson/base16-vim'
+    " Plug 'arcticicestudio/nord-vim'
     Plug 'fcpg/vim-fahrenheit'
 
     " Formatting
