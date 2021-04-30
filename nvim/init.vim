@@ -2,7 +2,6 @@
 set guicursor=
 set termguicolors
 set completeopt=menuone,noinsert,noselect
-set mouse=a
 set updatetime=100
 set timeoutlen=300
 
@@ -28,7 +27,6 @@ call plug#begin()
     " LSP & Completition
     Plug 'neovim/nvim-lspconfig'
     Plug 'nvim-lua/completion-nvim'
-    Plug 'onsails/lspkind-nvim'
 
     " Surrounding utils
     Plug 'tpope/vim-surround'
@@ -69,35 +67,6 @@ call plug#begin()
     " Formatting
     Plug 'sbdchd/neoformat'
 call plug#end()
-
-" LSP Symbols
-lua << EOF
-require('lspkind').init({
-    -- with_text = true,
-    symbol_map = {
-      Text = '',
-      Method = 'ƒ',
-      Function = '',
-      Constructor = '',
-      Variable = '',
-      Class = '',
-      Interface = 'ﰮ',
-      Module = '',
-      Property = '',
-      Unit = '',
-      Value = '',
-      Enum = '了',
-      Keyword = '',
-      Snippet = '﬌',
-      Color = '',
-      File = '',
-      Folder = '',
-      EnumMember = '',
-      Constant = '',
-      Struct = ''
-    },
-})
-EOF
 
 " LSP
 lua <<EOF
