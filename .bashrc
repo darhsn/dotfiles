@@ -112,9 +112,9 @@ setps1() {
         GIT_BRANCH="$(git symbolic-ref --short HEAD 2>/dev/null)"
 
         if [ "${GIT_BRANCH}" == "" ]; then
-            PS1="${PINK}\w${WHITE} ${SHELL_COLOR}->${WHITE} "
+            PS1="${SHELL_COLOR}-> ${PINK}\W${WHITE} "
         else
-            PS1="${PINK}\w${GREEN} ${GIT_BRANCH} ${SHELL_COLOR}->${WHITE} "
+            PS1="${SHELL_COLOR}-> ${PINK}\W${GREEN} ${GIT_BRANCH}${WHITE} "
         fi
     }
 
