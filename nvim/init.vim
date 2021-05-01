@@ -4,6 +4,7 @@ set termguicolors
 set completeopt=menuone,noinsert,noselect
 set updatetime=100
 set timeoutlen=300
+set noshowmode
 
 " Local to window
 set number relativenumber
