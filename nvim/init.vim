@@ -50,9 +50,8 @@ call plug#begin()
     " Tmux
     Plug 'preservim/vimux'
 
-    " NvimTreesitter (Better syntax analyzing and highlighting)
-    Plug 'nvim-treesitter/nvim-treesitter'
-    Plug 'nvim-treesitter/playground'
+    " Polyglot (Better syntax highlighting)
+    Plug 'sheerun/vim-polyglot'
 
     " Colorscheme
     " Plug 'morhetz/gruvbox'
@@ -60,6 +59,7 @@ call plug#begin()
     " Plug 'chriskempson/base16-vim'
     " Plug 'arcticicestudio/nord-vim'
     Plug 'fcpg/vim-fahrenheit'
+    Plug 'pR0Ps/molokai-dark'
 
     " Formatting
     Plug 'sbdchd/neoformat'
@@ -193,18 +193,10 @@ augroup DARIO_GROUP
 augroup END
 
 augroup FORMATTER
-    autocmd BufWritePre *.js silent! Neoformat
-    autocmd BufWritePre *.ts silent! Neoformat
+    " autocmd BufWritePre *.js silent! Neoformat
+    " autocmd BufWritePre *.ts silent! Neoformat
     autocmd BufWritePre *.html silent! Neoformat
     autocmd BufWritePre *.css silent! Neoformat
     autocmd BufWritePre *.c silent! Neoformat
     autocmd BufWritePre *.h silent! Neoformat
-augroup END
-
-augroup TREESITTER
-    autocmd BufWritePre *.js silent! TSBufEnable javascript
-    autocmd BufWritePre *.ts silent! TSBufEnable typescript
-    autocmd BufWritePre *.json silent! TSBufEnable json
-    autocmd BufWritePre *.c silent! TSBufEnable c
-    autocmd BufWritePre *.php silent! TSBufEnable php
 augroup END
