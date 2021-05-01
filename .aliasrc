@@ -1,23 +1,21 @@
 #!/bin/bash
 
-alias l="exa -lh"
+alias ls="exa -lh"
+alias lt="exa -lh --tree"
 alias lh="exa -lah"
 
-alias mk="mkdir -p"
-alias t="touch"
+alias mkdir="mkdir -p"
 alias rm="rm -r"
 
-alias g="grep --color=auto"
-alias m="less"
+alias grep="grep --color=auto"
 
-alias c="cd"
 alias ..="cd .."
 alias ...="cd ../../"
 alias ....="cd ../../../"
 
-alias cl="clear"
 alias cls="clear && l"
 alias clh="clear && lh"
+alias clt="clear && lt"
 
 alias sd="mkdir -p ~/sd && sudo mount /dev/mmcblk0 ~/sd && cd ~/sd"
 alias usd="sudo umount ~/sd && rm -rf ~/sd"
@@ -26,7 +24,6 @@ alias vi="nvim"
 
 alias aliasrc="vi \"$HOME/dotfiles/.aliasrc\""
 alias bashrc="vi \"$HOME/dotfiles/.bashrc\""
-alias nvimconf="vi \"$HOME/dotfiles/nvim/init.vim\""
 
 alias code="c ~/Code"
 alias dotfiles="c ~/dotfiles/"
