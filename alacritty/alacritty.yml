@@ -30,9 +30,9 @@ colors:
         white:   '0xFFFFFF'
 font:
     normal:
-        family: UbuntuMono Nerd Font
+        family: Consolas
     italic:
-        family: UbuntuMono Nerd Font
+        family: Consolas
     size: 15.0
 window:
     padding:
