@@ -13,7 +13,7 @@ alias ..="cd .."
 alias ...="cd ../../"
 alias ....="cd ../../../"
 
-alias cls="clear && l"
+alias cls="clear && ls"
 alias clh="clear && lh"
 alias clt="clear && lt"
 
@@ -25,9 +25,9 @@ alias vi="nvim"
 alias aliasrc="vi \"$HOME/dotfiles/.aliasrc\""
 alias bashrc="vi \"$HOME/dotfiles/.bashrc\""
 
-alias code="c ~/Code"
-alias dotfiles="c ~/dotfiles/"
-alias scripts="c ~/Code/Scripts"
+alias code="cd ~/Code"
+alias dotfiles="cd ~/dotfiles/"
+alias scripts="cd ~/Code/Scripts"
 
 alias rxmon="xrandr --output VGA-1 --auto --right-of LVDS1"
 alias rxmon_off="xrandr --output VGA-1 --off"
