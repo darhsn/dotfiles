@@ -45,6 +45,7 @@ There are several screenshots available in the `screenshots` folder
 ### Base16
 ![base16](./screenshots/base16.png)
 ### Dark
+![dark](./screenshots/dark.png)
 
 ## Gtk theme
 You need to install lxappearance and the gruvbox-gtk and arc-gtk themes
