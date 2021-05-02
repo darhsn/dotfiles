@@ -26,8 +26,8 @@ alias aliasrc="vi \"$HOME/dotfiles/.aliasrc\""
 alias bashrc="vi \"$HOME/dotfiles/.bashrc\""
 
 alias code="cd ~/Code"
-alias dotfiles="cd ~/dotfiles/"
-alias scripts="cd ~/Code/Scripts"
+alias dots="cd ~/dotfiles/"
+alias windisk="cd ~/windisk/"
 
 alias rxmon="xrandr --output VGA-1 --auto --right-of LVDS-1"
 alias rxmon_off="xrandr --output VGA-1 --off"
