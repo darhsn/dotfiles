@@ -30,10 +30,10 @@ colors:
         white:   '0xFFFFFF'
 font:
     normal:
-        family: monaco
+        family: UbuntuMono Nerd Font
     italic:
-        family: monaco
-    size: 12.0
+        family: UbuntuMono Nerd Font
+    size: 15.0
 window:
     padding:
         x: 4
