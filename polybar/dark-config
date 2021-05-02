@@ -33,7 +33,8 @@ modules-right = pulseaudio keyboard wlan battery
 inherit = template
 monitor = VGA-1
 modules-left = workspaces
-modules-right = pulseaudio keyboard wlan battery time
+modules-center = time
+modules-right = pulseaudio keyboard wlan battery
 
 [module/keyboard]
 type = internal/xkeyboard
