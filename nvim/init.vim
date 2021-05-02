@@ -70,7 +70,7 @@ lua <<EOF
 local lspconfig = require('lspconfig')
 local completion = require('completion')
 
-local lsp_servers = {"vimls", "clangd", "phpactor", "tsserver"}
+local lsp_servers = {"vimls", "clangd", "phpactor", "tsserver", "html"}
 
 for index, server in ipairs(lsp_servers) do
     lspconfig[server].setup{
@@ -195,8 +195,8 @@ augroup END
 augroup FORMATTER
     " autocmd BufWritePre *.js silent! Neoformat
     " autocmd BufWritePre *.ts silent! Neoformat
-    autocmd BufWritePre *.html silent! Neoformat
-    autocmd BufWritePre *.css silent! Neoformat
+    " autocmd BufWritePre *.html silent! Neoformat
+    " autocmd BufWritePre *.css silent! Neoformat
     autocmd BufWritePre *.c silent! Neoformat
     autocmd BufWritePre *.h silent! Neoformat
 augroup END
