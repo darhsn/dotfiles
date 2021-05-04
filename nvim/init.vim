@@ -59,7 +59,6 @@ call plug#begin()
     Plug 'chriskempson/base16-vim'
     Plug 'arcticicestudio/nord-vim'
     Plug 'fcpg/vim-fahrenheit'
-    Plug 'pR0Ps/molokai-dark'
     Plug 'drewtempelmeyer/palenight.vim'
 
     " Formatting
