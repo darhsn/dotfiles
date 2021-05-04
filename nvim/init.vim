@@ -17,7 +17,7 @@ set noswapfile
 set expandtab
 
 let mapleader=" "
-let g:colorscheme="dark"
+let g:colorscheme="pale-dark"
 
 call plug#begin()
     " Telescope
@@ -54,12 +54,13 @@ call plug#begin()
     Plug 'sheerun/vim-polyglot'
 
     " Colorscheme
-    " Plug 'morhetz/gruvbox'
-    " Plug 'joshdick/onedark.vim'
-    " Plug 'chriskempson/base16-vim'
-    " Plug 'arcticicestudio/nord-vim'
+    Plug 'morhetz/gruvbox'
+    Plug 'joshdick/onedark.vim'
+    Plug 'chriskempson/base16-vim'
+    Plug 'arcticicestudio/nord-vim'
     Plug 'fcpg/vim-fahrenheit'
     Plug 'pR0Ps/molokai-dark'
+    Plug 'drewtempelmeyer/palenight.vim'
 
     " Formatting
     Plug 'sbdchd/neoformat'
@@ -82,20 +83,30 @@ EOF
 " Colorscheme
 if g:colorscheme == "gruvbox"
     let g:gruvbox_contrast_dark = "hard"
-    let g:gruvbox_italic = 1
+    " let g:gruvbox_italic = 1
     colorscheme gruvbox
 elseif g:colorscheme == "base16"
     colorscheme base16-default-dark
-    hi Comment cterm=italic gui=italic
+    " hi Comment cterm=italic gui=italic
 elseif g:colorscheme == "nord"
     let g:nord_italic = 1
     let g:nord_italic_comments = 1
     colorscheme nord
 elseif g:colorscheme == "onedark"
-    let g:onedark_terminal_italics = 1
+    let g:onedark_color_overrides = {
+        \ "black": {"gui": "#000000", "cterm": "0", "cterm16": "0" }
+        \ }
+    " let g:onedark_terminal_italics = 1
     colorscheme onedark
 elseif g:colorscheme == "dark"
+    " hi Comment cterm=italic gui=italic
     colorscheme fahrenheit
+elseif g:colorscheme == "pale-dark"
+    let g:palenight_color_overrides = {
+        \ 'black': { 'gui': '#000000', "cterm": "0", "cterm16": "0" },
+        \ }
+    " let g:palenight_terminal_italics = 1
+    colorscheme palenight
 endif
 
 " Git gutter
