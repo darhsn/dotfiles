@@ -1,9 +1,9 @@
 [colors]
-background = #000
-foreground = ##ffffff
-muted = #262626
-urgent = #870000
-primary = #5f87af
+background = #000000
+foreground = #ABB2BF
+muted = #585858
+urgent = #E06C75
+primary = #61AFEF
 
 [template]
 width = 100%
@@ -33,15 +33,14 @@ modules-right = pulseaudio keyboard wlan battery
 inherit = template
 monitor = VGA-1
 modules-left = workspaces
-modules-center = time
-modules-right = pulseaudio keyboard wlan battery
+modules-right = pulseaudio keyboard wlan battery time
 
 [module/keyboard]
 type = internal/xkeyboard
 blacklist-0 = num lock
 blacklist-1 = scroll lock
 format =  <label-indicator><label-layout>
-label-indicator = %{F#870000}
+label-indicator = %{F#ab4642}
 label-layout =   %layout%
 
 [module/wlan]
@@ -75,11 +74,11 @@ type = internal/battery
 battery = BAT0
 adapter = AC0
 full-at = 98
-format-charging = %{F#ffd75f} <label-charging>
+format-charging = %{F#E5C07B} <label-charging>
 format-discharging = <ramp-capacity>  <label-discharging>
-format-full = %{F#ffd75f} <label-full>
-ramp-capacity-0 = %{F#870000}
-ramp-capacity-1 = %{F#5f87af}
+format-full = %{F#E5C07B} <label-full>
+ramp-capacity-0 = %{F#E06C75}
+ramp-capacity-1 = %{F#86c1b9}
 ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 

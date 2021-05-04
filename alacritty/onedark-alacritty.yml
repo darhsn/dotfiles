@@ -1,7 +1,7 @@
 colors:
     primary:
-    background: '#000000'
-    foreground: '#abb2bf'
+      background: '#000000'
+      foreground: '#abb2bf'
 
     bright_foreground: '#e6efff'
 

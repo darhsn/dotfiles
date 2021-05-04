@@ -1,33 +1,39 @@
 colors:
-    # Default colors
     primary:
-        background: '0x000000'
-        foreground: '0xffffff'
-    cursor:
-        text: '0xF81CE5'
-        cursor: '0xffffff'
+      background: '#000000'
+      foreground: '#abb2bf'
 
-    # Normal colors
+    bright_foreground: '#e6efff'
+
     normal:
-        black:   '0x000000'
-        red:     '0xfe0100'
-        green:   '0x33ff00'
-        yellow:  '0xfeff00'
-        blue:    '0x0066ff'
-        magenta: '0xcc00ff'
-        cyan:    '0x00ffff'
-        white:   '0xd0d0d0'
+        black:   '#000000'
+        red:     '#e06c75'
+        green:   '#98c379'
+        yellow:  '#d19a66'
+        blue:    '#61afef'
+        magenta: '#c678dd'
+        cyan:    '#56b6c2'
+        white:   '#828791'
 
-      # Bright colors
     bright:
-        black:   '0x808080'
-        red:     '0xfe0100'
-        green:   '0x33ff00'
-        yellow:  '0xfeff00'
-        blue:    '0x0066ff'
-        magenta: '0xcc00ff'
-        cyan:    '0x00ffff'
-        white:   '0xFFFFFF'
+        black:   '#5c6370'
+        red:     '#e06c75'
+        green:   '#98c379'
+        yellow:  '#d19a66'
+        blue:    '#61afef'
+        magenta: '#c678dd'
+        cyan:    '#56b6c2'
+        white:   '#e6efff'
+
+    dim:
+        black:   '#000000'
+        red:     '#e06c75'
+        green:   '#98c379'
+        yellow:  '#d19a66'
+        blue:    '#61afef'
+        magenta: '#c678dd'
+        cyan:    '#56b6c2'
+        white:   '#828791'
 font:
     normal:
         family: UbuntuMono Nerd Font
