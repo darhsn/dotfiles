@@ -10,7 +10,6 @@
 
 
 * {
-  black:      #000000;
   red:        #eb6e67;
   green:      #95ee8f;
   yellow:     #f8c456;
@@ -21,7 +20,7 @@
   text:       #dfdfdf;
   text-alt:   #b2b2b2;
   fg:         #abb2bf;
-  bg:         #282c34;
+  bg:         #000000;
 
   spacing: 0;
   background-color: transparent;

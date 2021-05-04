@@ -1,12 +1,12 @@
 colors:
     primary:
-    background: '#282C34'
+    background: '#000000'
     foreground: '#abb2bf'
 
     bright_foreground: '#e6efff'
 
     normal:
-        black:   '#282C34'
+        black:   '#000000'
         red:     '#e06c75'
         green:   '#98c379'
         yellow:  '#d19a66'
@@ -26,7 +26,7 @@ colors:
         white:   '#e6efff'
 
     dim:
-        black:   '#282C34'
+        black:   '#000000'
         red:     '#e06c75'
         green:   '#98c379'
         yellow:  '#d19a66'

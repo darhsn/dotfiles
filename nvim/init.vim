@@ -17,7 +17,7 @@ set noswapfile
 set expandtab
 
 let mapleader=" "
-let g:colorscheme="pale-dark"
+let g:colorscheme="onedark"
 
 call plug#begin()
     " Telescope
@@ -59,7 +59,6 @@ call plug#begin()
     Plug 'chriskempson/base16-vim'
     Plug 'arcticicestudio/nord-vim'
     Plug 'fcpg/vim-fahrenheit'
-    Plug 'drewtempelmeyer/palenight.vim'
 
     " Formatting
     Plug 'sbdchd/neoformat'
@@ -97,15 +96,10 @@ elseif g:colorscheme == "onedark"
         \ }
     " let g:onedark_terminal_italics = 1
     colorscheme onedark
+    hi! StatusLine ctermfg=145 ctermbg=0 guifg=#ABB2BF guibg=#000000
 elseif g:colorscheme == "dark"
     " hi Comment cterm=italic gui=italic
     colorscheme fahrenheit
-elseif g:colorscheme == "pale-dark"
-    let g:palenight_color_overrides = {
-        \ 'black': { 'gui': '#000000', "cterm": "0", "cterm16": "0" },
-        \ }
-    " let g:palenight_terminal_italics = 1
-    colorscheme palenight
 endif
 
 " Git gutter
