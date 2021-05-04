@@ -175,3 +175,4 @@ hc unlock
 polybar primary &
 nitrogen --restore
 compton &
+picom &
