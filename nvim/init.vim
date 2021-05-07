@@ -69,7 +69,7 @@ lua <<EOF
 local lspconfig = require('lspconfig')
 local completion = require('completion')
 
-local lsp_servers = {"vimls", "clangd", "phpactor", "tsserver", "html"}
+local lsp_servers = {"vimls", "clangd", "phpactor", "tsserver", "pyright"}
 
 for index, server in ipairs(lsp_servers) do
     lspconfig[server].setup{
