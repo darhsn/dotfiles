@@ -32,9 +32,9 @@ colors:
         white:   '0xf8f8f8'
 font:
     normal:
-        family: UbuntuMono Nerd Font
+        family: Inconsolata NerdFont
     italic:
-        family: UbuntuMono Nerd Font
+        family: Inconsolata NerdFont
     size: 13.5
 window:
     padding:
