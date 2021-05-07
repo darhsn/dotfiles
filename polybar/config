@@ -18,9 +18,9 @@ margin-top = 0
 margin-bottom = 0
 module-margin-left = 1
 module-margin-right = 1
-font-0 = "UbuntuMono Nerd Font:pixelsize=12"
-font-1 = "UbuntuMono Nerd Font:pixelsize=12"
-font-2 = "UbuntuMono Nerd Font:pixelsize=12"
+font-0 = "Inconsolata NerdFont:pixelsize=12"
+font-1 = "Inconsolata NerdFont:pixelsize=12"
+font-2 = "Inconsolata NerdFont:pixelsize=12"
 
 [bar/primary]
 inherit = template

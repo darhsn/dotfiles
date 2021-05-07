@@ -1,5 +1,5 @@
 [global]
-font = UbuntuMono Nerd Font 11
+font = Inconsolata NerdFont 12
 
 # Allow a small subset of html markup:
 #   <b>bold</b>
