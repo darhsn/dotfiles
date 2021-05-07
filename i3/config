@@ -37,7 +37,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec kitty -d /bin/bash
+bindsym $mod+Return exec alacritty -d /bin/bash
 
 # kill focused window
 bindsym $mod+Shift+q kill
