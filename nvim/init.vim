@@ -28,6 +28,7 @@ call plug#begin()
     " LSP & Completition
     Plug 'neovim/nvim-lspconfig'
     Plug 'nvim-lua/completion-nvim'
+    Plug 'glepnir/lspsaga.nvim'
 
     " Surrounding utils
     Plug 'tpope/vim-surround'
@@ -69,13 +70,55 @@ lua <<EOF
 local lspconfig = require('lspconfig')
 local completion = require('completion')
 
-local lsp_servers = {"vimls", "clangd", "phpactor", "tsserver", "pyls"}
+local lsp_servers = {"vimls", "clangd", "phpactor", "tsserver", "pyright"}
 
 for index, server in ipairs(lsp_servers) do
     lspconfig[server].setup{
         on_attach=completion.on_attach
     }
 end
+EOF
+
+" LSP Saga
+lua <<EOF
+local saga = require("lspsaga")
+
+saga.init_lsp_saga {
+    debug = false,
+    use_saga_diagnostic_sign = true,
+    -- diagnostic sign
+    error_sign = 'E',
+    warn_sign = 'W',
+    hint_sign = 'W',
+    infor_sign = 'W',
+    dianostic_header_icon = ' D  ',
+    -- code action title icon
+    code_action_icon = 'C ',
+    code_action_prompt = {
+        enable = true,
+        sign = true,
+        sign_priority = 40,
+        virtual_text = true,
+    },
+    finder_definition_icon = 'F  ',
+    finder_reference_icon = 'R  ',
+    max_preview_lines = 10,
+    finder_action_keys = {
+        open = 'o', vsplit = 's',split = 'i',quit = 'q',
+        scroll_down = '<C-f>',
+        scroll_up = '<C-b>'
+    },
+    code_action_keys = {
+        quit = 'q',exec = '<CR>'
+    },
+    rename_action_keys = {
+        quit = '<C-c>',exec = '<CR>'
+    },
+    definition_preview_icon = 'P  ',
+    border_style = "plus",
+    rename_prompt_prefix = 'R',
+    server_filetype_map = {}
+}
 EOF
 
 " Colorscheme
@@ -190,6 +233,11 @@ nnoremap <silent> <leader>mi :call TmuxMake("install")<CR>
 nnoremap <silent> <leader>mt :call TmuxMake("test")<CR>
 nnoremap <silent> <leader>mc :call TmuxMake("clean")<CR>
 nnoremap <silent> <leader>mm :call TmuxMake("")<CR>
+
+nnoremap <silent> <leader>ld :Lspsaga show_line_diagnostics<CR>
+nnoremap <silent> <leader>lc :Lspsaga code_actions<CR>
+nnoremap <silent> <leader>ln :Lspsaga diagnostics_jump_next<CR>
+nnoremap <silent> <leader>lN :Lspsaga diagnostics_jump_prev<CR>
 
 nnoremap <silent> <leader>tf :Telescope find_files<CR>
 nnoremap <silent> <leader>tg :Telescope git_files<CR>

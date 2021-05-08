@@ -30,9 +30,9 @@ colors:
         white:   '0xFFFFFF'
 font:
     normal:
-        family: Inconsolata NerdFont
+        family: JetBrains Mono Nerd Font
     italic:
-        family: Inconsolata NerdFont
+        family: JetBrains Mono Nerd Font
     size: 13.5
 window:
     padding:

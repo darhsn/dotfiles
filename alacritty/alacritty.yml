@@ -36,10 +36,10 @@ colors:
         white:   '#828791'
 font:
     normal:
-        family: Inconsolata NerdFont
+        family: JetBrains Mono Nerd Font
     italic:
-        family: Inconsolata NerdFont
-    size: 14
+        family: JetBrains Mono Nerd Font
+    size: 12
 window:
     padding:
         x: 4
