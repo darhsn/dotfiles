@@ -69,7 +69,7 @@ lua <<EOF
 local lspconfig = require('lspconfig')
 local completion = require('completion')
 
-local lsp_servers = {"vimls", "clangd", "phpactor", "tsserver", "pyright"}
+local lsp_servers = {"vimls", "clangd", "phpactor", "tsserver", "pyls"}
 
 for index, server in ipairs(lsp_servers) do
     lspconfig[server].setup{
@@ -127,7 +127,7 @@ let g:currentmode = {
     \ ''     : 'V',
     \ }
 
-set statusline=%{toupper(g:currentmode[mode()])}\ %#Todo#%F%h\ %#Type#%{fugitive#statusline()}\ %=\ %#Function#LN\ %l\/%L\ %#Number#C\ %c%V\ %#Statement#%P\ %#Indentifier#\%m%r%h%w%y
+set statusline=%{toupper(g:currentmode[mode()])}\ %#Todo#%F%h\ %#Type#%{fugitive#statusline()}\ %=\ W\ %{LSPWarnings()}\ E\ %{LSPErrors()}\ %#Function#LN\ %l\/%L\ %#Number#C\ %c%V\ %#Indentifier#\%m%r%h%w%y
 
 " Functions
 fun! TrimSpace()
@@ -142,6 +142,16 @@ endfun
 
 fun TmuxMake(command)
     VimuxRunCommand "clear; make " . a:command . "; read -p \"Program finished with $?, Press enter to continue...\" && exit"
+endfun
+
+fun LSPErrors()
+    let errs = luaeval('vim.lsp.diagnostic.get_count(0, "Error")')
+    return errs
+endfun
+
+fun LSPWarnings()
+    let errs = luaeval('vim.lsp.diagnostic.get_count(0, "Warning")')
+    return errs
 endfun
 
 fun BufferAdd()
