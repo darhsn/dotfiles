@@ -1,45 +1,40 @@
 colors:
+
     primary:
-      background: '#000000'
-      foreground: '#abb2bf'
+        background: '#1d2021'
+        foreground: '#d5c4a1'
 
-    bright_foreground: '#e6efff'
+    cursor:
+        text: '#1d2021'
+        cursor: '#d5c4a1'
 
+    # Normal colors
     normal:
-        black:   '#000000'
-        red:     '#e06c75'
-        green:   '#98c379'
-        yellow:  '#d19a66'
-        blue:    '#61afef'
-        magenta: '#c678dd'
-        cyan:    '#56b6c2'
-        white:   '#828791'
+        black:   '#1d2021'
+        red:     '#fb4934'
+        green:   '#b8bb26'
+        yellow:  '#fabd2f'
+        blue:    '#83a598'
+        magenta: '#d3869b'
+        cyan:    '#8ec07c'
+        white:   '#d5c4a1'
 
+    # Bright colors
     bright:
-        black:   '#5c6370'
-        red:     '#e06c75'
-        green:   '#98c379'
-        yellow:  '#d19a66'
-        blue:    '#61afef'
-        magenta: '#c678dd'
-        cyan:    '#56b6c2'
-        white:   '#e6efff'
-
-    dim:
-        black:   '#000000'
-        red:     '#e06c75'
-        green:   '#98c379'
-        yellow:  '#d19a66'
-        blue:    '#61afef'
-        magenta: '#c678dd'
-        cyan:    '#56b6c2'
-        white:   '#828791'
+        black:   '#665c54'
+        red:     '#fb4934'
+        green:   '#b8bb26'
+        yellow:  '#fabd2f'
+        blue:    '#83a598'
+        magenta: '#d3869b'
+        cyan: '#8ec07c'
+        white:   '#fbf1c7'
 font:
     normal:
         family: JetBrains Mono Nerd Font
     italic:
         family: JetBrains Mono Nerd Font
-    size: 12
+    size: 13.5
 window:
     padding:
         x: 4
