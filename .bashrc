@@ -3,6 +3,7 @@
 # Variables
 export DOTS_DIR="$HOME/dotfiles"
 export EDITOR="nvim"
+export POWERLINE=1
 
 # Aliases
 source ~/.aliasrc
@@ -90,6 +91,19 @@ fetch() {
 EOF
 }
 
+# Code command
+code() {
+    if [ "${1}" == "" ]; then
+        cd "${HOME}/Code"
+    elif [ "${1}" == "web" ]; then
+        cd "${HOME}/Code/WebServer"
+    elif [ "${1}" == "go" ]; then
+        cd "${HOME}/Code/Go"
+    elif [ "${1}" == "python" ]; then
+        cd "${HOME}/Code/Python"
+    fi
+}
+
 # Prompt function
 setps1() {
 
@@ -123,5 +137,5 @@ setps1() {
 
 # Startup commands
 clear
-setps1
+# setps1
 fetch
