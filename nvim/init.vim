@@ -17,7 +17,7 @@ set noswapfile
 set expandtab
 
 let mapleader=" "
-let g:colorscheme="onedark"
+let g:colorscheme="gruvbox"
 
 call plug#begin()
     " Telescope
@@ -29,6 +29,9 @@ call plug#begin()
     Plug 'neovim/nvim-lspconfig'
     Plug 'nvim-lua/completion-nvim'
     Plug 'glepnir/lspsaga.nvim'
+
+    " Harpoon
+    Plug 'ThePrimeagen/harpoon'
 
     " Surrounding utils
     Plug 'tpope/vim-surround'
@@ -55,7 +58,6 @@ call plug#begin()
     Plug 'sheerun/vim-polyglot'
 
     " Colorscheme
-    Plug 'morhetz/gruvbox'
     Plug 'joshdick/onedark.vim'
     Plug 'chriskempson/base16-vim'
     Plug 'arcticicestudio/nord-vim'
@@ -123,9 +125,9 @@ EOF
 
 " Colorscheme
 if g:colorscheme == "gruvbox"
-    let g:gruvbox_contrast_dark = "hard"
+    " let g:gruvbox_contrast_dark = "hard"
     " let g:gruvbox_italic = 1
-    colorscheme gruvbox
+    colorscheme base16-gruvbox-dark-hard
 elseif g:colorscheme == "base16"
     colorscheme base16-default-dark
     " hi Comment cterm=italic gui=italic
@@ -234,18 +236,24 @@ nnoremap <silent> <leader>mt :call TmuxMake("test")<CR>
 nnoremap <silent> <leader>mc :call TmuxMake("clean")<CR>
 nnoremap <silent> <leader>mm :call TmuxMake("")<CR>
 
-nnoremap <silent> <leader>ld :Lspsaga show_line_diagnostics<CR>
+nnoremap <silent> <leader>ll :Lspsaga show_line_diagnostics<CR>
+nnoremap <silent> <leader>ld :lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> <leader>lc :Lspsaga code_actions<CR>
 nnoremap <silent> <leader>ln :Lspsaga diagnostics_jump_next<CR>
 nnoremap <silent> <leader>lN :Lspsaga diagnostics_jump_prev<CR>
 
 nnoremap <silent> <leader>tf :Telescope find_files<CR>
+nnoremap <silent> <C-p> :Telescope find_files<CR>
 nnoremap <silent> <leader>tg :Telescope git_files<CR>
 
 nnoremap <silent> <leader>bd :bd<CR>
 nnoremap <silent> <leader>ba :call BufferAdd()<CR>
 nnoremap <silent> <C-h> :bprev<CR>
 nnoremap <silent> <C-l> :bnext<CR>
+
+nnoremap <silent> <leader>t :term<CR>
+
+tnoremap <silent> <Esc> <C-\><C-n>
 
 " Auto commands
 augroup DARIO_GROUP
