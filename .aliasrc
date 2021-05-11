@@ -25,7 +25,7 @@ alias vi="nvim"
 alias aliasrc="vi \"$HOME/dotfiles/.aliasrc\""
 alias bashrc="vi \"$HOME/dotfiles/.bashrc\""
 
-alias code="cd ~/Code"
+# alias code="cd ~/Code"
 alias dots="cd ~/dotfiles/"
 alias windisk="cd ~/windisk/"
 
