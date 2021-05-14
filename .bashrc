@@ -104,6 +104,37 @@ code() {
     fi
 }
 
+# Function to manage tmux sessions
+session() {
+    if [ "${1}" == "" ]; then
+        tmux list-sessions
+    elif [ "${1}" == "new" ]; then
+        if [ "${2}" == "" ]; then
+            echo "session: invalid empty session"
+        else
+            tmux new -s ${2}
+        fi
+    elif [ "${1}" == "list" ]; then
+        tmux list-sessions
+    elif [ "${1}" == "killall" ]; then
+        tmux kill-server
+    elif [ "${1}" == "kill" ]; then
+        if [ "${2}" == "" ]; then
+            echo "session: invalid empty kill"
+        else
+            tmux kill-session -t ${2}
+        fi
+    elif [ "${1}" == "attach" ]; then
+        if [ "${2}" == "" ]; then
+            echo "session: invalid empty attach"
+        else
+            tmux attach-session -t ${2}
+        fi
+    elif [ "${1}" == "last" ]; then
+        tmux attach-session
+    fi
+}
+
 # Prompt function
 setps1() {
 
@@ -137,5 +168,5 @@ setps1() {
 
 # Startup commands
 clear
-# setps1
+setps1
 fetch
