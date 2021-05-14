@@ -132,6 +132,12 @@ session() {
         fi
     elif [ "${1}" == "last" ]; then
         tmux attach-session
+    elif [ "${1}" == "switch" ]; then
+        if [ "${2}" == "" ]; then
+            echo "session: invalid switch attach"
+        else
+            tmux switch-client -t ${2}
+        fi
     fi
 }
 
