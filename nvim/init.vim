@@ -19,7 +19,7 @@ set expandtab
 let mapleader=" "
 let g:colorscheme="gruvbox"
 
-" source ~/.config/nvim/buftabline.vim
+source ~/.config/nvim/buftabline.vim
 
 call plug#begin()
     " Telescope
