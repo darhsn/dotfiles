@@ -19,6 +19,8 @@ set expandtab
 let mapleader=" "
 let g:colorscheme="gruvbox"
 
+" source ~/.config/nvim/buftabline.vim
+
 call plug#begin()
     " Telescope
     Plug 'nvim-lua/popup.nvim'
@@ -29,9 +31,6 @@ call plug#begin()
     Plug 'neovim/nvim-lspconfig'
     Plug 'nvim-lua/completion-nvim'
     Plug 'glepnir/lspsaga.nvim'
-
-    " Harpoon
-    Plug 'ThePrimeagen/harpoon'
 
     " Surrounding utils
     Plug 'tpope/vim-surround'
@@ -60,7 +59,6 @@ call plug#begin()
     " Colorscheme
     Plug 'joshdick/onedark.vim'
     Plug 'chriskempson/base16-vim'
-    Plug 'arcticicestudio/nord-vim'
     Plug 'fcpg/vim-fahrenheit'
 
     " Formatting
@@ -171,6 +169,33 @@ let g:currentmode = {
     \ 'V'      : 'V',
     \ ''     : 'V',
     \ }
+
+" Tabline
+function BufList()
+  let all = range(0, bufnr('$'))
+  let res = []
+  for b in all
+    if buflisted(b)
+      call add(res, bufname(b))
+    endif
+  endfor
+  return res
+endfunction
+
+function TabLine()
+    let bufs_string = ""
+    let bufs = BufList()
+
+    for name in bufs
+        let bufs_string = bufs_string . name . " "
+    endfor
+
+    return bufs_string
+endfunction
+
+augroup TABLINE
+    autocmd BufWritePre,BufEnter * set tabline=%{TabLine()}
+augroup END
 
 set statusline=%{toupper(g:currentmode[mode()])}\ %#Todo#%F%h\ %#Type#%{fugitive#statusline()}\ %=\ W\ %{LSPWarnings()}\ E\ %{LSPErrors()}\ %#Function#LN\ %l\/%L\ %#Number#C\ %c%V\ %#Indentifier#\%m%r%h%w%y
 
