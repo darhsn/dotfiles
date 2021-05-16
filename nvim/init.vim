@@ -121,36 +121,12 @@ saga.init_lsp_saga {
 EOF
 
 " Colorscheme
-
-function SetColorscheme(italic, colorscheme)
-    if a:italic == 1
-        let g:nord_italic = 1
-        let g:nord_italic_comments = 1
-        let g:onedark_terminal_italics = 1
-        hi Comment cterm=italic gui=italic
-    endif
-
-    if a:colorscheme == "gruvbox"
-        colorscheme base16-gruvbox-dark-hard
-    elseif a:colorscheme == "base16"
-        colorscheme base16-default-dark
-    elseif a:colorscheme == "nord"
-        colorscheme nord
-    elseif a:colorscheme == "onedark"
-        let g:onedark_color_overrides = {
-            \ "black": {"gui": "#000000", "cterm": "0", "cterm16": "0" }
-            \ }
-        colorscheme onedark
-        hi! StatusLine ctermfg=145 ctermbg=0 guifg=#ABB2BF guibg=#000000
-    elseif a:colorscheme == "dark"
-        colorscheme fahrenheit
-    elseif a:colorscheme == "solarized"
-        colorscheme solarized
-    endif
-endfunction
-
-call SetColorscheme(1, "solarized")
-
+" let g:onedark_color_overrides = { "black": {"gui": "#000000", "cterm": "0", "cterm16": "0" } }
+" colorscheme onedark
+" hi! StatusLine ctermfg=145 ctermbg=0 guifg=#ABB2BF guibg=#000000
+" colorscheme fahrenheit
+colorscheme solarized
+hi! Comment cterm=italic gui=italic
 
 " Git gutter
 let g:gitgutter_map_keys = 0
