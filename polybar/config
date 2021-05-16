@@ -1,9 +1,9 @@
 [colors]
-background = #000000
-foreground = #ABB2BF
-muted = #585858
-urgent = #E06C75
-primary = #61AFEF
+background = #002b36
+foreground = #eee8d5
+muted = #839496
+urgent = #dc322f
+primary = #2aa198
 
 [template]
 width = 100%
@@ -18,9 +18,9 @@ margin-top = 0
 margin-bottom = 0
 module-margin-left = 1
 module-margin-right = 1
-font-0 = "JetBrains Mono Nerd Font:pixelsize=11"
-font-1 = "JetBrains Mono Nerd Font:pixelsize=11"
-font-2 = "JetBrains Mono Nerd Font:pixelsize=11"
+font-0 = "UbuntuMono Nerd Font:pixelsize=11"
+font-1 = "UbuntuMono Nerd Font:pixelsize=11"
+font-2 = "UbuntuMono Nerd Font:pixelsize=11"
 
 [bar/primary]
 inherit = template
@@ -40,7 +40,7 @@ type = internal/xkeyboard
 blacklist-0 = num lock
 blacklist-1 = scroll lock
 format =  <label-indicator><label-layout>
-label-indicator = %{F#ab4642}
+label-indicator = %{F#dc322f}
 label-layout =   %layout%
 
 [module/wlan]
@@ -74,11 +74,11 @@ type = internal/battery
 battery = BAT0
 adapter = AC0
 full-at = 98
-format-charging = %{F#E5C07B} <label-charging>
+format-charging = %{F#b58900} <label-charging>
 format-discharging = <ramp-capacity>  <label-discharging>
-format-full = %{F#E5C07B} <label-full>
-ramp-capacity-0 = %{F#E06C75}
-ramp-capacity-1 = %{F#86c1b9}
+format-full = %{F#b58900} <label-full>
+ramp-capacity-0 = %{F#dc322f}
+ramp-capacity-1 = %{F#eee8d5}
 ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
