@@ -247,7 +247,7 @@ nnoremap <silent> <leader>pu :PlugUpdate<CR>
 nnoremap <silent> <leader>pU :PlugUpgrade<CR>
 
 nnoremap <silent> <leader>gg :Git<CR>
-nnoremap <silent> <leader>gp :call TmuxGitPush()<CR>
+nnoremap <silent> <leader>gp :term git push<CR>
 nnoremap <silent> <leader>gb :Git blame<CR>
 
 nnoremap <silent> <leader>ghn :GitGutterNextHunk<CR>
