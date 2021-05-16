@@ -3,7 +3,6 @@
 # Variables
 export DOTS_DIR="$HOME/dotfiles"
 export EDITOR="nvim"
-export POWERLINE=1
 
 # Aliases
 source ~/.aliasrc
