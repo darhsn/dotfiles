@@ -19,8 +19,6 @@ set expandtab
 let mapleader=" "
 let g:colorscheme="solarized"
 
-" source ~/.config/nvim/buftabline.vim
-
 call plug#begin()
     " Telescope
     Plug 'nvim-lua/popup.nvim'
