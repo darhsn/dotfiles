@@ -18,8 +18,12 @@ hc keybind $Mod-Shift-q close
 
 # Programs
 hc keybind $Mod-Return spawn "${TERMINAL:-alacritty}" # Spawn my terminal emulator
-hc keybind $Mod-d spawn rofi -show run # Spawn rofi menu
-hc keybind $Mod-Control-s spawn maim $HOME/Pictures/Screenshots/screenshot_$(date +%s).png
+hc keybind $Mod-p spawn maim $HOME/Pictures/Screenshots/screenshot_$(date +%s).png
+
+# Some rofi menus
+hc keybind $Mod-d spawn rofi -show run
+hc keybind $Mod-m spawn ~/dotfiles/shutdown-menu.sh
+hc keybind $Mod-t spawn ~/dotfiles/switch-theme.sh
 
 # basic movement in tiling and floating mode
 # focusing clients
