@@ -17,7 +17,7 @@ set noswapfile
 set expandtab
 
 let mapleader=" "
-let g:colorscheme="onedark"
+let g:colorscheme="solarized"
 
 " source ~/.config/nvim/buftabline.vim
 
@@ -143,6 +143,8 @@ elseif g:colorscheme == "onedark"
 elseif g:colorscheme == "dark"
     " hi Comment cterm=italic gui=italic
     colorscheme fahrenheit
+elseif g:colorscheme == "solarized"
+    colorscheme solarized
 endif
 
 " Git gutter
