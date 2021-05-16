@@ -55,4 +55,11 @@ switch-theme() {
         echo "Themes: gruvbox, onedark, nord, base16, dark"
     fi
 
+    killall polybar
+    polybar primary &!
+
+    killall dunst
+    dunst &!
+
 }
+
