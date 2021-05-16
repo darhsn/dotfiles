@@ -17,9 +17,9 @@ set noswapfile
 set expandtab
 
 let mapleader=" "
-let g:colorscheme="gruvbox"
+let g:colorscheme="onedark"
 
-source ~/.config/nvim/buftabline.vim
+" source ~/.config/nvim/buftabline.vim
 
 call plug#begin()
     " Telescope
