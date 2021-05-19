@@ -17,7 +17,6 @@ set noswapfile
 set expandtab
 
 let mapleader=" "
-let g:colorscheme="solarized"
 let g:italic=1
 
 call plug#begin()
@@ -152,33 +151,6 @@ let g:currentmode = {
     \ 'V'      : 'V',
     \ ''     : 'V',
     \ }
-
-" Tabline
-function BufList()
-  let all = range(0, bufnr('$'))
-  let res = []
-  for b in all
-    if buflisted(b)
-      call add(res, bufname(b))
-    endif
-  endfor
-  return res
-endfunction
-
-function TabLine()
-    let bufs_string = ""
-    let bufs = BufList()
-
-    for name in bufs
-        let bufs_string = bufs_string . name . " "
-    endfor
-
-    return bufs_string
-endfunction
-
-augroup TABLINE
-    autocmd BufWritePre,BufEnter * set tabline=%{TabLine()}
-augroup END
 
 set statusline=%{toupper(g:currentmode[mode()])}\ %#Todo#%F%h\ %#Type#%{fugitive#statusline()}\ %=\ W\ %{LSPWarnings()}\ E\ %{LSPErrors()}\ %#Function#LN\ %l\/%L\ %#Number#C\ %c%V\ %#Indentifier#\%m%r%h%w%y
 
