@@ -60,6 +60,13 @@ switch-theme() {
         cp $DOTFILES_DIR/kitty/base16-kitty.conf $DOTFILES_DIR/kitty/kitty.conf
         cp $DOTFILES_DIR/alacritty/base16-alacritty.yml $DOTFILES_DIR/alacritty/alacritty.yml
         echo "switch-theme: changed theme to base16, wallpaper and vim theme should be changed manually"
+    elif [ "${1}" == "solarized" ]; then
+        cp $DOTFILES_DIR/polybar/solarized-config $DOTFILES_DIR/polybar/config
+        cp $DOTFILES_DIR/rofi/solarized.rasi $DOTFILES_DIR/rofi/theme.rasi
+        cp $DOTFILES_DIR/dunst/solarized-dunstrc $DOTFILES_DIR/dunst/dunstrc
+        cp $DOTFILES_DIR/kitty/solarized-kitty.conf $DOTFILES_DIR/kitty/kitty.conf
+        cp $DOTFILES_DIR/alacritty/solarized-alacritty.yml $DOTFILES_DIR/alacritty/alacritty.yml
+        echo "switch-theme: changed theme to solarized, wallpaper and vim theme should be changed manually"
     elif [ "${1}" == "dark" ]; then
         cp $DOTFILES_DIR/polybar/dark-config $DOTFILES_DIR/polybar/config
         cp $DOTFILES_DIR/rofi/dark.rasi $DOTFILES_DIR/rofi/theme.rasi
