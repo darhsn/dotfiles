@@ -25,6 +25,9 @@ call plug#begin()
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim'
 
+    " Harpoon
+    Plug 'ThePrimeagen/harpoon'
+
     " LSP & Completition
     Plug 'neovim/nvim-lspconfig'
     Plug 'nvim-lua/completion-nvim'
@@ -230,6 +233,11 @@ nnoremap <silent> <leader>bd :bd<CR>
 nnoremap <silent> <leader>ba :call BufferAdd()<CR>
 nnoremap <silent> <C-h> :bprev<CR>
 nnoremap <silent> <C-l> :bnext<CR>
+
+nnoremap <silent> <leader>ha :lua require("harpoon.mark").add_file()<CR>
+nnoremap <silent> <leader>hm :lua require("harpoon.ui").toggle_quick_menu()<CR>
+nnoremap <silent> <leader>hn :lua require("harpoon.ui").nav_next()<CR>
+nnoremap <silent> <leader>hN :lua require("harpoon.ui").nav_prev()<CR>
 
 nnoremap <silent> <leader>t :term<CR>
 
