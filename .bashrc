@@ -153,6 +153,18 @@ session() {
     fi
 }
 
+# FZF Finder
+finder() {
+
+    result="$(find . -maxdepth 1 -type d | grep -v './\.' | fzf)"
+
+    if [ "${result}" == "" ]; then
+        echo "Invalid empty!"
+    else
+        cd ${result} && tmux
+    fi
+}
+
 # Prompt function
 setps1() {
 
