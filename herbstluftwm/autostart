@@ -18,7 +18,7 @@ hc keybind $Mod-Shift-q close
 
 # Programs
 hc keybind $Mod-Return spawn "${TERMINAL:-alacritty}" # Spawn my terminal emulator
-hc keybind $Mod-p spawn maim $HOME/Pictures/Screenshots/screenshot_$(date +%s).png
+hc keybind $Mod-Print spawn maim $HOME/Pictures/Screenshots/screenshot_.png
 
 # Some rofi menus
 hc keybind $Mod-d spawn rofi -show run
@@ -176,7 +176,7 @@ hc unlock
 # hc detect_monitors
 
 # Auto start programs
-polybar primary &
+polybar primary &!
 nitrogen --restore
-compton &
-picom &
+compton &!
+picom &!
