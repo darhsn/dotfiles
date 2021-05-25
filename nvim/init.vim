@@ -153,6 +153,10 @@ let bufferline.icon_close_tab_modified = 'M'
 
 let bufferline.no_name_title = "Untitled"
 
+" Nerd tree
+let g:NERDTreeDirArrowExpandable = '~'
+let g:NERDTreeDirArrowCollapsible = '-'
+
 " Git gutter
 let g:gitgutter_map_keys = 0
 
@@ -178,7 +182,7 @@ let g:currentmode = {
     \ ''     : 'V',
     \ }
 
-set statusline=%{toupper(g:currentmode[mode()])}\ %#Todo#%F%h\ %#Type#%{fugitive#statusline()}\ %=\ W\ %{LSPWarnings()}\ E\ %{LSPErrors()}\ %#Function#LN\ %l\/%L\ %#Number#C\ %c%V\ %#Indentifier#\%m%r%h%w%y
+set statusline=%#PMenuSel#%{toupper(g:currentmode[mode()])}\ %#LineNR#\ %#CursorLineNR#\ %F%h\ %{GitBranch()}\ %=\ W\ %{LSPWarnings()}\ E\ %{LSPErrors()}\ LN\ %l\/%L\ C\ %c%V\ \%m%r%h%w%y
 
 " Functions
 fun! TrimSpace()
@@ -205,6 +209,11 @@ fun LSPWarnings()
     return errs
 endfun
 
+fun GitBranch()
+  let l:branchname = system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
+  return strlen(l:branchname) > 0?''.l:branchname.'':''
+endfun
+
 fun BufferAdd()
     let buffer = input("Buffer to add => ")
     if buffer == ""
@@ -213,7 +222,7 @@ fun BufferAdd()
         exec "badd " . buffer
         bnext
     endif
-endfunction
+endfun
 
 " Mappings
 nnoremap <silent> <leader>c :Commentary<CR>
