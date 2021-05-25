@@ -133,6 +133,23 @@ EOF
 colorscheme solarized
 hi! Comment cterm=italic gui=italic
 
+" Tabline
+let bufferline = get(g:, 'bufferline', {})
+
+let bufferline.animation = v:true
+let bufferline.auto_hide = v:false
+let bufferline.tabpages = v:false
+let bufferline.closable = v:false
+let bufferline.clickable = v:false
+let bufferline.icons = v:false
+
+let bufferline.icon_separator_active = '|'
+let bufferline.icon_separator_inactive = '|'
+let bufferline.icon_close_tab = 'X'
+let bufferline.icon_close_tab_modified = 'M'
+
+let bufferline.no_name_title = "Untitled"
+
 " Git gutter
 let g:gitgutter_map_keys = 0
 
@@ -234,8 +251,8 @@ nnoremap <silent> <leader>tg :Telescope git_files<CR>
 
 nnoremap <silent> <leader>bd :bd<CR>
 nnoremap <silent> <leader>ba :call BufferAdd()<CR>
-nnoremap <silent> <C-h> :bprev<CR>
-nnoremap <silent> <C-l> :bnext<CR>
+nnoremap <silent> <C-h> :BufferPrevious<CR>
+nnoremap <silent> <C-l> :BufferNext<CR>
 
 nnoremap <silent> <leader>ha :lua require("harpoon.mark").add_file()<CR>
 nnoremap <silent> <leader>hm :lua require("harpoon.ui").toggle_quick_menu()<CR>
