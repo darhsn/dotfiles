@@ -25,6 +25,9 @@ call plug#begin()
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim'
 
+    " NerdTree
+    Plug 'preservim/nerdtree'
+
     " Harpoon
     Plug 'ThePrimeagen/harpoon'
 
@@ -258,6 +261,9 @@ nnoremap <silent> <leader>ha :lua require("harpoon.mark").add_file()<CR>
 nnoremap <silent> <leader>hm :lua require("harpoon.ui").toggle_quick_menu()<CR>
 nnoremap <silent> <leader>hn :lua require("harpoon.ui").nav_next()<CR>
 nnoremap <silent> <leader>hN :lua require("harpoon.ui").nav_prev()<CR>
+
+nnoremap <silent> <leader>nt :NERDTreeToggle<CR>
+nnoremap <silent> <leader>nc :NERDTreeClose<CR>
 
 nnoremap <silent> <leader>t :term<CR>
 
