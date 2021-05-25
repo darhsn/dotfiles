@@ -33,6 +33,9 @@ call plug#begin()
     Plug 'nvim-lua/completion-nvim'
     Plug 'glepnir/lspsaga.nvim'
 
+    " Tabline
+    Plug 'romgrk/barbar.nvim'
+
     " Surrounding utils
     Plug 'tpope/vim-surround'
     Plug 'jiangmiao/auto-pairs'
