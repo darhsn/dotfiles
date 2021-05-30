@@ -44,33 +44,31 @@ blacklist-0 = num lock
 blacklist-1 = scroll lock
 format =  <label-indicator><label-layout>
 label-indicator = %{F#ff4d4d}
-label-layout =   %layout%
+label-layout = " "
 
 [module/wlan]
 type = internal/network
 interface = wlp3s0
 interval = 5
-format-connected =   <label-connected>
-label-connected = %essid%
-format-disconnected = 睊 <label-disconnected>
-label-disconnected = no conn
+format-connected = %{F#458588}
+format-disconnected = %{F#ff4d4d}睊
 
 [module/time]
 type = internal/date
 interval = 5
-date =  %I:%M%p
+date = %{F#ff1a1a} %{F#fbf1c7} %I:%M %p
 
 [module/pulseaudio]
 type = internal/pulseaudio
 format-volume = <ramp-volume> <label-volume>
 label-volume = %percentage%%
 
-label-muted = ﱝ muted
+label-muted = ﱝ
 label-muted-foreground = ${colors.muted}
 
 ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
+ramp-volume-1 = %{F#c4c400}
+ramp-volume-2 = %{F#ff1a1a}
 
 [module/battery]
 type = internal/battery
@@ -78,7 +76,7 @@ battery = BAT0
 adapter = AC0
 full-at = 98
 format-charging = %{F#c4c400} <label-charging>
-format-discharging = <ramp-capacity>  <label-discharging>
+format-discharging = <ramp-capacity> <label-discharging>
 format-full = %{F#c4c400} <label-full>
 ramp-capacity-0 = %{F#ff1a1a}
 ramp-capacity-1 = %{F#ffcc00}
@@ -88,18 +86,24 @@ ramp-capacity-4 = 
 
 [module/workspaces]
 type = internal/xworkspaces
+
+icon-default = 
+
 pin-workspaces = false
 enable-click = true
-enable-scroll = true
-label-active = %icon% %name% %icon%
+enable-scroll = false
+
+format = <label-state>
+
+label-active = " %icon% "
 label-active-foreground = ${colors.primary}
 label-active-background = ${colors.background}
-label-occupied = %icon% %name% %icon%
+label-occupied = " %icon% "
 label-occupied-foreground = ${colors.foreground}
-label-urgent = %icon% %name% %icon%
+label-urgent = " %icon% "
 label-urgent-foreground = ${colors.urgent}
 label-urgent-background = ${colors.background}
-label-empty = %icon% %name% %icon%
+label-empty = " %icon% "
 label-empty-foreground = ${colors.muted}
 
 [module/i3]

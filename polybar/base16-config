@@ -41,33 +41,31 @@ blacklist-0 = num lock
 blacklist-1 = scroll lock
 format =  <label-indicator><label-layout>
 label-indicator = %{F#ab4642}
-label-layout =   %layout%
+label-layout = " "
 
 [module/wlan]
 type = internal/network
 interface = wlp3s0
 interval = 5
-format-connected =   <label-connected>
-label-connected = %essid%
-format-disconnected = 睊 <label-disconnected>
-label-disconnected = no conn
+format-connected = %{F#7cafc2}
+format-disconnected = %{F#ab4642}睊
 
 [module/time]
 type = internal/date
 interval = 5
-date =   %I:%M %p
+date = %{F#ab4642} %{F#d8d8d8} %I:%M %p
 
 [module/pulseaudio]
 type = internal/pulseaudio
 format-volume = <ramp-volume> <label-volume>
 label-volume = %percentage%%
 
-label-muted = ﱝ muted
+label-muted = ﱝ
 label-muted-foreground = ${colors.muted}
 
 ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
+ramp-volume-1 = %{F#f7ca88}
+ramp-volume-2 = %{F#ab4642}
 
 [module/battery]
 type = internal/battery
@@ -85,18 +83,24 @@ ramp-capacity-4 = 
 
 [module/workspaces]
 type = internal/xworkspaces
+
+icon-default = 
+
 pin-workspaces = false
 enable-click = true
-enable-scroll = true
-label-active = %icon% %name% %icon%
+enable-scroll = false
+
+format = <label-state>
+
+label-active = " %icon% "
 label-active-foreground = ${colors.primary}
 label-active-background = ${colors.background}
-label-occupied = %icon% %name% %icon%
+label-occupied = " %icon% "
 label-occupied-foreground = ${colors.foreground}
-label-urgent = %icon% %name% %icon%
+label-urgent = " %icon% "
 label-urgent-foreground = ${colors.urgent}
 label-urgent-background = ${colors.background}
-label-empty = %icon% %name% %icon%
+label-empty = " %icon% "
 label-empty-foreground = ${colors.muted}
 
 [module/i3]

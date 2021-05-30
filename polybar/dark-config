@@ -42,41 +42,39 @@ blacklist-0 = num lock
 blacklist-1 = scroll lock
 format =  <label-indicator><label-layout>
 label-indicator = %{F#870000}
-label-layout =   %layout%
+label-layout = " "
 
 [module/wlan]
 type = internal/network
 interface = wlp3s0
 interval = 5
-format-connected =   <label-connected>
-label-connected = %essid%
-format-disconnected = 睊 <label-disconnected>
-label-disconnected = no conn
+format-connected = %{F#5f87af}
+format-disconnected = %{F#870000}睊
 
 [module/time]
 type = internal/date
 interval = 5
-date =   %I:%M %p
+date = %{F#870000} %{F#ffffff} %I:%M %p
 
 [module/pulseaudio]
 type = internal/pulseaudio
 format-volume = <ramp-volume> <label-volume>
 label-volume = %percentage%%
 
-label-muted = ﱝ muted
+label-muted = ﱝ
 label-muted-foreground = ${colors.muted}
 
 ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
+ramp-volume-1 = %{F#ffd75f}
+ramp-volume-2 = %{F#870000}
 
 [module/battery]
 type = internal/battery
 battery = BAT0
 adapter = AC0
 full-at = 98
-format-charging = %{F#ffd75f} <label-charging>
-format-discharging = <ramp-capacity>  <label-discharging>
+format-charging = %{F#ffd75f} %{F#d8d8d8}<label-charging>
+format-discharging = <ramp-capacity> ${F#d8d8d8}  <label-discharging>
 format-full = %{F#ffd75f} <label-full>
 ramp-capacity-0 = %{F#870000}
 ramp-capacity-1 = %{F#5f87af}
@@ -86,20 +84,25 @@ ramp-capacity-4 = 
 
 [module/workspaces]
 type = internal/xworkspaces
+
+icon-default = 
+
 pin-workspaces = false
 enable-click = true
-enable-scroll = true
-label-active = %icon% %name% %icon%
+enable-scroll = false
+
+format = <label-state>
+
+label-active = " %icon% "
 label-active-foreground = ${colors.primary}
 label-active-background = ${colors.background}
-label-occupied = %icon% %name% %icon%
+label-occupied = " %icon% "
 label-occupied-foreground = ${colors.foreground}
-label-urgent = %icon% %name% %icon%
+label-urgent = " %icon% "
 label-urgent-foreground = ${colors.urgent}
 label-urgent-background = ${colors.background}
-label-empty = %icon% %name% %icon%
+label-empty = " %icon% "
 label-empty-foreground = ${colors.muted}
-
 
 [module/i3]
 type = internal/i3
@@ -108,8 +111,8 @@ pin-workspaces = true
 format = <label-state> <label-mode>
 label-mode = %mode%
 label-mode-padding = 1.5
-label-mode-background = ${colors.background}
-label-mode-foreground = ${colors.urgent}
+label-mode-background = ${colors.urgent}
+label-mode-foreground = ${colors.foreground}
 label-focused-font = 1.5
 label-focused = %index%
 label-focused-foreground = ${colors.primary}
@@ -127,8 +130,8 @@ label-visible-foreground = ${colors.foreground}
 label-visible-background = ${colors.background}
 label-urgent-font = 1.5
 label-urgent = %index%
-label-urgent-foreground = ${colors.urgent}
-label-urgent-background = ${colors.background}
+label-urgent-foreground = ${colors.foreground}
+label-urgent-background = ${colors.urgent}
 label-urgent-padding = 1.5
 
 [settings]
