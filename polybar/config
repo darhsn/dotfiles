@@ -7,7 +7,7 @@ primary = #2aa198
 
 [template]
 width = 100%
-height = 25
+height = 30
 fixed-center = true
 override-redirect = false
 background = ${colors.background}
@@ -41,33 +41,31 @@ blacklist-0 = num lock
 blacklist-1 = scroll lock
 format =  <label-indicator><label-layout>
 label-indicator = %{F#dc322f}
-label-layout =   %layout%
+label-layout = " "
 
 [module/wlan]
 type = internal/network
 interface = wlp3s0
 interval = 5
-format-connected =   <label-connected>
-label-connected = %essid%
-format-disconnected = 睊 <label-disconnected>
-label-disconnected = no conn
+format-connected = %{F#2aa198} %{F#eee8d5}
+format-disconnected = %{F#dc322f}睊%{F#eee8d5}
 
 [module/time]
 type = internal/date
 interval = 5
-date =   %I:%M %p
+date = %{F#cb4b16}  %{F#eee8d5}%I:%M %p
 
 [module/pulseaudio]
 type = internal/pulseaudio
 format-volume = <ramp-volume> <label-volume>
 label-volume = %percentage%%
 
-label-muted = ﱝ muted
+label-muted = ﱝ
 label-muted-foreground = ${colors.muted}
 
 ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
+ramp-volume-1 = %{F#b58900}
+ramp-volume-2 = %{F#dc322f}
 
 [module/battery]
 type = internal/battery
@@ -85,18 +83,24 @@ ramp-capacity-4 = 
 
 [module/workspaces]
 type = internal/xworkspaces
+
+icon-default = 
+
 pin-workspaces = false
 enable-click = true
-enable-scroll = true
-label-active = %icon% %name% %icon%
+enable-scroll = false
+
+format = <label-state>
+
+label-active = " %icon% "
 label-active-foreground = ${colors.primary}
 label-active-background = ${colors.background}
-label-occupied = %icon% %name% %icon%
+label-occupied = " %icon% "
 label-occupied-foreground = ${colors.foreground}
-label-urgent = %icon% %name% %icon%
+label-urgent = " %icon% "
 label-urgent-foreground = ${colors.urgent}
 label-urgent-background = ${colors.background}
-label-empty = %icon% %name% %icon%
+label-empty = " %icon% "
 label-empty-foreground = ${colors.muted}
 
 
