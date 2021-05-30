@@ -16,7 +16,7 @@ hc keybind $Mod-Shift-e quit
 hc keybind $Mod-Shift-r reload
 hc keybind $Mod-Shift-q close
 
-# Programs
+5
 hc keybind $Mod-Return spawn "${TERMINAL:-alacritty}" # Spawn my terminal emulator
 hc keybind $Mod-Print spawn maim $HOME/Pictures/Screenshots/screenshot_.png
 
@@ -65,8 +65,8 @@ hc keybind $Mod-Control-Up      resize up +$resizestep
 hc keybind $Mod-Control-Right   resize right +$resizestep
 
 # tags
-tag_names=( {1..9} )
-tag_keys=( {1..9} 0 )
+tag_names=( {1..5} )
+tag_keys=( {1..5} 0 )
 
 hc rename default "${tag_names[0]}" || true
 for i in "${!tag_names[@]}" ; do
@@ -173,7 +173,7 @@ hc unlock
 # do multi monitor setup here, e.g.:
 # hc set_monitors 1280x1024+0+0 1280x1024+1280+0
 # or simply:
-# hc detect_monitors
+hc detect_monitors
 
 # Auto start programs
 polybar primary &!
