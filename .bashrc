@@ -187,9 +187,9 @@ setps1() {
         GIT_BRANCH="$(git symbolic-ref --short HEAD 2>/dev/null)"
 
         if [ "${GIT_BRANCH}" == "" ]; then
-            PS1="${SHELL_COLOR}-> ${PINK}\W${WHITE} "
+            PS1="[${BLUE}$(whoami)${WHITE}@${RED}$(hostname) ${PINK}\W${WHITE}]${SHELL_COLOR}\$${WHITE} "
         else
-            PS1="${SHELL_COLOR}-> ${PINK}\W${GREEN} ${GIT_BRANCH}${WHITE} "
+            PS1="[${BLUE}$(whoami)${WHITE}@${RED}$(hostname) ${PINK}\W${WHITE}](${GREEN}${GIT_BRANCH}${WHITE})${SHELL_COLOR}\$${WHITE} "
         fi
     }
 
