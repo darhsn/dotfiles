@@ -68,6 +68,9 @@ call plug#begin()
     Plug 'chriskempson/base16-vim'
     Plug 'fcpg/vim-fahrenheit'
 
+    " Discord
+    Plug 'aurieh/discord.nvim'
+
     " Formatting
     Plug 'sbdchd/neoformat'
 call plug#end()
@@ -133,7 +136,8 @@ EOF
 " colorscheme onedark
 " hi! StatusLine ctermfg=145 ctermbg=0 guifg=#ABB2BF guibg=#000000
 " colorscheme fahrenheit
-colorscheme solarized
+" colorscheme solarized
+colorscheme datheme
 hi! Comment cterm=italic gui=italic
 
 " Tabline
@@ -261,7 +265,7 @@ nnoremap <silent> <leader>tf :Telescope find_files<CR>
 nnoremap <silent> <C-p> :Telescope find_files<CR>
 nnoremap <silent> <leader>tg :Telescope git_files<CR>
 
-nnoremap <silent> <leader>bd :bd<CR>
+nnoremap <silent> <leader>bd :bd!<CR>
 nnoremap <silent> <leader>ba :call BufferAdd()<CR>
 nnoremap <silent> <C-h> :BufferPrevious<CR>
 nnoremap <silent> <C-l> :BufferNext<CR>
