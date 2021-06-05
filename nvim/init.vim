@@ -81,7 +81,8 @@ lua <<EOF
 local lspconfig = require('lspconfig')
 local completion = require('completion')
 
-local lsp_servers = {"vimls", "clangd", "phpactor", "tsserver", "pyright"}
+-- local lsp_servers = {"vimls", "clangd", "phpactor", "tsserver", "pyright"}
+local lsp_servers = {}
 
 for index, server in ipairs(lsp_servers) do
     lspconfig[server].setup{
@@ -89,6 +90,9 @@ for index, server in ipairs(lsp_servers) do
     }
 end
 EOF
+
+" Close tag
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.php,*ejs'
 
 " LSP Saga
 lua <<EOF
@@ -129,6 +133,17 @@ saga.init_lsp_saga {
     border_style = "plus",
     rename_prompt_prefix = 'R',
     server_filetype_map = {}
+}
+EOF
+
+" Telescope
+lua <<EOF
+
+require("telescope").setup{
+    defaults = {
+        file_ignore_patterns = {  "node_modules/*" },
+        borderchars = { '-', '|', '-', '|', '+', '+', '+', '+' }
+    }
 }
 EOF
 
