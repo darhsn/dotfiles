@@ -67,6 +67,7 @@ call plug#begin()
     Plug 'joshdick/onedark.vim'
     Plug 'chriskempson/base16-vim'
     Plug 'fcpg/vim-fahrenheit'
+    Plug 'darioisthebest/datheme'
 
     " Discord
     Plug 'aurieh/discord.nvim'
@@ -137,6 +138,8 @@ EOF
 " hi! StatusLine ctermfg=145 ctermbg=0 guifg=#ABB2BF guibg=#000000
 " colorscheme fahrenheit
 " colorscheme solarized
+let g:datheme_bg="dark"
+let g:datheme_line_numbers=1
 colorscheme datheme
 hi! Comment cterm=italic gui=italic
 
