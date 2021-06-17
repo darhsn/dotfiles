@@ -1,6 +1,6 @@
 " Global
 set guicursor=
-set termguicolors
+set notermguicolors
 set completeopt=menuone,noinsert,noselect
 set updatetime=100
 set timeoutlen=300
@@ -50,6 +50,9 @@ call plug#begin()
     " WebDev
     Plug 'ap/vim-css-color'
 
+    " ASM dev
+    Plug 'cpcsdk/vim-z80-democoding'
+
     " Git
     Plug 'tpope/vim-fugitive'
     Plug 'airblade/vim-gitgutter'
@@ -68,6 +71,8 @@ call plug#begin()
     Plug 'chriskempson/base16-vim'
     Plug 'fcpg/vim-fahrenheit'
     Plug 'darioisthebest/datheme'
+    Plug 'crusoexia/vim-monokai'
+    Plug 'altercation/vim-colors-solarized'
 
     " Discord
     Plug 'aurieh/discord.nvim'
@@ -81,7 +86,7 @@ lua <<EOF
 local lspconfig = require('lspconfig')
 local completion = require('completion')
 
--- local lsp_servers = {"vimls", "clangd", "phpactor", "tsserver", "pyright"}
+local lsp_servers = {"vimls", "tsserver", "pyright"}
 local lsp_servers = {}
 
 for index, server in ipairs(lsp_servers) do
@@ -152,10 +157,10 @@ EOF
 " colorscheme onedark
 " hi! StatusLine ctermfg=145 ctermbg=0 guifg=#ABB2BF guibg=#000000
 " colorscheme fahrenheit
-" colorscheme solarized
-let g:datheme_bg="dark"
-let g:datheme_line_numbers=1
-colorscheme datheme
+colorscheme solarized
+" let g:datheme_bg="dark"
+" let g:datheme_line_numbers=1
+" colorscheme monokai
 hi! Comment cterm=italic gui=italic
 
 " Tabline
