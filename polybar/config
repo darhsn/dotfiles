@@ -1,9 +1,9 @@
 [colors]
-background = #000
-foreground = ##ffffff
-muted = #262626
-urgent = #870000
-primary = #5f87af
+background = #000000
+foreground = #ABB2BF
+muted = #585858
+urgent = #E06C75
+primary = #61AFEF
 
 [template]
 width = 100%
@@ -33,28 +33,27 @@ modules-right = pulseaudio keyboard wlan battery
 inherit = template
 monitor = VGA-1
 modules-left = workspaces
-modules-center = time
-modules-right = pulseaudio keyboard wlan battery
+modules-right = pulseaudio keyboard wlan battery time
 
 [module/keyboard]
 type = internal/xkeyboard
 blacklist-0 = num lock
 blacklist-1 = scroll lock
 format =  <label-indicator><label-layout>
-label-indicator = %{F#870000}
+label-indicator = %{F#ab4642}
 label-layout = " "
 
 [module/wlan]
 type = internal/network
 interface = wlp3s0
 interval = 5
-format-connected = %{F#5f87af}
-format-disconnected = %{F#870000}睊
+format-connected = %{F#61AFEF}
+format-disconnected = %{F#ab4642}睊
 
 [module/time]
 type = internal/date
 interval = 5
-date = %{F#870000} %{F#ffffff} %I:%M %p
+date = %{F#ab4642} %{F#ABB2BF} %I:%M %p
 
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -65,19 +64,19 @@ label-muted = ﱝ
 label-muted-foreground = ${colors.muted}
 
 ramp-volume-0 = 
-ramp-volume-1 = %{F#ffd75f}
-ramp-volume-2 = %{F#870000}
+ramp-volume-1 = %{F#E5C07B}
+ramp-volume-2 = %{F#E06C75}
 
 [module/battery]
 type = internal/battery
 battery = BAT0
 adapter = AC0
 full-at = 98
-format-charging = %{F#ffd75f} %{F#d8d8d8}<label-charging>
-format-discharging = <ramp-capacity> %{F#d8d8d8}  <label-discharging>
-format-full = %{F#ffd75f} <label-full>
-ramp-capacity-0 = %{F#870000}
-ramp-capacity-1 = %{F#5f87af}
+format-charging = %{F#E5C07B} <label-charging>
+format-discharging = <ramp-capacity>  <label-discharging>
+format-full = %{F#E5C07B} <label-full>
+ramp-capacity-0 = %{F#E06C75}
+ramp-capacity-1 = %{F#86c1b9}
 ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
@@ -104,6 +103,7 @@ label-urgent-background = ${colors.background}
 label-empty = " %icon% "
 label-empty-foreground = ${colors.muted}
 
+
 [module/i3]
 type = internal/i3
 wrapping-scroll = false
@@ -111,8 +111,8 @@ pin-workspaces = true
 format = <label-state> <label-mode>
 label-mode = %mode%
 label-mode-padding = 1.5
-label-mode-background = ${colors.urgent}
-label-mode-foreground = ${colors.foreground}
+label-mode-background = ${colors.background}
+label-mode-foreground = ${colors.urgent}
 label-focused-font = 1.5
 label-focused = %index%
 label-focused-foreground = ${colors.primary}
@@ -130,8 +130,8 @@ label-visible-foreground = ${colors.foreground}
 label-visible-background = ${colors.background}
 label-urgent-font = 1.5
 label-urgent = %index%
-label-urgent-foreground = ${colors.foreground}
-label-urgent-background = ${colors.urgent}
+label-urgent-foreground = ${colors.urgent}
+label-urgent-background = ${colors.background}
 label-urgent-padding = 1.5
 
 [settings]

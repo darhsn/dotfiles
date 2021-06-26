@@ -1,6 +1,6 @@
 " Global
 set guicursor=
-set notermguicolors
+set termguicolors
 set completeopt=menuone,noinsert,noselect
 set updatetime=100
 set timeoutlen=300
@@ -86,7 +86,7 @@ lua <<EOF
 local lspconfig = require('lspconfig')
 local completion = require('completion')
 
-local lsp_servers = {"vimls", "tsserver", "pyright"}
+local lsp_servers = {"vimls", "tsserver", "pyright", "clangd"}
 local lsp_servers = {}
 
 for index, server in ipairs(lsp_servers) do
@@ -153,10 +153,10 @@ require("telescope").setup{
 EOF
 
 " Colorscheme
-" let g:onedark_color_overrides = { "black": {"gui": "#000000", "cterm": "0", "cterm16": "0" } }
-" colorscheme onedark
+let g:onedark_color_overrides = { "black": {"gui": "#000000", "cterm": "0", "cterm16": "0" } }
+colorscheme onedark
 " hi! StatusLine ctermfg=145 ctermbg=0 guifg=#ABB2BF guibg=#000000
-colorscheme fahrenheit
+" colorscheme base16-gruvbox-dark-hard
 " colorscheme solarized
 " let g:datheme_bg="dark"
 " let g:datheme_line_numbers=1
