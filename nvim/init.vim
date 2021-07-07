@@ -155,7 +155,8 @@ EOF
 " Colorscheme
 let g:onedark_color_overrides = { "black": {"gui": "#000000", "cterm": "0", "cterm16": "0" } }
 colorscheme onedark
-" hi! StatusLine ctermfg=145 ctermbg=0 guifg=#ABB2BF guibg=#000000
+hi! StatusLine ctermfg=145 ctermbg=0 guifg=#ABB2BF guibg=#000000
+hi! CursorLine guibg=#000000
 " colorscheme base16-gruvbox-dark-hard
 " colorscheme solarized
 " let g:datheme_bg="dark"
@@ -186,6 +187,7 @@ let g:NERDTreeDirArrowCollapsible = '-'
 
 " Git gutter
 let g:gitgutter_map_keys = 0
+
 
 " Statusline
 let g:currentmode = {
