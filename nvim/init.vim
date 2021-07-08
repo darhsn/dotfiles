@@ -71,11 +71,7 @@ call plug#begin()
     Plug 'chriskempson/base16-vim'
     Plug 'fcpg/vim-fahrenheit'
     Plug 'darioisthebest/datheme'
-    Plug 'crusoexia/vim-monokai'
     Plug 'altercation/vim-colors-solarized'
-
-    " Discord
-    Plug 'aurieh/discord.nvim'
 
     " Formatting
     Plug 'sbdchd/neoformat'
