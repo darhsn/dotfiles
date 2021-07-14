@@ -90,19 +90,19 @@ switch-theme() {
 
 # Fetch function
 fetch() {
-#    lolcat <<EOF
-#       _____
-#      /   __/  ${USER}@$(hostname)
-#     |  /      os:        $(cat /etc/fedora-release)
-#    _|  |_     kernel:    $(uname -sr)
-#   |_    _|    uptime:    $(uptime -p | sed 's/up //')
-#     |  |      shell:     $(basename ${SHELL})
-#   __/  |      editor:    $(basename ${EDITOR})
-#  /____/
-#
-#EOF
+    lolcat <<EOF
+       _____
+      /   __/  ${USER}@$(hostname)
+     |  /      os:        $(cat /etc/fedora-release)
+    _|  |_     kernel:    $(uname -sr)
+   |_    _|    uptime:    $(uptime -p | sed 's/up //')
+     |  |      shell:     $(basename ${SHELL})
+   __/  |      editor:    $(basename ${EDITOR})
+  /____/
 
-pfetch
+EOF
+
+#pfetch
 }
 
 # Code command
