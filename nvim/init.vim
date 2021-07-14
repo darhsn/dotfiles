@@ -70,8 +70,7 @@ call plug#begin()
     Plug 'joshdick/onedark.vim'
     Plug 'chriskempson/base16-vim'
     Plug 'fcpg/vim-fahrenheit'
-    Plug 'darioisthebest/datheme'
-    Plug 'altercation/vim-colors-solarized'
+    Plug 'ayu-theme/ayu-vim'
 
     " Formatting
     Plug 'sbdchd/neoformat'
@@ -83,7 +82,6 @@ local lspconfig = require('lspconfig')
 local completion = require('completion')
 
 local lsp_servers = {"vimls", "tsserver", "pyright", "clangd"}
-local lsp_servers = {}
 
 for index, server in ipairs(lsp_servers) do
     lspconfig[server].setup{
@@ -150,14 +148,15 @@ EOF
 
 " Colorscheme
 let g:onedark_color_overrides = { "black": {"gui": "#000000", "cterm": "0", "cterm16": "0" } }
-colorscheme onedark
 hi! StatusLine ctermfg=145 ctermbg=0 guifg=#ABB2BF guibg=#000000
 hi! CursorLine guibg=#000000
+" colorscheme onedark
 " colorscheme base16-gruvbox-dark-hard
 " colorscheme solarized
 " let g:datheme_bg="dark"
 " let g:datheme_line_numbers=1
-" colorscheme monokai
+let ayucolor="dark"
+colorscheme ayu
 hi! Comment cterm=italic gui=italic
 
 " Tabline
