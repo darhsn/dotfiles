@@ -18,16 +18,14 @@ margin-top = 0
 margin-bottom = 0
 module-margin-left = 1
 module-margin-right = 1
-font-0 = "UbuntuMono Nerd Font:pixelsize=11"
-font-1 = "UbuntuMono Nerd Font:pixelsize=11"
-font-2 = "UbuntuMono Nerd Font:pixelsize=11"
+font-0 = "Fira Code Nerd Font:pixelsize=11"
 
 [bar/primary]
 inherit = template
 monitor = LVDS-1
-modules-left = workspaces
-modules-center = time
-modules-right = pulseaudio keyboard wlan battery
+modules-left = keyboard wlan pulseaudio
+modules-center = workspaces
+modules-right = battery time
 
 [bar/secondary]
 inherit = template
@@ -41,7 +39,7 @@ blacklist-0 = num lock
 blacklist-1 = scroll lock
 format =  <label-indicator><label-layout>
 label-indicator = %{F#ab4642}
-label-layout = " "
+label-layout = " "
 
 [module/wlan]
 type = internal/network
@@ -84,7 +82,7 @@ ramp-capacity-4 = 
 [module/workspaces]
 type = internal/xworkspaces
 
-icon-default = 
+icon-default = 
 
 pin-workspaces = false
 enable-click = true
