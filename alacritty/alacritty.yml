@@ -31,7 +31,7 @@ font:
         family: Fira Mono Nerd Font
     italic:
         family: Fira Mono Nerd Font
-    size: 11
+    size: 12
 window:
     padding:
         x: 4
