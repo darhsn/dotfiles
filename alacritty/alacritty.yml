@@ -2,38 +2,38 @@
 colors:
     # Default colors
     primary:
-        background: '0x0f1419'
-        foreground: '0xe6e1cf'
+        background: '#000000'
+        foreground: '#ffffff'
 
     # Normal colors
     normal:
-        black:   '0x000000'
-        red:     '0xf34a4a'
-        green:   '0xbae67e'
-        yellow:  '0xffee99'
-        blue:    '0x73d0ff'
-        magenta: '0xd4bfff'
-        cyan:    '0x83CEC6'
-        white:   '0xf2f2f2'
+        black:   '#000000'
+        red:     '#d70061'
+        green:   '#5ff967'
+        yellow:  '#ffff00'
+        blue:    '#0088ff'
+        magenta: '#c526ff'
+        cyan:    '#40e0d0'
+        white:   '#ffffff'
 
     # Bright colors
     bright:
-        black:   '0x737d87'
-        red:     '0xff3333'
-        green:   '0xc2d94c'
-        yellow:  '0xe7c547'
-        blue:    '0x59c2ff'
-        magenta: '0xb77ee0'
-        cyan:    '0x5ccfe6'
-        white:   '0xffffff'
+        black:   '#2e373e'
+        red:     '#ff005f'
+        green:   '#5ff967'
+        yellow:  '#ffff00'
+        blue:    '#306b8f'
+        magenta: '#c526ff'
+        cyan:    '#c526ff'
+        white:   '#1a1a1a'
 font:
     normal:
-        family: Fira Mono Nerd Font
+        family: Hack NerdFont
     italic:
-        family: Fira Mono Nerd Font
-    size: 12
+        family: Hack NerdFont
+    size: 11.5
 window:
     padding:
         x: 4
         y: 4
-
+background_opacity: 0.94
