@@ -6,14 +6,14 @@ configuration {
    blue:             #73d0ff;
    darkblue:         #B48EAD;
    cyan:             #95e6cb;
-   lightcyan:        #B48EAD;
+   selected-color:   #40e0d0;
    green:            #bae67e;
    red:              #ff3333;
 
-   dark1:            #0a0e14;
+   dark1:            #000000;
    dark2:            #1f2430;
-   dark3:            #b3b1ad;
-   dark4:            #b3b1ad;
+   dark3:            #ffffff;
+   dark4:            #2e373e;
 
    light1:           #e6e1cf;
 
@@ -24,7 +24,7 @@ configuration {
    main-color:       @blue;
    highlight:        @light1;
    urgent-color:     @red;
-   selected-color:   @lightcyan;
+   selected-color:   @selected-color;
 }
 
 window {
