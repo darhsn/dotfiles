@@ -20,5 +20,5 @@ sudo fc-cache -fv
 ```
 
 ## Screenshots
-![./screenshots/rice.png](dark rice)
+![Dark rice](./screenshots/rice.png)
 
