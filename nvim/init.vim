@@ -38,6 +38,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 Plug 'bignimbus/pop-punk.vim'
+Plug 'nanotech/jellybeans.vim'
 
 call plug#end()
 
@@ -84,8 +85,10 @@ endfunction
 hi StatusSep guifg=#d70061 ctermfg=161
 set statusline=%#PMenuSel#%{toupper(g:currentmode[mode()])}\ %#StatusSep#\ %#LineNR#\ %#CursorLineNR#\ %F%h\ %{GitBranch()}\ %=\ %l:%c\ \%m%r%h%w%y
 
-colorscheme pop-punk
+colorscheme jellybeans
 hi! Normal guibg=none ctermbg=none
+hi! NonText guibg=none ctermbg=none
+hi! SpecialKey guibg=none ctermbg=none
 hi! LineNR guibg=none ctermbg=none
 
 " Mappings
