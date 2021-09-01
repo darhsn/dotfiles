@@ -1,36 +1,37 @@
 # Colors (Ayu Dark)
-colors:
+
+# colors:
     # Default colors
-    primary:
-        background: '#000000'
-        foreground: '#ffffff'
+    # primary:
+        # background: '#000000'
+        # foreground: '#ffffff'
 
     # Normal colors
-    normal:
-        black:   '#000000'
-        red:     '#d70061'
-        green:   '#5ff967'
-        yellow:  '#ffff00'
-        blue:    '#0088ff'
-        magenta: '#c526ff'
-        cyan:    '#40e0d0'
-        white:   '#ffffff'
+    # normal:
+        # black:   '#000000'
+        # red:     '#d70061'
+        # green:   '#5ff967'
+        # yellow:  '#ffff00'
+        # blue:    '#0088ff'
+        # magenta: '#c526ff'
+        # cyan:    '#40e0d0'
+        # white:   '#ffffff'
 
     # Bright colors
-    bright:
-        black:   '#2e373e'
-        red:     '#ff005f'
-        green:   '#5ff967'
-        yellow:  '#ffff00'
-        blue:    '#306b8f'
-        magenta: '#c526ff'
-        cyan:    '#c526ff'
-        white:   '#1a1a1a'
+    # bright:
+        # black:   '#2e373e'
+        # red:     '#ff005f'
+        # green:   '#5ff967'
+        # yellow:  '#ffff00'
+        # blue:    '#306b8f'
+        # magenta: '#c526ff'
+        # cyan:    '#c526ff'
+        # white:   '#1a1a1a'
 font:
     normal:
-        family: Hack NerdFont
+        family: Iosevka Fixed Slab
     italic:
-        family: Hack NerdFont
+        family: Iosevka Fixed Slab
     size: 11.5
 window:
     padding:
