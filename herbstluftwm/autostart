@@ -16,7 +16,6 @@ hc keybind $Mod-Shift-e quit
 hc keybind $Mod-Shift-r reload
 hc keybind $Mod-Shift-q close
 
-5
 hc keybind $Mod-Return spawn "${TERMINAL:-alacritty}" # Spawn my terminal emulator
 hc keybind $Mod-Print spawn maim $HOME/Pictures/Screenshots/screenshot_.png
 
@@ -176,7 +175,7 @@ hc unlock
 hc detect_monitors
 
 # Auto start programs
-polybar primary &!
 nitrogen --restore
 compton &!
 picom &!
+polybar primary &!
