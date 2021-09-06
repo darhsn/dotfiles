@@ -95,10 +95,13 @@ hi! LineNR guibg=none ctermbg=none
 nnoremap <silent> <leader>gg :Git<CR>
 nnoremap <silent> <leader>gp :Git push<CR>
 
+nnoremap <silent> <C-l> :bn<CR>
+nnoremap <silent> <C-h> :bp<CR>
+
 nnoremap <silent> <leader>t :term<CR>
 
 nnoremap <silent> <leader>c :Commentary<CR>
 
 nnoremap <silent> <C-p> :Telescope find_files<CR>
 
-nnoremap <silent> <leader>ll :Lspsaga show_line_diagnostics
+nnoremap <silent> <leader>ll :Lspsaga show_line_diagnostics<CR>
