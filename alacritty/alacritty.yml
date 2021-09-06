@@ -1,46 +1,40 @@
-colors:
-    primary:
-      background: '#000000'
-      foreground: '#abb2bf'
+# Colors (Ayu Dark)
 
-    bright_foreground: '#e6efff'
+# colors:
+    # Default colors
+    # primary:
+        # background: '#000000'
+        # foreground: '#ffffff'
 
-    normal:
-        black:   '#000000'
-        red:     '#e06c75'
-        green:   '#98c379'
-        yellow:  '#d19a66'
-        blue:    '#61afef'
-        magenta: '#c678dd'
-        cyan:    '#56b6c2'
-        white:   '#828791'
+    # Normal colors
+    # normal:
+        # black:   '#000000'
+        # red:     '#d70061'
+        # green:   '#5ff967'
+        # yellow:  '#ffff00'
+        # blue:    '#0088ff'
+        # magenta: '#c526ff'
+        # cyan:    '#40e0d0'
+        # white:   '#ffffff'
 
-    bright:
-        black:   '#5c6370'
-        red:     '#e06c75'
-        green:   '#98c379'
-        yellow:  '#d19a66'
-        blue:    '#61afef'
-        magenta: '#c678dd'
-        cyan:    '#56b6c2'
-        white:   '#e6efff'
-
-    dim:
-        black:   '#000000'
-        red:     '#e06c75'
-        green:   '#98c379'
-        yellow:  '#d19a66'
-        blue:    '#61afef'
-        magenta: '#c678dd'
-        cyan:    '#56b6c2'
-        white:   '#828791'
+    # Bright colors
+    # bright:
+        # black:   '#2e373e'
+        # red:     '#ff005f'
+        # green:   '#5ff967'
+        # yellow:  '#ffff00'
+        # blue:    '#306b8f'
+        # magenta: '#c526ff'
+        # cyan:    '#c526ff'
+        # white:   '#1a1a1a'
 font:
     normal:
-        family: UbuntuMono Nerd Font
+        family: Iosevka Fixed Slab
     italic:
-        family: UbuntuMono Nerd Font
-    size: 13.5
+        family: Iosevka Fixed Slab
+    size: 11.5
 window:
     padding:
         x: 4
         y: 4
+background_opacity: 0.94

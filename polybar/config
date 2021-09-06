@@ -1,9 +1,9 @@
 [colors]
-background = #000000
-foreground = #ABB2BF
+background = #0F1419
+foreground = #E6E1CF
 muted = #585858
-urgent = #E06C75
-primary = #61AFEF
+urgent = #F07178
+primary = #95E6CB
 
 [template]
 width = 100%
@@ -18,16 +18,14 @@ margin-top = 0
 margin-bottom = 0
 module-margin-left = 1
 module-margin-right = 1
-font-0 = "UbuntuMono Nerd Font:pixelsize=11"
-font-1 = "UbuntuMono Nerd Font:pixelsize=11"
-font-2 = "UbuntuMono Nerd Font:pixelsize=11"
+font-0 = "Fira Mono Nerd Font:pixelsize=9"
 
 [bar/primary]
 inherit = template
 monitor = LVDS-1
-modules-left = workspaces
-modules-center = time
-modules-right = pulseaudio keyboard wlan battery
+modules-left = keyboard wlan pulseaudio
+modules-center = workspaces
+modules-right = battery time
 
 [bar/secondary]
 inherit = template
@@ -41,19 +39,19 @@ blacklist-0 = num lock
 blacklist-1 = scroll lock
 format =  <label-indicator><label-layout>
 label-indicator = %{F#ab4642}
-label-layout = " "
+label-layout = " "
 
 [module/wlan]
 type = internal/network
 interface = wlp3s0
 interval = 5
-format-connected = %{F#61AFEF}
+format-connected = %{F#95E6CB}
 format-disconnected = %{F#ab4642}睊
 
 [module/time]
 type = internal/date
 interval = 5
-date = %{F#ab4642} %{F#ABB2BF} %I:%M %p
+date = %{F#ab4642} %{F#E6E1CF} %I:%M %p
 
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -65,7 +63,7 @@ label-muted-foreground = ${colors.muted}
 
 ramp-volume-0 = 
 ramp-volume-1 = %{F#E5C07B}
-ramp-volume-2 = %{F#E06C75}
+ramp-volume-2 = %{F#F07178}
 
 [module/battery]
 type = internal/battery
@@ -75,8 +73,8 @@ full-at = 98
 format-charging = %{F#E5C07B} <label-charging>
 format-discharging = <ramp-capacity>  <label-discharging>
 format-full = %{F#E5C07B} <label-full>
-ramp-capacity-0 = %{F#E06C75}
-ramp-capacity-1 = %{F#86c1b9}
+ramp-capacity-0 = %{F#F07178}
+ramp-capacity-1 = %{F#95e6cb}
 ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
@@ -84,7 +82,7 @@ ramp-capacity-4 = 
 [module/workspaces]
 type = internal/xworkspaces
 
-icon-default = 
+icon-default = 
 
 pin-workspaces = false
 enable-click = true
