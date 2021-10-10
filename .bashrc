@@ -3,6 +3,9 @@
 # Variables
 export DOTS_DIR="$HOME/dotfiles"
 export EDITOR="nvim"
+export GOROOT="/usr/lib/go/"
+export GOPATH="$HOME/Code/GO"
+export GO111MODULE="on"
 
 # Aliases
 source ~/.aliasrc
