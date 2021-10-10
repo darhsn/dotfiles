@@ -32,7 +32,7 @@ font:
         family: Iosevka Fixed Slab
     italic:
         family: Iosevka Fixed Slab
-    size: 11.5
+    size: 10.5
 window:
     padding:
         x: 4
