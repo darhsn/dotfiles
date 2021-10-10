@@ -37,8 +37,9 @@ Plug 'cohama/lexima.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
-Plug 'bignimbus/pop-punk.vim'
-Plug 'nanotech/jellybeans.vim'
+Plug 'jacoborus/tender.vim'
+
+Plug 'vimwiki/vimwiki'
 
 call plug#end()
 
@@ -83,13 +84,13 @@ function GitBranch()
 endfunction
 
 hi StatusSep guifg=#d70061 ctermfg=161
-set statusline=%#PMenuSel#%{toupper(g:currentmode[mode()])}\ %#StatusSep#\ %#LineNR#\ %#CursorLineNR#\ %F%h\ %{GitBranch()}\ %=\ %l:%c\ \%m%r%h%w%y
+set statusline=%{toupper(g:currentmode[mode()])}\ \|\ %F%h\ %{GitBranch()}\ %=\ %l:%c\ \|\ \%m%r%h%w%y
 
-colorscheme jellybeans
-hi! Normal guibg=none ctermbg=none
-hi! NonText guibg=none ctermbg=none
-hi! SpecialKey guibg=none ctermbg=none
-hi! LineNR guibg=none ctermbg=none
+colorscheme tender
+" hi! Normal guibg=#000000 ctermbg=0
+" hi! NonText guibg=#000000 ctermbg=0
+" hi! SpecialKey guibg=#000000 ctermbg=0
+" hi! LineNR guibg=#000000 ctermbg=0
 
 " Mappings
 nnoremap <silent> <leader>gg :Git<CR>
